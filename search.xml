@@ -73,6 +73,7 @@
 ]]></content>
       <categories>
         <category>学习</category>
+        <category>工具</category>
       </categories>
       <tags>
         <tag>工具</tag>
@@ -84,7 +85,7 @@
     <content><![CDATA[<h2 id="test"><a href="#test" class="headerlink" title="test"></a>test</h2><p>Typora Markdown</p>
 <p>目录规划</p>
 <ul>
-<li><h2 id="学习"><a href="#学习" class="headerlink" title="学习"></a>学习</h2></li>
+<li><h2 id="学习-工具"><a href="#学习-工具" class="headerlink" title="学习- 工具"></a>学习<br>- 工具</h2></li>
 <li><p>求职</p>
 <ul>
 <li><p>简历</p>
@@ -105,6 +106,7 @@
 ]]></content>
       <categories>
         <category>学习</category>
+        <category>博客</category>
       </categories>
       <tags>
         <tag>随笔</tag>
@@ -116,6 +118,7 @@
     <content><![CDATA[]]></content>
       <categories>
         <category>学习</category>
+        <category>运维</category>
       </categories>
       <tags>
         <tag>运维</tag>
@@ -127,6 +130,7 @@
     <content><![CDATA[]]></content>
       <categories>
         <category>求职</category>
+        <category>刷题</category>
       </categories>
   </entry>
   <entry>
@@ -193,6 +197,7 @@
 <h4 id="Part-6、其他问题"><a href="#Part-6、其他问题" class="headerlink" title="Part 6、其他问题"></a>Part 6、其他问题</h4>]]></content>
       <categories>
         <category>求职</category>
+        <category>面试</category>
       </categories>
       <tags>
         <tag>面试</tag>
@@ -200,7 +205,7 @@
   </entry>
   <entry>
     <title>《JavsScript百炼成仙》</title>
-    <url>/2024/03/05/%E3%80%8AJavsScript%E7%99%BE%E7%82%BC%E6%88%90%E4%BB%99%E3%80%8B/</url>
+    <url>/2022/04/12/%E3%80%8AJavsScript%E7%99%BE%E7%82%BC%E6%88%90%E4%BB%99%E3%80%8B/</url>
     <content><![CDATA[<h3 id="《JavaScript百炼成仙》读书笔记"><a href="#《JavaScript百炼成仙》读书笔记" class="headerlink" title="《JavaScript百炼成仙》读书笔记"></a>《JavaScript百炼成仙》读书笔记</h3><h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><ul>
 <li>本书旨在通过独特的角度和轻松的方式介绍JavaScript的核心概念和高级技巧，使读者能够深入理解并灵活运用JavaScript。</li>
 </ul>
