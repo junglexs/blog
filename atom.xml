@@ -6,7 +6,7 @@
   <link href="http://junglexs.com/atom.xml" rel="self"/>
   
   <link href="http://junglexs.com/"/>
-  <updated>2024-03-04T16:59:39.625Z</updated>
+  <updated>2024-03-05T16:09:56.601Z</updated>
   <id>http://junglexs.com/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>求职技巧</title>
+    <link href="http://junglexs.com/2024/03/04/%E6%B1%82%E8%81%8C%E6%8A%80%E5%B7%A7/"/>
+    <id>http://junglexs.com/2024/03/04/%E6%B1%82%E8%81%8C%E6%8A%80%E5%B7%A7/</id>
+    <published>2024-03-04T15:13:03.000Z</published>
+    <updated>2024-03-05T16:09:56.601Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;观B站鱼皮直播有感&lt;/p&gt;
+&lt;h4 id=&quot;Part-1、求职的几个阶段&quot;&gt;&lt;a href=&quot;#Part-1、求职的几个阶段&quot; class=&quot;headerlink&quot; title=&quot;Part 1、求职的几个阶段&quot;&gt;&lt;/a&gt;Part 1、求职的几个阶段&lt;/h4&gt;&lt;p&gt;技术积累</summary>
+        
+      
+    
+    
+    
+    <category term="求职" scheme="http://junglexs.com/categories/%E6%B1%82%E8%81%8C/"/>
+    
+    <category term="面试" scheme="http://junglexs.com/categories/%E6%B1%82%E8%81%8C/%E9%9D%A2%E8%AF%95/"/>
+    
+    
+    <category term="面试" scheme="http://junglexs.com/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+  </entry>
   
   <entry>
     <title>面试官问我按钮级别权限怎么控制，我说v-if，面试官说再见</title>
@@ -42,34 +70,6 @@
     <category term="Vue" scheme="http://junglexs.com/tags/Vue/"/>
     
     <category term="权限" scheme="http://junglexs.com/tags/%E6%9D%83%E9%99%90/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>求职技巧</title>
-    <link href="http://junglexs.com/2024/03/04/%E6%B1%82%E8%81%8C%E6%8A%80%E5%B7%A7/"/>
-    <id>http://junglexs.com/2024/03/04/%E6%B1%82%E8%81%8C%E6%8A%80%E5%B7%A7/</id>
-    <published>2024-03-04T15:13:03.000Z</published>
-    <updated>2024-03-05T16:06:46.561Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;观B站鱼皮直播有感&lt;/p&gt;
-&lt;h4 id=&quot;Part-1、求职的几个阶段&quot;&gt;&lt;a href=&quot;#Part-1、求职的几个阶段&quot; class=&quot;headerlink&quot; title=&quot;Part 1、求职的几个阶段&quot;&gt;&lt;/a&gt;Part 1、求职的几个阶段&lt;/h4&gt;&lt;p&gt;技术积累</summary>
-        
-      
-    
-    
-    
-    <category term="求职" scheme="http://junglexs.com/categories/%E6%B1%82%E8%81%8C/"/>
-    
-    <category term="面试" scheme="http://junglexs.com/categories/%E6%B1%82%E8%81%8C/%E9%9D%A2%E8%AF%95/"/>
-    
-    
-    <category term="面试" scheme="http://junglexs.com/tags/%E9%9D%A2%E8%AF%95/"/>
     
   </entry>
   
