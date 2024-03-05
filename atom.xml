@@ -6,7 +6,7 @@
   <link href="http://junglexs.com/atom.xml" rel="self"/>
   
   <link href="http://junglexs.com/"/>
-  <updated>2024-03-04T16:15:37.739Z</updated>
+  <updated>2024-03-05T16:00:32.548Z</updated>
   <id>http://junglexs.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>《JavsScript百炼成仙》</title>
+    <link href="http://junglexs.com/2024/03/05/%E3%80%8AJavsScript%E7%99%BE%E7%82%BC%E6%88%90%E4%BB%99%E3%80%8B/"/>
+    <id>http://junglexs.com/2024/03/05/%E3%80%8AJavsScript%E7%99%BE%E7%82%BC%E6%88%90%E4%BB%99%E3%80%8B/</id>
+    <published>2024-03-05T15:44:37.000Z</published>
+    <updated>2024-03-05T16:00:32.548Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;《JavaScript百炼成仙》读书笔记&quot;&gt;&lt;a href=&quot;#《JavaScript百炼成仙》读书笔记&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="书籍" scheme="http://junglexs.com/categories/%E4%B9%A6%E7%B1%8D/"/>
+    
+    
+    <category term="读书笔记" scheme="http://junglexs.com/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>面试官问我按钮级别权限怎么控制，我说v-if，面试官说再见</title>
@@ -135,7 +160,7 @@
     <link href="http://junglexs.com/2023/06/29/markdown%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0(MacOS)/"/>
     <id>http://junglexs.com/2023/06/29/markdown%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0(MacOS)/</id>
     <published>2023-06-29T14:55:00.000Z</published>
-    <updated>2024-03-05T14:42:23.728Z</updated>
+    <updated>2024-03-05T15:58:14.829Z</updated>
     
     
       
@@ -162,7 +187,7 @@
     <link href="http://junglexs.com/2023/06/01/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
     <id>http://junglexs.com/2023/06/01/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</id>
     <published>2023-06-01T15:55:04.000Z</published>
-    <updated>2024-03-05T15:40:18.122Z</updated>
+    <updated>2024-03-05T15:46:22.126Z</updated>
     
     
       
