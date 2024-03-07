@@ -92,39 +92,11 @@
   </entry>
   
   <entry>
-    <title>运维</title>
-    <link href="https://junglexs.github.io/2024/03/04/%E8%BF%90%E7%BB%B4/"/>
-    <id>https://junglexs.github.io/2024/03/04/%E8%BF%90%E7%BB%B4/</id>
-    <published>2024-03-04T12:58:06.000Z</published>
-    <updated>2024-03-06T18:06:18.060Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;test github page&lt;/p&gt;
-&lt;p&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="学习" scheme="https://junglexs.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
-    
-    <category term="运维" scheme="https://junglexs.github.io/categories/%E5%AD%A6%E4%B9%A0/%E8%BF%90%E7%BB%B4/"/>
-    
-    
-    <category term="运维" scheme="https://junglexs.github.io/tags/%E8%BF%90%E7%BB%B4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>hexo使用笔记</title>
-    <link href="https://junglexs.github.io/2023/07/29/hexo%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/"/>
-    <id>https://junglexs.github.io/2023/07/29/hexo%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/</id>
+    <title>Hexo 使用笔记</title>
+    <link href="https://junglexs.github.io/2023/07/29/Hexo%20%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/"/>
+    <id>https://junglexs.github.io/2023/07/29/Hexo%20%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/</id>
     <published>2023-07-29T14:54:13.000Z</published>
-    <updated>2024-03-06T17:11:43.796Z</updated>
+    <updated>2024-03-07T16:57:49.230Z</updated>
     
     
       
@@ -147,11 +119,11 @@
   </entry>
   
   <entry>
-    <title>markdown使用笔记</title>
-    <link href="https://junglexs.github.io/2023/06/29/markdown%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0(MacOS)/"/>
-    <id>https://junglexs.github.io/2023/06/29/markdown%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0(MacOS)/</id>
+    <title>Markdown 使用笔记（MacOS）</title>
+    <link href="https://junglexs.github.io/2023/06/29/Markdown%20%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0%EF%BC%88MacOS%EF%BC%89/"/>
+    <id>https://junglexs.github.io/2023/06/29/Markdown%20%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0%EF%BC%88MacOS%EF%BC%89/</id>
     <published>2023-06-29T14:55:00.000Z</published>
-    <updated>2024-03-06T17:11:54.109Z</updated>
+    <updated>2024-03-07T16:57:29.617Z</updated>
     
     
       
@@ -199,6 +171,34 @@
     
     
     <category term="随笔" scheme="https://junglexs.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>运维知识库</title>
+    <link href="https://junglexs.github.io/2023/05/04/%E8%BF%90%E7%BB%B4%E7%9F%A5%E8%AF%86%E5%BA%93/"/>
+    <id>https://junglexs.github.io/2023/05/04/%E8%BF%90%E7%BB%B4%E7%9F%A5%E8%AF%86%E5%BA%93/</id>
+    <published>2023-05-04T12:58:06.000Z</published>
+    <updated>2024-03-07T17:07:22.776Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;SSL-证书&quot;&gt;&lt;a href=&quot;#SSL-证书&quot; class=&quot;headerlink&quot; title=&quot;SSL 证书&quot;&gt;&lt;/a&gt;SSL 证书&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;SSL证书（Secure Sockets</summary>
+        
+      
+    
+    
+    
+    <category term="学习" scheme="https://junglexs.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="运维" scheme="https://junglexs.github.io/categories/%E5%AD%A6%E4%B9%A0/%E8%BF%90%E7%BB%B4/"/>
+    
+    
+    <category term="运维" scheme="https://junglexs.github.io/tags/%E8%BF%90%E7%BB%B4/"/>
     
   </entry>
   
