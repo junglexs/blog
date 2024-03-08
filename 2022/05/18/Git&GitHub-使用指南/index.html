@@ -11,7 +11,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title>Markdown 使用笔记（MacOS） |  Junglexs</title>
+      <title>Git&amp;GitHub 使用指南 |  Junglexs</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/favicon.ico" />
@@ -54,7 +54,7 @@
     <main class="content on">
       <section class="outer">
   <article
-  id="post-Markdown 使用笔记（MacOS）"
+  id="post-Git&amp;GitHub-使用指南"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -65,7 +65,7 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  Markdown 使用笔记（MacOS）
+  Git&amp;GitHub 使用指南
 </h1>
  
 
@@ -73,8 +73,8 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2023/06/29/Markdown%20%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0%EF%BC%88MacOS%EF%BC%89/" class="article-date">
-  <time datetime="2023-06-29T14:55:00.000Z" itemprop="datePublished">2023-06-29</time>
+      <a href="/2022/05/18/Git&GitHub-%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/" class="article-date">
+  <time datetime="2022-05-18T15:45:57.000Z" itemprop="datePublished">2022-05-18</time>
 </a> 
   <div class="article-category">
     <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a> / <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0/%E5%B7%A5%E5%85%B7/">工具</a>
@@ -85,7 +85,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">199</span>
+            <span class="post-count">574</span>
         </span>
     </span>
 
@@ -94,7 +94,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> 阅读时长≈</span>
-            <span class="post-count">1 分钟</span>
+            <span class="post-count">2 分钟</span>
         </span>
     </span>
 </div>
@@ -109,28 +109,45 @@
   
     <div class="article-entry" itemprop="articleBody">
        
-  <h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><ul>
-<li>生成代码块 <code>option + command + C</code> </li>
-<li>源码模式 <code>command + /</code></li>
-<li>标题 <code>comand + 1</code> 或 2 、 3、 4</li>
-<li>查找 <code>comand + F</code></li>
-<li>超链接 <code>command + K</code></li>
-<li>查找并替换 <code>option + command + F</code></li>
-<li>无序列表 <code>option + command + U</code>  或 <code>- + tab</code></li>
-<li>有序列表 <code>option + command + L</code> 或 <code>1. + tab</code> </li>
-<li>代码  <code>control + ` </code></li>
-<li>代码块 <code>option + command + C</code></li>
-<li>引用 <code>option + command + Q</code></li>
-<li>放大&#x2F;缩小 <code>shift + command + =</code> &#x2F; <code>shift + command + -</code></li>
+  <h1 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h1><h2 id="本地代码上传"><a href="#本地代码上传" class="headerlink" title="本地代码上传"></a>本地代码上传</h2><p>1.建立远程仓库<br>2.切换到项目路径，打开终端<br>3.设置用户名、邮箱 </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;[你的GitHub的用户名]&quot;</span><br><span class="line">git config --global user.email &quot;[你的GitHub绑定的邮箱]&quot;</span><br></pre></td></tr></table></figure>
+<p>4.查看是否创建成功</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --list</span><br></pre></td></tr></table></figure>
+<p>5.初始化一个空的 git 本地仓库</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure>
+<p>6.绑定本地仓库与远程仓库</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin [远程仓库的具体地址]</span><br></pre></td></tr></table></figure>
+<p>7.查看本地分支情况</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch</span><br></pre></td></tr></table></figure>
+<p>8.创建并切换到 <code>master</code> 分支</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b master</span><br></pre></td></tr></table></figure>
+<p>9.添加文件到暂存区</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br></pre></td></tr></table></figure>
+<p>10.将更改提交到本地仓库</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m &quot;[自定义的提交信息]&quot;</span><br></pre></td></tr></table></figure>
+<p>11.将本地仓库 push 到远程仓库</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
+<p>12.若发生冲突，则可以先暂存本地代码</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git stash -m &quot;[自定义的暂存信息]&quot;</span><br></pre></td></tr></table></figure>
+<p>13.再拉取远端代码后，pop 代码，再次 push</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git stash pop</span><br><span class="line">git pull origin master</span><br><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
+
+<ol start="14">
+<li>生成 SSH Key，在图中路径找到并复制密钥<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;你的GitHub绑定的邮箱&quot;</span><br></pre></td></tr></table></figure>
+<img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7bc3ab392f0547f4bf5594d7ec660e72~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1212&h=854&s=336984&e=png&b=fdfdfd" alt="image.png"><br>或者以下代码查看密钥</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat ~<span class="regexp">/.ssh/i</span>d_rsa.<span class="property">pub</span></span><br></pre></td></tr></table></figure>
+<p>复制密钥到GitHub上</p>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ef182221a1da48cb9224430990fe493d~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=3024&h=1508&s=436959&e=png&b=fefefe" alt="image.png"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/90ebd1dfa5fc44b587a1cc2f1b90a8d8~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1212&h=350&s=196085&e=png&b=fdfdfd" alt="image.png"></p>
+<h2 id="stash-pop-和-stash-apply-的区别"><a href="#stash-pop-和-stash-apply-的区别" class="headerlink" title="stash pop 和 stash apply 的区别"></a>stash pop 和 stash apply 的区别</h2><ul>
+<li><strong>相同处</strong>：<code>git stash apply</code> 和 <code>git stash pop</code> 都是用来从存储区（stash）恢复工作目录的命令。它们的主要区别在于处理完恢复操作后对 stash 的影响。</li>
+<li><strong>不同处</strong>：<code>pop</code> 会从 stash 中恢复保存的工作目录和索引，并将这些更改应用到当前分支上，但它与 <code>apply</code> 不同的是，<code>pop</code> 操作会从 stash 中删除恢复的 stash。</li>
+<li><strong>总结</strong>：如果你打算在多个分支之间多次应用相同的 stash，可以使用 <code>apply</code>，这样 stash 不会被删除，你可以在需要的时候再次应用。如果你只需要一次性地应用 stash 并将其删除，可以使用 <code>pop</code>。</li>
 </ul>
-<h2 id="语法与文本内容冲突"><a href="#语法与文本内容冲突" class="headerlink" title="语法与文本内容冲突"></a>语法与文本内容冲突</h2><h4 id="使用反斜杠-来将这些字符进行转义"><a href="#使用反斜杠-来将这些字符进行转义" class="headerlink" title="使用反斜杠\来将这些字符进行转义"></a>使用反斜杠<code>\</code>来将这些字符进行转义</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">*\*这样里面的文字就不会加粗了\*\*</span><br></pre></td></tr></table></figure>
-
-<h4 id="使用多个反引号来创建代码块"><a href="#使用多个反引号来创建代码块" class="headerlink" title="使用多个反引号来创建代码块"></a>使用多个反引号来创建代码块</h4><p>如果你发现转义字符不起作用（例如，在某些Markdown解析器中可能会有差异），另一个方法是使用更多的反引号来创建代码块，并在里面放置你的代码</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">`` control + ` ``</span><br></pre></td></tr></table></figure>
-
-
-
-<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/632381789">Markdown教程</a></p>
+<h2 id="git-commit-规范"><a href="#git-commit-规范" class="headerlink" title="git commit 规范"></a>git commit 规范</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">feat</span>(user-auth): add user authentication <span class="comment">// 新功能（feat）</span></span><br><span class="line"><span class="title function_">fix</span>(database): resolve issue <span class="keyword">with</span> data inconsistency <span class="comment">// Bug修复（fix）</span></span><br><span class="line"><span class="title function_">docs</span>(readme): update project documentation <span class="comment">// 文档变更（docs）</span></span><br><span class="line"><span class="title function_">perf</span>(api): improve response time <span class="keyword">for</span> data retrieval <span class="comment">// 性能优化（perf）</span></span><br><span class="line"><span class="title function_">style</span>(css): adjust layout <span class="keyword">for</span> better readability <span class="comment">// 样式修改（style）</span></span><br><span class="line"><span class="title function_">test</span>(api): add unit tests <span class="keyword">for</span> user service <span class="comment">// 测试相关（test）</span></span><br><span class="line"><span class="title function_">refactor</span>(database): restructure database schema <span class="comment">// 重构（refactor）</span></span><br><span class="line"><span class="attr">revert</span>: undo previous commit <span class="comment">// 回滚变更（revert）</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
  
       <!-- reward -->
       
@@ -195,12 +212,12 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://junglexs.github.io/2023/06/29/Markdown%20%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0%EF%BC%88MacOS%EF%BC%89/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://junglexs.github.io/2022/05/18/Git&GitHub-%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/" alt="微信分享二维码">
     </div>
 </div>
 
 <div id="share-mask"></div>  
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%B7%A5%E5%85%B7/" rel="tag">工具</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/" rel="tag">Git</a></li></ul>
 
     </footer>
   </div>
@@ -208,19 +225,19 @@
    
   <nav class="article-nav">
     
-      <a href="/2023/07/29/Hexo%20%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/" class="article-nav-link">
+      <a href="/2023/05/04/%E8%BF%90%E7%BB%B4%E7%9F%A5%E8%AF%86%E5%BA%93/" class="article-nav-link">
         <strong class="article-nav-caption">上一篇</strong>
         <div class="article-nav-title">
           
-            Hexo 使用笔记
+            运维知识库
           
         </div>
       </a>
     
     
-      <a href="/2023/06/01/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" class="article-nav-link">
+      <a href="/2022/04/12/%E3%80%8AJavsScript%E7%99%BE%E7%82%BC%E6%88%90%E4%BB%99%E3%80%8B/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">个人博客</div>
+        <div class="article-nav-title">《JavsScript百炼成仙》</div>
       </a>
     
   </nav>
