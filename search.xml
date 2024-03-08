@@ -171,7 +171,7 @@
       </tags>
   </entry>
   <entry>
-    <title>Git&amp;GitHub 使用指南</title>
+    <title>Git &amp; GitHub 使用指南</title>
     <url>/2022/05/18/Git&amp;GitHub-%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</url>
     <content><![CDATA[<h1 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h1><h2 id="本地代码上传"><a href="#本地代码上传" class="headerlink" title="本地代码上传"></a>本地代码上传</h2><p>1.建立远程仓库<br>2.切换到项目路径，打开终端<br>3.设置用户名、邮箱 </p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git config --global user.name &quot;[你的GitHub的用户名]&quot;</span><br><span class="line">git config --global user.email &quot;[你的GitHub绑定的邮箱]&quot;</span><br></pre></td></tr></table></figure>
