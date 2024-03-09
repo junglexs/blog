@@ -129,15 +129,35 @@
 <p>云服务器ECS（Elastic Compute Service）是提供可弹性伸缩的计算能力的IaaS级别云计算服务。即虚拟的物理服务器，由服务商搭建维护，用户按需租赁使用。</p>
 </blockquote>
 <p>用户可以通过互联网远程访问这些虚拟化的计算资源，并且可以根据业务需求快速地调整资源配置，例如CPU、内存、硬盘空间等。ECS消除了传统物理服务器的硬件投资和维护成本，提供了灵活、高效、可靠的计算服务。</p>
+<p>PS：不同厂商对云计算服务有不同的叫法，</p>
+<ul>
+<li>阿里云 叫 <strong>云服务器 ECS</strong>（Elastic Compute Service）</li>
+<li>腾讯云 叫 <strong>云服务器 CVM</strong>（Cloud Virtual Machine）</li>
+<li>移动云 叫 <strong>云主机 ECS</strong></li>
+</ul>
 <h2 id="云服务器-ECS-由什么组成？"><a href="#云服务器-ECS-由什么组成？" class="headerlink" title="云服务器 ECS 由什么组成？"></a>云服务器 ECS 由什么组成？</h2><p>云服务器通常包含实例、镜像、块存储、安全组、快照、网络等功能组件。</p>
-<h2 id="ECS-的特点"><a href="#ECS-的特点" class="headerlink" title="ECS 的特点"></a>ECS 的特点</h2><p>ECS的主要特点包括：</p>
-<ol>
-<li><strong>弹性和可伸缩性</strong>：用户可以根据实际需求，随时创建、删除、扩展或缩减云服务器，实现资源的动态调整。</li>
-<li><strong>成本效益</strong>：用户按实际使用的计算资源付费，避免了传统服务器固定资本开支的浪费。</li>
-<li><strong>快速部署</strong>：用户可以在几分钟内部署并启动云服务器，迅速响应业务需求。</li>
-<li><strong>安全可靠</strong>：云服务提供商通常会提供多层次的安全保护措施，保障数据安全和业务的稳定运行。</li>
-<li><strong>全球化服务</strong>：用户可以选择全球不同地区的数据中心，优化应用程序的访问速度和用户体验。</li>
-</ol>
+<ul>
+<li>实例：等同于一台虚拟服务器，内含 vCPU、内存、操作系统、网络额配置、磁盘等基础计算组件。</li>
+<li>镜像：等同于“装机盘”，为 ECS 实例提供操作系统和预装的软件。</li>
+<li>块存储：分布式数据存储设备。</li>
+<li>安全组：一种虚拟防火墙，划分安全隔离区域，实现网络访问控制</li>
+<li>快照：某一时间点云盘的实时副本，常用于数据备份&#x2F;恢复、应用容灾、制作镜像等。</li>
+<li>网络：主要是有专有网络 VPC，在逻辑上可彻底隔离的云上私有网络。</li>
+</ul>
+<p>以下是移动云的例子 </p>
+<p><strong>实例</strong>：提供各种实例规格（CPU、内存），不同 CPU 内存比，从“1核2G”到“80核1280G”，移动云的通用型s5云主机规格，s5.large.2，vCPU 2 个，内存 4GB，s5.xlarge.2则是 4C8G</p>
+<p><strong>镜像</strong>：是用于创建 ECS 的模板。支持多种 Windows 和 Linux 操作系统，可以选择公共镜像、私有镜像（已部署好业务的 ECS 可创建为自定义镜像，镜像文件.qcow2）</p>
+<p><strong>块存储</strong>：移动云的云硬盘，有多种类型：容量型、性能型、性能优化型、高性能型</p>
+<p><strong>网络</strong>：虚拟私有云 <strong>VPC</strong>（Virtual Private Cloud）基于先进的SDN 技术，为云服务器、云容器、云数据库等云上资源构建隔离、私密的虚拟网络环境，使用户能够构建独立的网络空间。支持<strong>子网管理</strong>（子网是由一组IP地址组成的地址池，每个子网相当于一个分布式虚拟交换机），支持<strong>多网卡功能</strong>（创建云主机时系统自动创建一个虚拟网卡，为云主机提供虚拟网络功能）<a href="https://ecloud.10086.cn/op-help-center/doc/article/24853">应用场景</a></p>
+<h1 id="专有宿主机-DDH"><a href="#专有宿主机-DDH" class="headerlink" title="专有宿主机 DDH"></a>专有宿主机 DDH</h1><blockquote>
+<p>专有宿主机DDH，即单租户独享物理资源的云主机，依托阿里云虚拟化服务的单租户运行环境，可按需创建ECS实例，让您独享一台云主机的所有物理资源。</p>
+</blockquote>
+<h1 id="虚拟私有云-VPC"><a href="#虚拟私有云-VPC" class="headerlink" title="虚拟私有云 VPC"></a>虚拟私有云 VPC</h1><blockquote>
+<p>虚拟私有云VPC（Virtual Private Cloud）是一个公共云计算资源的动态配置池，需要使用加密协议、隧道协议和其他安全程序，在民营企业和云服务提供商之间传输数据。一个VPC基本上把提供商的多租户架构变成单租户架构。</p>
+</blockquote>
+<h1 id="负载均衡-SLB"><a href="#负载均衡-SLB" class="headerlink" title="负载均衡 SLB"></a>负载均衡 SLB</h1><blockquote>
+<p>负载均衡 SLB（）</p>
+</blockquote>
 <h1 id="SSL-证书"><a href="#SSL-证书" class="headerlink" title="SSL 证书"></a>SSL 证书</h1><blockquote>
 <p>SSL证书（Secure Sockets Layer证书）是一种安全协议，用于在互联网上的服务器和浏览器之间建立加密链接。这意味着所有在服务器和浏览器之间传输的数据都是加密的，这有助于保护敏感信息免受黑客攻击，如信用卡信息、登录凭据和个人信息等。</p>
 </blockquote>
@@ -281,7 +301,8 @@
   <entry>
     <title>Markdown 使用笔记（MacOS）</title>
     <url>/2023/06/29/Markdown-%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0%EF%BC%88MacOS%EF%BC%89/</url>
-    <content><![CDATA[<h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><ul>
+    <content><![CDATA[<p><a href="https://zhuanlan.zhihu.com/p/632381789">Markdown教程</a></p>
+<h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><ul>
 <li>生成代码块 <code>option + command + C</code> </li>
 <li>源码模式 <code>command + /</code></li>
 <li>标题 <code>comand + 1</code> 或 2 、 3、 4</li>
@@ -302,7 +323,12 @@
 
 
 
-<p><a href="https://zhuanlan.zhihu.com/p/632381789">Markdown教程</a></p>
+
+
+
+
+
+
 ]]></content>
       <categories>
         <category>学习</category>
