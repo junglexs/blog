@@ -2,8 +2,9 @@
 <search>
   <entry>
     <title>《JavsScript百炼成仙》</title>
-    <url>/2022/04/12/%E3%80%8AJavsScript%E7%99%BE%E7%82%BC%E6%88%90%E4%BB%99%E3%80%8B/</url>
-    <content><![CDATA[<h2 id="《JavaScript百炼成仙》读书笔记"><a href="#《JavaScript百炼成仙》读书笔记" class="headerlink" title="《JavaScript百炼成仙》读书笔记"></a>《JavaScript百炼成仙》读书笔记</h2><h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><ul>
+    <url>/2021/02/12/%E3%80%8AJavsScript%E7%99%BE%E7%82%BC%E6%88%90%E4%BB%99%E3%80%8B/</url>
+    <content><![CDATA[<p>杨逸飞 编著</p>
+<h2 id="读书笔记"><a href="#读书笔记" class="headerlink" title="读书笔记"></a>读书笔记</h2><h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><ul>
 <li>本书旨在通过独特的角度和轻松的方式介绍JavaScript的核心概念和高级技巧，使读者能够深入理解并灵活运用JavaScript。</li>
 </ul>
 <h4 id="第一章：JavaScript基础精要"><a href="#第一章：JavaScript基础精要" class="headerlink" title="第一章：JavaScript基础精要"></a>第一章：JavaScript基础精要</h4><ul>
@@ -53,10 +54,7 @@
     <content><![CDATA[<h2 id="test"><a href="#test" class="headerlink" title="test"></a>test</h2><p>Typora Markdown</p>
 <p>目录规划</p>
 <ul>
-<li>学习<ul>
-<li>工具</li>
-</ul>
-</li>
+<li><h2 id="学习-工具"><a href="#学习-工具" class="headerlink" title="学习- 工具"></a>学习<br>- 工具</h2></li>
 <li>求职<ul>
 <li><p>简历</p>
 </li>
@@ -336,6 +334,111 @@
       </categories>
       <tags>
         <tag>工具</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Web 性能优化方案</title>
+    <url>/2023/06/12/Web-%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E6%96%B9%E6%A1%88/</url>
+    <content><![CDATA[<h2 id="输入-URL-到页面展示完整过程"><a href="#输入-URL-到页面展示完整过程" class="headerlink" title="输入 URL 到页面展示完整过程"></a>输入 URL 到页面展示完整过程</h2><h3 id="一、网络请求阶段"><a href="#一、网络请求阶段" class="headerlink" title="一、网络请求阶段"></a>一、网络请求阶段</h3><ol>
+<li><strong>解析URL</strong>：浏览器首先解析输入的URL（统一资源定位符），以确定要请求的资源的位置。URL通常包含协议（如HTTP或HTTPS）、服务器地址（IP地址或域名）和资源路径。</li>
+<li><strong>DNS查询</strong>：如果URL包含域名，浏览器需要将域名解析为IP地址。这是通过查询DNS（域名系统）服务器完成的。如果IP地址已经缓存（之前访问过的域名），则可以跳过这一步。</li>
+<li><strong>建立连接</strong>：浏览器根据解析得到的IP地址，尝试与服务器建立连接。对于HTTP协议，这通常意味着建立一个TCP连接。如果是HTTPS协议，则还需要建立一个安全层（SSL&#x2F;TLS）以确保数据加密。</li>
+<li><strong>发送请求</strong>：一旦连接建立，浏览器就会发送一个HTTP请求到服务器。请求包含了请求的资源（通过URL指定）、请求方法（如GET或POST）和一些头信息，这些头信息可能包括用户代理（浏览器类型和版本）、接受的内容类型等。</li>
+<li><strong>接收响应</strong>：服务器接收到请求后，会处理该请求，并将响应发送回浏览器。响应通常包含一个状态码（如200表示成功，404表示未找到等）、响应头（如内容类型、缓存控制等）和响应体（即请求的资源内容）。</li>
+</ol>
+<h3 id="二、关键渲染路径"><a href="#二、关键渲染路径" class="headerlink" title="二、关键渲染路径"></a>二、关键渲染路径</h3><blockquote>
+<p>关键渲染路径（Critical Rendering Path）是指浏览器从收到网页资源开始，到能够解析并呈现页面的过程中，必须执行的一系列步骤。这个过程涵盖了从接收 HTML、CSS、JavaScript 等文件，到解析这些文件并将其转换成可视化网页的整个流程。</p>
+</blockquote>
+<p>主要包括以下步骤：</p>
+<ol>
+<li><strong>HTML解析</strong>：浏览器从服务器接收到HTML文件，并开始逐行解析。这个过程中，浏览器会构建DOM（文档对象模型）树。</li>
+<li><strong>CSS解析</strong>：浏览器处理所有的CSS样式信息，包括外部的CSS文件和页面内的样式。这些信息被用来生成CSSOM（CSS对象模型）树。</li>
+<li><strong>渲染树构建</strong>：DOM树和CSSOM树合并后形成渲染树（Render Tree）。渲染树反映了将要显示在页面上的所有可视元素及其样式信息。</li>
+<li><strong>布局（Layout&#x2F;Reflow）</strong>：浏览器计算渲染树中每个节点的准确位置和大小。这个过程也称为重排。</li>
+<li><strong>绘制（Paint）</strong>：浏览器根据渲染树来绘制页面上的所有元素。这包括颜色、图像和文字等的具体呈现，也称为重绘。</li>
+<li><strong>合成（Composite）</strong>：如果页面中有层叠的元素（例如，使用了CSS的<code>z-index</code>属性），浏览器会在这一步骤中进行合成，确保正确的元素覆盖关系。</li>
+</ol>
+<h2 id="策略"><a href="#策略" class="headerlink" title="策略"></a>策略</h2><p>缓存机制优化</p>
+<p>1、如果当前页面注册了Service Worker那么它可以拦截当前网站所有的请求，进行判断是否需要向远程发送网络请求，如果不需要发送网络请求，则取本地文件。</p>
+<p>2、根据ur&#x2F;查询本地是否已经有强制缓存，如果有则判断缓存是否过期，如果没过期则直接返回缓存内容。</p>
+<p>3、如果服务端返回的状态码为304则直接代表协商缓存生效，直接取本地的缓存文件。</p>
+<p>优化手段</p>
+<p>Service Worker 强制缓存，协商缓存？</p>
+<p>渲染优化策略</p>
+<p>优化手段</p>
+<p>服务端渲染（SSR）,提取关键 CSS，关键渲染路径，减少包体体积</p>
+<h2 id="方案"><a href="#方案" class="headerlink" title="方案"></a>方案</h2><h3 id="减小包的体积"><a href="#减小包的体积" class="headerlink" title="减小包的体积"></a>减小包的体积</h3><h4 id="拆分包的大小"><a href="#拆分包的大小" class="headerlink" title="拆分包的大小"></a>拆分包的大小</h4><p>splitChunks</p>
+<h4 id="Angular应用-懒加载"><a href="#Angular应用-懒加载" class="headerlink" title="Angular应用 懒加载"></a>Angular应用 懒加载</h4><p>分子模块路由</p>
+<h4 id="组件库-按需加载"><a href="#组件库-按需加载" class="headerlink" title="组件库 按需加载"></a>组件库 按需加载</h4><h3 id="提高-HTML解析效率"><a href="#提高-HTML解析效率" class="headerlink" title="提高 HTML解析效率"></a>提高 HTML解析效率</h3><h4 id="提取关键-css"><a href="#提取关键-css" class="headerlink" title="提取关键 css"></a>提取关键 css</h4><blockquote>
+<p><code>html-critical-webpack-plugin</code> 是一个基于 Webpack 的插件，专门用于在构建过程中自动提取关键 CSS（Critical CSS）。关键 CSS 指的是渲染页面首屏所需的最小CSS集合。通过将这部分CSS直接内联到HTML中，可以加快页面的首次渲染时间，提升用户体验。</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install html-critical-webpack-plugin --save-dev</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="为-js-文件添加-defer-模式"><a href="#为-js-文件添加-defer-模式" class="headerlink" title="为 js 文件添加 defer 模式"></a>为 js 文件添加 defer 模式</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install script-ext-html-webpack-plugin --save-dev</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="减少卡顿"><a href="#减少卡顿" class="headerlink" title="减少卡顿"></a>减少卡顿</h3><h4 id="优化路由守卫"><a href="#优化路由守卫" class="headerlink" title="优化路由守卫"></a>优化路由守卫</h4><p>简化路由逻辑</p>
+<h4 id="webworker"><a href="#webworker" class="headerlink" title="webworker"></a>webworker</h4><p>web-work app</p>
+<blockquote>
+<p>Web Worker 提供了一种在主线程之外执行JavaScript代码的能力，这意味着你可以在一个后台线程中运行脚本，从而避免影响到主线程的性能，特别是UI的响应性和渲染。通过将计算密集型或耗时的任务移到Web Worker中，应用的主线程可以保持流畅，从而提升用户体验。</p>
+</blockquote>
+<h3 id="提升界面易用性"><a href="#提升界面易用性" class="headerlink" title="提升界面易用性"></a>提升界面易用性</h3><p>确保文本在网页字体加载期间保持可见状态</p>
+<p>font-display: swap</p>
+<p>提升页面易用性</p>
+<ul>
+<li>使用font-display：swap</li>
+<li>图片设置明确的 width 和height</li>
+<li>使用被动式监听器来提高滚动性能</li>
+<li>pagehide 代替 unload</li>
+<li>lighthouse 分析说明</li>
+</ul>
+<h2 id="性能指标"><a href="#性能指标" class="headerlink" title="性能指标"></a>性能指标</h2><p>首次渲染时间（白屏时间） FPT First Paint Time</p>
+<p>首次可交互时间 TTI Time to Interact</p>
+<p>DOM Ready时间 Ready</p>
+<p>页面完全加载时间 onLoad</p>
+]]></content>
+      <categories>
+        <category>学习</category>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>Web</tag>
+        <tag>性能优化</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>《Angular 开发入门与实战》</title>
+    <url>/2021/09/15/%E3%80%8AAngular-%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8%E4%B8%8E%E5%AE%9E%E6%88%98%E3%80%8B/</url>
+    <content><![CDATA[<p>兰泽君 著作</p>
+<h2 id="读书笔记"><a href="#读书笔记" class="headerlink" title="读书笔记"></a>读书笔记</h2><h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>Angular是一种流行的前端框架，由Google维护，专为开发动态单页应用（SPA）而设计。它鼓励使用TypeScript进行开发，这是JavaScript的一个超集，添加了静态类型等特性。</p>
+<h4 id="第一部分：Angular基础"><a href="#第一部分：Angular基础" class="headerlink" title="第一部分：Angular基础"></a>第一部分：Angular基础</h4><ul>
+<li><strong>TypeScript基础</strong>：介绍TypeScript的基本语法，以及如何在Angular项目中使用它。</li>
+<li><strong>组件和模块</strong>：解释Angular应用是如何通过组件来构建用户界面的，每个组件都有自己的逻辑和模板。模块则用来组织这些组件，以及提供服务。</li>
+<li><strong>模板和数据绑定</strong>：介绍如何使用Angular模板语法来显示数据和响应用户事件，以及单向和双向数据绑定的概念。</li>
+<li><strong>服务和依赖注入</strong>：讨论服务的概念，这是一种用于封装业务逻辑的方法，以及Angular如何使用依赖注入（DI）模式来提供这些服务。</li>
+</ul>
+<h4 id="第二部分：进阶实战"><a href="#第二部分：进阶实战" class="headerlink" title="第二部分：进阶实战"></a>第二部分：进阶实战</h4><ul>
+<li><strong>路由和导航</strong>：深入探讨Angular路由器的工作原理，如何定义路由规则，以及如何进行导航。</li>
+<li><strong>表单处理</strong>：详细说明如何使用Angular表单模块来创建和验证用户输入表单。</li>
+<li><strong>RxJS和异步编程</strong>：介绍如何使用RxJS库在Angular中处理异步操作，包括Observable和操作符的概念。</li>
+<li><strong>状态管理</strong>：探讨在Angular应用中管理状态的策略，可能包括使用NgRx或其他状态管理库。</li>
+</ul>
+<h4 id="第三部分：项目实战"><a href="#第三部分：项目实战" class="headerlink" title="第三部分：项目实战"></a>第三部分：项目实战</h4><ul>
+<li><strong>构建实际项目</strong>：通过构建一个实际的Angular应用来综合运用前面学到的知识，可能是一个电商平台、博客系统或任务管理器。</li>
+<li><strong>性能优化</strong>：介绍如何分析和提升Angular应用的性能。</li>
+<li><strong>部署和维护</strong>：讨论将Angular应用部署到生产环境的最佳实践，以及如何维护和更新现有应用。</li>
+</ul>
+<h4 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h4><p>《Angular 开发入门与实战》是一本面向希望深入了解Angular框架的前端开发人员的实用指南。通过阅读这本书，开发者不仅能掌握Angular的基础知识，还能学会如何在实际项目中应用这些知识来构建复杂的应用程序。</p>
+<p>这份读书笔记旨在概述书中可能包含的主要内容和概念，真正的学习和理解还需深入阅读原书并实践其中的示例和技巧。</p>
+]]></content>
+      <categories>
+        <category>书籍</category>
+      </categories>
+      <tags>
+        <tag>读书笔记</tag>
       </tags>
   </entry>
 </search>

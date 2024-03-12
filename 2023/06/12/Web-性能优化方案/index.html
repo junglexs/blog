@@ -11,7 +11,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title>运维知识库 |  Junglexs</title>
+      <title>Web 性能优化方案 |  Junglexs</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/favicon.ico" />
@@ -54,7 +54,7 @@
     <main class="content on">
       <section class="outer">
   <article
-  id="post-运维知识库"
+  id="post-Web-性能优化方案"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -65,7 +65,7 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  运维知识库
+  Web 性能优化方案
 </h1>
  
 
@@ -73,11 +73,11 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2023/05/04/%E8%BF%90%E7%BB%B4%E7%9F%A5%E8%AF%86%E5%BA%93/" class="article-date">
-  <time datetime="2023-05-04T12:58:06.000Z" itemprop="datePublished">2023-05-04</time>
+      <a href="/2023/06/12/Web-%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E6%96%B9%E6%A1%88/" class="article-date">
+  <time datetime="2023-06-12T13:00:16.000Z" itemprop="datePublished">2023-06-12</time>
 </a> 
   <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a> / <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0/%E8%BF%90%E7%BB%B4/">运维</a>
+    <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a> / <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0/Web/">Web</a>
   </div>
   
 <div class="word_count">
@@ -85,7 +85,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">1.1k</span>
+            <span class="post-count">1.3k</span>
         </span>
     </span>
 
@@ -94,7 +94,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> 阅读时长≈</span>
-            <span class="post-count">3 分钟</span>
+            <span class="post-count">4 分钟</span>
         </span>
     </span>
 </div>
@@ -109,44 +109,66 @@
   
     <div class="article-entry" itemprop="articleBody">
        
-  <h1 id="云服务器-ECS"><a href="#云服务器-ECS" class="headerlink" title="云服务器 ECS"></a>云服务器 ECS</h1><blockquote>
-<p>云服务器ECS（Elastic Compute Service）是提供可弹性伸缩的计算能力的IaaS级别云计算服务。即虚拟的物理服务器，由服务商搭建维护，用户按需租赁使用。</p>
+  <h2 id="输入-URL-到页面展示完整过程"><a href="#输入-URL-到页面展示完整过程" class="headerlink" title="输入 URL 到页面展示完整过程"></a>输入 URL 到页面展示完整过程</h2><h3 id="一、网络请求阶段"><a href="#一、网络请求阶段" class="headerlink" title="一、网络请求阶段"></a>一、网络请求阶段</h3><ol>
+<li><strong>解析URL</strong>：浏览器首先解析输入的URL（统一资源定位符），以确定要请求的资源的位置。URL通常包含协议（如HTTP或HTTPS）、服务器地址（IP地址或域名）和资源路径。</li>
+<li><strong>DNS查询</strong>：如果URL包含域名，浏览器需要将域名解析为IP地址。这是通过查询DNS（域名系统）服务器完成的。如果IP地址已经缓存（之前访问过的域名），则可以跳过这一步。</li>
+<li><strong>建立连接</strong>：浏览器根据解析得到的IP地址，尝试与服务器建立连接。对于HTTP协议，这通常意味着建立一个TCP连接。如果是HTTPS协议，则还需要建立一个安全层（SSL&#x2F;TLS）以确保数据加密。</li>
+<li><strong>发送请求</strong>：一旦连接建立，浏览器就会发送一个HTTP请求到服务器。请求包含了请求的资源（通过URL指定）、请求方法（如GET或POST）和一些头信息，这些头信息可能包括用户代理（浏览器类型和版本）、接受的内容类型等。</li>
+<li><strong>接收响应</strong>：服务器接收到请求后，会处理该请求，并将响应发送回浏览器。响应通常包含一个状态码（如200表示成功，404表示未找到等）、响应头（如内容类型、缓存控制等）和响应体（即请求的资源内容）。</li>
+</ol>
+<h3 id="二、关键渲染路径"><a href="#二、关键渲染路径" class="headerlink" title="二、关键渲染路径"></a>二、关键渲染路径</h3><blockquote>
+<p>关键渲染路径（Critical Rendering Path）是指浏览器从收到网页资源开始，到能够解析并呈现页面的过程中，必须执行的一系列步骤。这个过程涵盖了从接收 HTML、CSS、JavaScript 等文件，到解析这些文件并将其转换成可视化网页的整个流程。</p>
 </blockquote>
-<p>用户可以通过互联网远程访问这些虚拟化的计算资源，并且可以根据业务需求快速地调整资源配置，例如CPU、内存、硬盘空间等。ECS消除了传统物理服务器的硬件投资和维护成本，提供了灵活、高效、可靠的计算服务。</p>
-<p>PS：不同厂商对云计算服务有不同的叫法，</p>
+<p>主要包括以下步骤：</p>
+<ol>
+<li><strong>HTML解析</strong>：浏览器从服务器接收到HTML文件，并开始逐行解析。这个过程中，浏览器会构建DOM（文档对象模型）树。</li>
+<li><strong>CSS解析</strong>：浏览器处理所有的CSS样式信息，包括外部的CSS文件和页面内的样式。这些信息被用来生成CSSOM（CSS对象模型）树。</li>
+<li><strong>渲染树构建</strong>：DOM树和CSSOM树合并后形成渲染树（Render Tree）。渲染树反映了将要显示在页面上的所有可视元素及其样式信息。</li>
+<li><strong>布局（Layout&#x2F;Reflow）</strong>：浏览器计算渲染树中每个节点的准确位置和大小。这个过程也称为重排。</li>
+<li><strong>绘制（Paint）</strong>：浏览器根据渲染树来绘制页面上的所有元素。这包括颜色、图像和文字等的具体呈现，也称为重绘。</li>
+<li><strong>合成（Composite）</strong>：如果页面中有层叠的元素（例如，使用了CSS的<code>z-index</code>属性），浏览器会在这一步骤中进行合成，确保正确的元素覆盖关系。</li>
+</ol>
+<h2 id="策略"><a href="#策略" class="headerlink" title="策略"></a>策略</h2><p>缓存机制优化</p>
+<p>1、如果当前页面注册了Service Worker那么它可以拦截当前网站所有的请求，进行判断是否需要向远程发送网络请求，如果不需要发送网络请求，则取本地文件。</p>
+<p>2、根据ur&#x2F;查询本地是否已经有强制缓存，如果有则判断缓存是否过期，如果没过期则直接返回缓存内容。</p>
+<p>3、如果服务端返回的状态码为304则直接代表协商缓存生效，直接取本地的缓存文件。</p>
+<p>优化手段</p>
+<p>Service Worker 强制缓存，协商缓存？</p>
+<p>渲染优化策略</p>
+<p>优化手段</p>
+<p>服务端渲染（SSR）,提取关键 CSS，关键渲染路径，减少包体体积</p>
+<h2 id="方案"><a href="#方案" class="headerlink" title="方案"></a>方案</h2><h3 id="减小包的体积"><a href="#减小包的体积" class="headerlink" title="减小包的体积"></a>减小包的体积</h3><h4 id="拆分包的大小"><a href="#拆分包的大小" class="headerlink" title="拆分包的大小"></a>拆分包的大小</h4><p>splitChunks</p>
+<h4 id="Angular应用-懒加载"><a href="#Angular应用-懒加载" class="headerlink" title="Angular应用 懒加载"></a>Angular应用 懒加载</h4><p>分子模块路由</p>
+<h4 id="组件库-按需加载"><a href="#组件库-按需加载" class="headerlink" title="组件库 按需加载"></a>组件库 按需加载</h4><h3 id="提高-HTML解析效率"><a href="#提高-HTML解析效率" class="headerlink" title="提高 HTML解析效率"></a>提高 HTML解析效率</h3><h4 id="提取关键-css"><a href="#提取关键-css" class="headerlink" title="提取关键 css"></a>提取关键 css</h4><blockquote>
+<p><code>html-critical-webpack-plugin</code> 是一个基于 Webpack 的插件，专门用于在构建过程中自动提取关键 CSS（Critical CSS）。关键 CSS 指的是渲染页面首屏所需的最小CSS集合。通过将这部分CSS直接内联到HTML中，可以加快页面的首次渲染时间，提升用户体验。</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install html-critical-webpack-plugin --save-dev</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="为-js-文件添加-defer-模式"><a href="#为-js-文件添加-defer-模式" class="headerlink" title="为 js 文件添加 defer 模式"></a>为 js 文件添加 defer 模式</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install script-ext-html-webpack-plugin --save-dev</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="减少卡顿"><a href="#减少卡顿" class="headerlink" title="减少卡顿"></a>减少卡顿</h3><h4 id="优化路由守卫"><a href="#优化路由守卫" class="headerlink" title="优化路由守卫"></a>优化路由守卫</h4><p>简化路由逻辑</p>
+<h4 id="webworker"><a href="#webworker" class="headerlink" title="webworker"></a>webworker</h4><p>web-work app</p>
+<blockquote>
+<p>Web Worker 提供了一种在主线程之外执行JavaScript代码的能力，这意味着你可以在一个后台线程中运行脚本，从而避免影响到主线程的性能，特别是UI的响应性和渲染。通过将计算密集型或耗时的任务移到Web Worker中，应用的主线程可以保持流畅，从而提升用户体验。</p>
+</blockquote>
+<h3 id="提升界面易用性"><a href="#提升界面易用性" class="headerlink" title="提升界面易用性"></a>提升界面易用性</h3><p>确保文本在网页字体加载期间保持可见状态</p>
+<p>font-display: swap</p>
+<p>提升页面易用性</p>
 <ul>
-<li>阿里云 叫 <strong>云服务器 ECS</strong>（Elastic Compute Service）</li>
-<li>腾讯云 叫 <strong>云服务器 CVM</strong>（Cloud Virtual Machine）</li>
-<li>移动云 叫 <strong>云主机 ECS</strong></li>
+<li>使用font-display：swap</li>
+<li>图片设置明确的 width 和height</li>
+<li>使用被动式监听器来提高滚动性能</li>
+<li>pagehide 代替 unload</li>
+<li>lighthouse 分析说明</li>
 </ul>
-<h2 id="云服务器-ECS-由什么组成？"><a href="#云服务器-ECS-由什么组成？" class="headerlink" title="云服务器 ECS 由什么组成？"></a>云服务器 ECS 由什么组成？</h2><p>云服务器通常包含实例、镜像、块存储、安全组、快照、网络等功能组件。</p>
-<ul>
-<li>实例：等同于一台虚拟服务器，内含 vCPU、内存、操作系统、网络额配置、磁盘等基础计算组件。</li>
-<li>镜像：等同于“装机盘”，为 ECS 实例提供操作系统和预装的软件。</li>
-<li>块存储：分布式数据存储设备。</li>
-<li>安全组：一种虚拟防火墙，划分安全隔离区域，实现网络访问控制</li>
-<li>快照：某一时间点云盘的实时副本，常用于数据备份&#x2F;恢复、应用容灾、制作镜像等。</li>
-<li>网络：主要是有专有网络 VPC，在逻辑上可彻底隔离的云上私有网络。</li>
-</ul>
-<p>以下是移动云的例子 </p>
-<p><strong>实例</strong>：提供各种实例规格（CPU、内存），不同 CPU 内存比，从“1核2G”到“80核1280G”，移动云的通用型s5云主机规格，s5.large.2，vCPU 2 个，内存 4GB，s5.xlarge.2则是 4C8G</p>
-<p><strong>镜像</strong>：是用于创建 ECS 的模板。支持多种 Windows 和 Linux 操作系统，可以选择公共镜像、私有镜像（已部署好业务的 ECS 可创建为自定义镜像，镜像文件.qcow2）</p>
-<p><strong>块存储</strong>：移动云的云硬盘，有多种类型：容量型、性能型、性能优化型、高性能型</p>
-<p><strong>网络</strong>：虚拟私有云 <strong>VPC</strong>（Virtual Private Cloud）基于先进的SDN 技术，为云服务器、云容器、云数据库等云上资源构建隔离、私密的虚拟网络环境，使用户能够构建独立的网络空间。支持<strong>子网管理</strong>（子网是由一组IP地址组成的地址池，每个子网相当于一个分布式虚拟交换机），支持<strong>多网卡功能</strong>（创建云主机时系统自动创建一个虚拟网卡，为云主机提供虚拟网络功能）<a target="_blank" rel="noopener" href="https://ecloud.10086.cn/op-help-center/doc/article/24853">应用场景</a></p>
-<h1 id="专有宿主机-DDH"><a href="#专有宿主机-DDH" class="headerlink" title="专有宿主机 DDH"></a>专有宿主机 DDH</h1><blockquote>
-<p>专有宿主机DDH，即单租户独享物理资源的云主机，依托阿里云虚拟化服务的单租户运行环境，可按需创建ECS实例，让您独享一台云主机的所有物理资源。</p>
-</blockquote>
-<h1 id="虚拟私有云-VPC"><a href="#虚拟私有云-VPC" class="headerlink" title="虚拟私有云 VPC"></a>虚拟私有云 VPC</h1><blockquote>
-<p>虚拟私有云VPC（Virtual Private Cloud）是一个公共云计算资源的动态配置池，需要使用加密协议、隧道协议和其他安全程序，在民营企业和云服务提供商之间传输数据。一个VPC基本上把提供商的多租户架构变成单租户架构。</p>
-</blockquote>
-<h1 id="负载均衡-SLB"><a href="#负载均衡-SLB" class="headerlink" title="负载均衡 SLB"></a>负载均衡 SLB</h1><blockquote>
-<p>负载均衡 SLB（）</p>
-</blockquote>
-<h1 id="SSL-证书"><a href="#SSL-证书" class="headerlink" title="SSL 证书"></a>SSL 证书</h1><blockquote>
-<p>SSL证书（Secure Sockets Layer证书）是一种安全协议，用于在互联网上的服务器和浏览器之间建立加密链接。这意味着所有在服务器和浏览器之间传输的数据都是加密的，这有助于保护敏感信息免受黑客攻击，如信用卡信息、登录凭据和个人信息等。</p>
-</blockquote>
-<p>SSL证书的工作原理是通过使用公钥和私钥来加密数据。当用户访问使用SSL的网站时，浏览器和服务器会进行一个称为”握手”的过程，以建立一个加密连接。SSL证书还包含了证书持有人的身份信息，并由第三方机构（证书颁发机构，CA）签发和验证，以确保用户访问的网站是合法的。</p>
-<p>可以在阿里云，申请免费证书，但免费证书的签发有效期是 3 个月（之前是 12 个月），到期要重新申请。</p>
+<h2 id="性能指标"><a href="#性能指标" class="headerlink" title="性能指标"></a>性能指标</h2><p>首次渲染时间（白屏时间） FPT First Paint Time</p>
+<p>首次可交互时间 TTI Time to Interact</p>
+<p>DOM Ready时间 Ready</p>
+<p>页面完全加载时间 onLoad</p>
  
       <!-- reward -->
       
@@ -211,12 +233,12 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://junglexs.github.io/2023/05/04/%E8%BF%90%E7%BB%B4%E7%9F%A5%E8%AF%86%E5%BA%93/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://junglexs.github.io/2023/06/12/Web-%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E6%96%B9%E6%A1%88/" alt="微信分享二维码">
     </div>
 </div>
 
 <div id="share-mask"></div>  
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%BF%90%E7%BB%B4/" rel="tag">运维</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Web/" rel="tag">Web</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/" rel="tag">性能优化</a></li></ul>
 
     </footer>
   </div>
@@ -224,19 +246,19 @@
    
   <nav class="article-nav">
     
-      <a href="/2023/06/12/Web-%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E6%96%B9%E6%A1%88/" class="article-nav-link">
+      <a href="/2023/07/29/Hexo-%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/" class="article-nav-link">
         <strong class="article-nav-caption">上一篇</strong>
         <div class="article-nav-title">
           
-            Web 性能优化方案
+            Hexo 使用笔记
           
         </div>
       </a>
     
     
-      <a href="/2022/06/29/Markdown-%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0%EF%BC%88MacOS%EF%BC%89/" class="article-nav-link">
+      <a href="/2023/05/04/%E8%BF%90%E7%BB%B4%E7%9F%A5%E8%AF%86%E5%BA%93/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">Markdown 使用笔记（MacOS）</div>
+        <div class="article-nav-title">运维知识库</div>
       </a>
     
   </nav>
