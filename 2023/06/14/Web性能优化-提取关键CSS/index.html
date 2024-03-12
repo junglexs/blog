@@ -11,7 +11,7 @@
         name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <title>Web |  Junglexs</title>
+      <title>Web性能优化-提取关键CSS |  Junglexs</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/favicon.ico" />
@@ -53,155 +53,188 @@
       
     <main class="content on">
       <section class="outer">
+  <article
+  id="post-Web性能优化-提取关键CSS"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  Web性能优化-提取关键CSS
+</h1>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/06/14/Web%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96-%E6%8F%90%E5%8F%96%E5%85%B3%E9%94%AECSS/" class="article-date">
+  <time datetime="2023-06-14T14:34:52.000Z" itemprop="datePublished">2023-06-14</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a> / <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0/Web/">Web</a>
+  </div>
   
-  <ul class="ads">
-    
-        <li>
-            <a href="">
-                <img src="" width="300" alt="">
-            </a>
-        </li>
-    
-        <li>
-            <a href="">
-                <img src="" width="300" alt="">
-            </a>
-        </li>
-    
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> 字数统计:</span>
+            <span class="post-count">497</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> 阅读时长≈</span>
+            <span class="post-count">1 分钟</span>
+        </span>
+    </span>
+</div>
+ 
+    </div>
+      
+    <div class="tocbot"></div>
+
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h3 id="工作原理"><a href="#工作原理" class="headerlink" title="工作原理"></a>工作原理</h3><p>当你使用 Webpack 构建你的前端资源时，<code>html-critical-webpack-plugin</code> 会分析你的应用程序的HTML输出和CSS文件，自动提取出对首屏渲染至关重要的CSS，并将这些CSS内联到HTML文件的<code>&lt;head&gt;</code>部分。这样做的好处是可以减少外部CSS文件的请求，从而加速页面的加载时间。</p>
+<h3 id="主要特点"><a href="#主要特点" class="headerlink" title="主要特点"></a>主要特点</h3><ul>
+<li><strong>自动提取关键CSS</strong>：无需手动确定哪些样式是关键样式，插件会自动进行提取。</li>
+<li><strong>提升页面加载性能</strong>：通过减少初始加载所需的HTTP请求数量，加速首次内容呈现（FCP）和首次有意义的绘制（FMP）。</li>
+<li><strong>易于集成</strong>：作为一个Webpack插件，它可以轻松地集成到现有的Webpack构建流程中，不需要大量的配置。</li>
 </ul>
-  
-  
-  <article class="articles">
-    
-    
-    <h1 class="page-type-title">Web</h1>
-    
-    
-  
-  
-  
-  
-  
-  
-  <div class="archives-wrap">
-    <div class="archive-year-wrap">
-      <a href="/archives/2023" class="archive-year">2023</a>
-    </div>
-    <div class="archives">
-      
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2023/06/15/Web%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96-WebWorker/" class="archive-article-date">
-  <time datetime="2023-06-15T14:46:41.000Z" itemprop="datePublished">06/15</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2023/06/15/Web%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96-WebWorker/"
-    >Web性能优化-Web Worker</a> 
-</h2>
+<h3 id="使用方式"><a href="#使用方式" class="headerlink" title="使用方式"></a>使用方式</h3><p>要在你的项目中使用<code>html-critical-webpack-plugin</code>，你需要首先安装这个插件。一般可以通过npm或yarn来安装：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install html-critical-webpack-plugin --save-dev</span><br></pre></td></tr></table></figure>
+
+<p>然后，在你的webpack配置文件中引入并配置这个插件：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title class_">HtmlCriticalWebpackPlugin</span> = <span class="built_in">require</span>(<span class="string">&#x27;html-critical-webpack-plugin&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">    <span class="comment">// 其他webpack配置...</span></span><br><span class="line">    <span class="attr">plugins</span>: [</span><br><span class="line">        <span class="keyword">new</span> <span class="title class_">HtmlCriticalWebpackPlugin</span>(&#123;</span><br><span class="line">            <span class="attr">base</span>: path.<span class="title function_">join</span>(path.<span class="title function_">resolve</span>(__dirname), <span class="string">&#x27;dist/&#x27;</span>),</span><br><span class="line">            <span class="attr">src</span>: <span class="string">&#x27;index.html&#x27;</span>,</span><br><span class="line">            <span class="attr">dest</span>: <span class="string">&#x27;index.html&#x27;</span>,</span><br><span class="line">            <span class="attr">inline</span>: <span class="literal">true</span>,</span><br><span class="line">            <span class="attr">minify</span>: <span class="literal">true</span>,</span><br><span class="line">            <span class="attr">extract</span>: <span class="literal">true</span>,</span><br><span class="line">            <span class="attr">width</span>: <span class="number">1300</span>,</span><br><span class="line">            <span class="attr">height</span>: <span class="number">900</span>,</span><br><span class="line">            <span class="attr">penthouse</span>: &#123;</span><br><span class="line">                <span class="attr">blockJSRequests</span>: <span class="literal">false</span>,</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">    ]</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><ul>
+<li><strong>兼容性</strong>：确保你的Webpack版本与插件版本兼容。</li>
+<li><strong>配置选项</strong>：<code>html-critical-webpack-plugin</code> 提供了多种配置选项，包括但不限于页面尺寸（用于模拟设备视口），以及是否内联关键CSS。根据项目的实际需要进行调整。</li>
+<li><strong>构建性能</strong>：提取关键CSS可能会增加构建时间，特别是对于大型项目，建议仅在生产环境构建中启用此插件。</li>
+</ul>
+<p>通过合理配置和使用<code>html-critical-webpack-plugin</code>，可以有效地优化你的前端项目的加载时间，提升用户体验。</p>
  
-
-    </header>
-    
-      
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a> / <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0/Web/">Web</a>
-  </div>
-
-    
-    
-  </div>
-</article>
-      
-  
-  
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2023/06/14/Web%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96-%E6%8F%90%E5%8F%96%E5%85%B3%E9%94%AECSS/" class="archive-article-date">
-  <time datetime="2023-06-14T14:34:52.000Z" itemprop="datePublished">06/14</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2023/06/14/Web%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96-%E6%8F%90%E5%8F%96%E5%85%B3%E9%94%AECSS/"
-    >Web性能优化-提取关键CSS</a> 
-</h2>
- 
-
-    </header>
-    
-      
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a> / <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0/Web/">Web</a>
-  </div>
-
-    
-    
-  </div>
-</article>
-      
-  
-  
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2023/06/13/Web%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96-JS%E6%96%87%E4%BB%B6%E6%B7%BB%E5%8A%A0defer/" class="archive-article-date">
-  <time datetime="2023-06-13T14:37:40.000Z" itemprop="datePublished">06/13</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2023/06/13/Web%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96-JS%E6%96%87%E4%BB%B6%E6%B7%BB%E5%8A%A0defer/"
-    >Web性能优化-JS文件添加defer</a> 
-</h2>
- 
-
-    </header>
-    
-      
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a> / <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0/Web/">Web</a>
-  </div>
-
-    
-    
-  </div>
-</article>
-      
-  
-  
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2023/06/12/Web%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E6%96%B9%E6%A1%88/" class="archive-article-date">
-  <time datetime="2023-06-12T13:00:16.000Z" itemprop="datePublished">06/12</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2023/06/12/Web%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E6%96%B9%E6%A1%88/"
-    >Web 性能优化方案</a> 
-</h2>
- 
-
-    </header>
-    
-      
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a> / <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0/Web/">Web</a>
-  </div>
-
-    
-    
-  </div>
-</article>
-      
+      <!-- reward -->
       
     </div>
+    
+
+    <!-- copyright -->
+    
+    <div class="declare">
+      <ul class="post-copyright">
+        <li>
+          <i class="ri-copyright-line"></i>
+          <strong>版权声明： </strong>
+          
+          本博客所有文章除特别声明外，著作权归作者所有。转载请注明出处！
+          
+        </li>
+      </ul>
+    </div>
+    
+    <footer class="article-footer">
+       
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://junglexs.github.io/2023/06/14/Web%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96-%E6%8F%90%E5%8F%96%E5%85%B3%E9%94%AECSS/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>  
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Web/" rel="tag">Web</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/" rel="tag">性能优化</a></li></ul>
+
+    </footer>
   </div>
-  
-  
+
+   
+  <nav class="article-nav">
+    
+      <a href="/2023/06/15/Web%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96-WebWorker/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            Web性能优化-Web Worker
+          
+        </div>
+      </a>
+    
+    
+      <a href="/2023/06/13/Web%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96-JS%E6%96%87%E4%BB%B6%E6%B7%BB%E5%8A%A0defer/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">Web性能优化-JS文件添加defer</div>
+      </a>
+    
+  </nav>
 
   
+   
+  
+   
+    <script src="https://cdn.staticfile.org/twikoo/1.4.18/twikoo.all.min.js"></script>
+    <div id="twikoo" class="twikoo"></div>
+    <script>
+        twikoo.init({
+            envId: ""
+        })
+    </script>
+ 
+</article>
+
 </section>
       <footer class="footer">
   <div class="outer">
@@ -350,6 +383,22 @@
 <script src="/js/lazyload.min.js"></script>
 
 <!-- Tocbot -->
+ 
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
+  });
+</script>
 
 <script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
 <link
