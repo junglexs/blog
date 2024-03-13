@@ -153,14 +153,14 @@
     <link href="https://junglexs.github.io/2023/06/15/Web%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96-WebWorker/"/>
     <id>https://junglexs.github.io/2023/06/15/Web%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96-WebWorker/</id>
     <published>2023-06-15T14:46:41.000Z</published>
-    <updated>2024-03-12T14:51:02.285Z</updated>
+    <updated>2024-03-13T11:53:40.428Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;Web Worker 提供了一种在主线程之外执行JavaScript代码的能力，这意味着你可以在一个后台线程中运行脚本，从而避免影响到主线程的性能，特别是UI的响应性和渲染。通过将计算密集型或耗时的任务移到Web</summary>
+    <summary type="html">&lt;p&gt;Web Worker 提供了一种在主线程之外执行 JavaScript 代码的能力，这意味着你可以在一个后台线程中运行脚本，从而避免影响到主线程的性能，特别是 UI 的响应性和渲染。通过将计算密集型或耗时的任务移到Web</summary>
         
       
     
@@ -249,6 +249,35 @@
         
         
     <summary type="html">&lt;h2 id=&quot;输入-URL-到页面展示完整过程&quot;&gt;&lt;a href=&quot;#输入-URL-到页面展示完整过程&quot; class=&quot;headerlink&quot; title=&quot;输入 URL 到页面展示完整过程&quot;&gt;&lt;/a&gt;输入 URL 到页面展示完整过程&lt;/h2&gt;&lt;h3</summary>
+        
+      
+    
+    
+    
+    <category term="学习" scheme="https://junglexs.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="Web" scheme="https://junglexs.github.io/categories/%E5%AD%A6%E4%B9%A0/Web/"/>
+    
+    
+    <category term="Web" scheme="https://junglexs.github.io/tags/Web/"/>
+    
+    <category term="性能优化" scheme="https://junglexs.github.io/tags/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Web性能优化-提取公共代码</title>
+    <link href="https://junglexs.github.io/2023/06/12/Web%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96-%E6%8F%90%E5%8F%96%E5%85%AC%E5%85%B1%E4%BB%A3%E7%A0%81/"/>
+    <id>https://junglexs.github.io/2023/06/12/Web%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96-%E6%8F%90%E5%8F%96%E5%85%AC%E5%85%B1%E4%BB%A3%E7%A0%81/</id>
+    <published>2023-06-12T11:57:47.000Z</published>
+    <updated>2024-03-13T11:59:47.188Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;要在 Angular 项目中引入 &lt;code&gt;splitChunks&lt;/code&gt; 插件来进行代码分割和优化，推荐的方式是通过 &lt;code&gt;ngx-build-plus&lt;/code&gt; 扩展 Angular CLI 的 Webpack 配置。由于 Angular CLI</summary>
         
       
     
