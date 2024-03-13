@@ -6,7 +6,7 @@
   <link href="https://junglexs.github.io/atom.xml" rel="self"/>
   
   <link href="https://junglexs.github.io/"/>
-  <updated>2024-03-06T17:11:10.509Z</updated>
+  <updated>2024-03-06T17:10:50.863Z</updated>
   <id>https://junglexs.github.io/</id>
   
   <author>
@@ -15,34 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>求职技巧</title>
-    <link href="https://junglexs.github.io/2024/03/04/%E6%B1%82%E8%81%8C%E6%8A%80%E5%B7%A7/"/>
-    <id>https://junglexs.github.io/2024/03/04/%E6%B1%82%E8%81%8C%E6%8A%80%E5%B7%A7/</id>
-    <published>2024-03-04T15:13:03.000Z</published>
-    <updated>2024-03-06T17:11:10.509Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;B站鱼皮&lt;/p&gt;
-&lt;h4 id=&quot;Part-1、求职的几个阶段&quot;&gt;&lt;a href=&quot;#Part-1、求职的几个阶段&quot; class=&quot;headerlink&quot; title=&quot;Part 1、求职的几个阶段&quot;&gt;&lt;/a&gt;Part 1、求职的几个阶段&lt;/h4&gt;&lt;p&gt;技术积累 -》</summary>
-        
-      
-    
-    
-    
-    <category term="求职" scheme="https://junglexs.github.io/categories/%E6%B1%82%E8%81%8C/"/>
-    
-    <category term="面试" scheme="https://junglexs.github.io/categories/%E6%B1%82%E8%81%8C/%E9%9D%A2%E8%AF%95/"/>
-    
-    
-    <category term="面试" scheme="https://junglexs.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
-    
-  </entry>
   
   <entry>
     <title>面试官问我按钮级别权限怎么控制，我说v-if，面试官说再见</title>
