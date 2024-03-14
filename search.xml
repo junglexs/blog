@@ -523,7 +523,7 @@
       </tags>
   </entry>
   <entry>
-    <title>Web性能优化-SplitChunks 提取公共代码</title>
+    <title>Web性能优化-SplitChunks提取公共代码</title>
     <url>/2023/06/12/Web%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96-SplitChunks%E6%8F%90%E5%8F%96%E5%85%AC%E5%85%B1%E4%BB%A3%E7%A0%81/</url>
     <content><![CDATA[<p>要在 Angular 项目中引入 <code>splitChunks</code> 插件来进行代码分割和优化，推荐的方式是通过 <code>ngx-build-plus</code> 扩展 Angular CLI 的 Webpack 配置。由于 Angular CLI 默认隐藏了 Webpack 的配置文件，使用 <code>ngx-build-plus</code> 允许你在不直接修改内部配置的情况下，添加自定义的 Webpack 配置。</p>
 <p>以下是引入 <code>splitChunks</code> 的步骤：</p>
