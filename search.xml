@@ -372,8 +372,11 @@
     <content><![CDATA[<h2 id="test"><a href="#test" class="headerlink" title="test"></a>test</h2><p>Typora Markdown</p>
 <p>目录规划</p>
 <ul>
-<li><h2 id="知识库-工具"><a href="#知识库-工具" class="headerlink" title="知识库- 工具"></a>知识库<br>- 工具</h2></li>
-<li>求职<ul>
+<li>知识库<ul>
+<li>计算机网络</li>
+</ul>
+</li>
+<li>工作<ul>
 <li><p>简历</p>
 </li>
 <li><p>面试</p>
@@ -386,6 +389,11 @@
 <li>随笔</li>
 <li>旅游</li>
 </ul>
+<p>图床</p>
+<p>接入评论系统</p>
+<p>图文</p>
+<p>音乐</p>
+<p>视频</p>
 ]]></content>
       <categories>
         <category>知识库</category>
@@ -445,6 +453,7 @@
 </blockquote>
 <p>SSL证书的工作原理是通过使用公钥和私钥来加密数据。当用户访问使用SSL的网站时，浏览器和服务器会进行一个称为”握手”的过程，以建立一个加密连接。SSL证书还包含了证书持有人的身份信息，并由第三方机构（证书颁发机构，CA）签发和验证，以确保用户访问的网站是合法的。</p>
 <p>可以在阿里云，申请免费证书，但免费证书的签发有效期是 3 个月（之前是 12 个月），到期要重新申请。</p>
+<p>PS：在宝塔面板中添加 SSL 证书的<strong>密钥（key）</strong>和<strong>证书（pem）</strong>，并打开强制 HTTPS，别忘了安全组里要开放 <strong>https（443）</strong>端口</p>
 ]]></content>
       <categories>
         <category>知识库</category>
