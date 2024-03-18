@@ -6,7 +6,7 @@
   <link href="https://junglexs.github.io/atom.xml" rel="self"/>
   
   <link href="https://junglexs.github.io/"/>
-  <updated>2024-03-18T14:11:25.496Z</updated>
+  <updated>2024-03-06T17:10:50.863Z</updated>
   <id>https://junglexs.github.io/</id>
   
   <author>
@@ -15,25 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>【MacOS】使用笔记</title>
-    <link href="https://junglexs.github.io/2024/03/18/%E3%80%90MacOS%E3%80%91%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/"/>
-    <id>https://junglexs.github.io/2024/03/18/%E3%80%90MacOS%E3%80%91%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/</id>
-    <published>2024-03-18T13:59:51.000Z</published>
-    <updated>2024-03-18T14:11:25.496Z</updated>
-    
-    
-    
-    
-    <category term="知识库" scheme="https://junglexs.github.io/categories/%E7%9F%A5%E8%AF%86%E5%BA%93/"/>
-    
-    <category term="MacOS" scheme="https://junglexs.github.io/categories/%E7%9F%A5%E8%AF%86%E5%BA%93/MacOS/"/>
-    
-    
-    <category term="MacOS" scheme="https://junglexs.github.io/tags/MacOS/"/>
-    
-  </entry>
   
   <entry>
     <title>面试官问我按钮级别权限怎么控制，我说v-if，面试官说再见</title>
@@ -422,6 +403,25 @@
     <category term="Git" scheme="https://junglexs.github.io/tags/Git/"/>
     
     <category term="GitHub" scheme="https://junglexs.github.io/tags/GitHub/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【MacOS】使用笔记</title>
+    <link href="https://junglexs.github.io/2021/11/25/%E3%80%90MacOS%E3%80%91%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/"/>
+    <id>https://junglexs.github.io/2021/11/25/%E3%80%90MacOS%E3%80%91%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/</id>
+    <published>2021-11-25T13:59:51.000Z</published>
+    <updated>2024-03-18T14:18:00.182Z</updated>
+    
+    
+    
+    
+    <category term="知识库" scheme="https://junglexs.github.io/categories/%E7%9F%A5%E8%AF%86%E5%BA%93/"/>
+    
+    <category term="MacOS" scheme="https://junglexs.github.io/categories/%E7%9F%A5%E8%AF%86%E5%BA%93/MacOS/"/>
+    
+    
+    <category term="MacOS" scheme="https://junglexs.github.io/tags/MacOS/"/>
     
   </entry>
   
