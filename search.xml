@@ -617,8 +617,42 @@
       </tags>
   </entry>
   <entry>
-    <title>VSCode插件</title>
-    <url>/2021/10/18/VSCode%E6%8F%92%E4%BB%B6/</url>
+    <title>React 笔记</title>
+    <url>/2023/07/25/React-%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<h4 id="创建-react-项目"><a href="#创建-react-项目" class="headerlink" title="创建 react 项目"></a>创建 react 项目</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">npx creact-react-app react-basic</span><br></pre></td></tr></table></figure>
+
+
+
+<p>index.js</p>
+<p>App.js</p>
+<p>创建 react</p>
+<p><a href="https://zh-hans.react.dev/learn/start-a-new-react-project">https://zh-hans.react.dev/learn/start-a-new-react-project</a></p>
+<h4 id="JSX"><a href="#JSX" class="headerlink" title="JSX"></a>JSX</h4><p>JavaScript 和XML的缩写</p>
+<p>在 JS 中编写 HTML 模板结构</p>
+<p>通过 Babel 编译</p>
+<p>组件化开发模式</p>
+<h4 id="useState"><a href="#useState" class="headerlink" title="useState"></a>useState</h4><p>数据驱动视图</p>
+<p>直接修改原对象 是无法改变视图的</p>
+<p>需要替换整个对象</p>
+<p>组件样式</p>
+<p>拓展：tailwind 样式是什么？</p>
+<p>浏览器插件：React Developer Tools</p>
+<p>利用 lodash 实现排序</p>
+<p>_.ordeBy</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">npm install classnames</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>知识库</category>
+        <category>React</category>
+      </categories>
+      <tags>
+        <tag>React</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>VSCode 插件</title>
+    <url>/2021/10/18/VSCode-%E6%8F%92%E4%BB%B6/</url>
     <content><![CDATA[<ol>
 <li>GitLens</li>
 <li>Error Lens</li>
@@ -650,5 +684,12 @@
 <p>设置中搜索Wrap Tabs，并打勾</p>
 </blockquote>
 ]]></content>
+      <categories>
+        <category>知识库</category>
+        <category>VSCode</category>
+      </categories>
+      <tags>
+        <tag>VSCode</tag>
+      </tags>
   </entry>
 </search>
