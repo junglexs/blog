@@ -616,4 +616,39 @@
         <tag>性能优化</tag>
       </tags>
   </entry>
+  <entry>
+    <title>VSCode插件</title>
+    <url>/2021/10/18/VSCode%E6%8F%92%E4%BB%B6/</url>
+    <content><![CDATA[<ol>
+<li>GitLens</li>
+<li>Error Lens</li>
+<li>Auto Rename Tag</li>
+<li>AZ AL Dev Tools&#x2F;AL Code Outline，梳理代码结构的插件</li>
+<li>Better Comments</li>
+<li>Turbo Console Log 自动写console</li>
+<li>Bracket Pair Colorizer2，颜色区分括号</li>
+<li>Chinese</li>
+<li>Code Runner</li>
+<li>Code Spell Checker</li>
+<li>Color Highlight</li>
+<li>ESLint， 格式化代码</li>
+<li>翻译（英汉词典）</li>
+<li>Image preview</li>
+<li>indent-rainbow，缩进高亮</li>
+<li>Regex Previewer 预览正则表达式</li>
+<li>Material Icon Theme</li>
+<li>open inbrowser</li>
+<li>Partial Diff</li>
+<li>Postcode</li>
+<li>Project Manager</li>
+<li>Zhihu On VSCode（摸鱼专用）</li>
+</ol>
+<h1 id="VSCode-设置"><a href="#VSCode-设置" class="headerlink" title="VSCode 设置"></a>VSCode 设置</h1><ul>
+<li>设置多行 Tabs</li>
+</ul>
+<blockquote>
+<p>设置中搜索Wrap Tabs，并打勾</p>
+</blockquote>
+]]></content>
+  </entry>
 </search>
