@@ -413,7 +413,7 @@
       </categories>
   </entry>
   <entry>
-    <title>运维</title>
+    <title>【服务器】</title>
     <url>/2023/05/04/%E6%9C%8D%E5%8A%A1%E5%99%A8/</url>
     <content><![CDATA[<h1 id="云服务器-ECS"><a href="#云服务器-ECS" class="headerlink" title="云服务器 ECS"></a>云服务器 ECS</h1><blockquote>
 <p>云服务器ECS（Elastic Compute Service）是提供可弹性伸缩的计算能力的IaaS级别云计算服务。即虚拟的物理服务器，由服务商搭建维护，用户按需租赁使用。</p>
@@ -504,7 +504,7 @@
       </tags>
   </entry>
   <entry>
-    <title>计算机网络</title>
+    <title>【计算机网络】</title>
     <url>/2022/06/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</url>
     <content><![CDATA[]]></content>
       <categories>
@@ -691,5 +691,10 @@
       <tags>
         <tag>VSCode</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>MacOS-使用笔记</title>
+    <url>/2024/03/18/MacOS-%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[]]></content>
   </entry>
 </search>
