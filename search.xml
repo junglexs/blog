@@ -542,7 +542,7 @@
 </li>
 <li><p>面试</p>
 </li>
-<li><p>刷题</p>
+<li><p>LeetCode</p>
 </li>
 </ul>
 </li>
@@ -728,6 +728,32 @@
       </categories>
       <tags>
         <tag>读书笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【Chrome】使用指南</title>
+    <url>/2022/04/19/%E3%80%90Chrome%E3%80%91%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</url>
+    <content><![CDATA[<p>Google Chrome</p>
+<p>谷歌浏览器</p>
+<h1 id="拓展程序"><a href="#拓展程序" class="headerlink" title="拓展程序"></a>拓展程序</h1><ol>
+<li>【Google 翻译 】选中翻译</li>
+<li>【沉浸式翻译】（巨好用）双语对照</li>
+<li>【Proxy SwitchOmega】 管理和切换代理</li>
+<li>【JSON Formatter】</li>
+<li>【CSS Peeper】</li>
+<li>【Lighthouse】分析、改善网页性能</li>
+<li>【React Developer Tools】React 开发</li>
+<li>【Redux DevTools】</li>
+<li>【Shazam】听歌识曲</li>
+<li></li>
+</ol>
+]]></content>
+      <categories>
+        <category>知识库</category>
+        <category>Chrome</category>
+      </categories>
+      <tags>
+        <tag>Chrome</tag>
       </tags>
   </entry>
 </search>
