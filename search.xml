@@ -152,6 +152,38 @@
       </tags>
   </entry>
   <entry>
+    <title>《Angular 开发入门与实战》</title>
+    <url>/2021/09/15/%E3%80%8AAngular%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8%E4%B8%8E%E5%AE%9E%E6%88%98%E3%80%8B/</url>
+    <content><![CDATA[<p>兰泽君 著作</p>
+<h2 id="读书笔记"><a href="#读书笔记" class="headerlink" title="读书笔记"></a>读书笔记</h2><h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>Angular是一种流行的前端框架，由Google维护，专为开发动态单页应用（SPA）而设计。它鼓励使用TypeScript进行开发，这是JavaScript的一个超集，添加了静态类型等特性。</p>
+<h4 id="第一部分：Angular基础"><a href="#第一部分：Angular基础" class="headerlink" title="第一部分：Angular基础"></a>第一部分：Angular基础</h4><ul>
+<li><strong>TypeScript基础</strong>：介绍TypeScript的基本语法，以及如何在Angular项目中使用它。</li>
+<li><strong>组件和模块</strong>：解释Angular应用是如何通过组件来构建用户界面的，每个组件都有自己的逻辑和模板。模块则用来组织这些组件，以及提供服务。</li>
+<li><strong>模板和数据绑定</strong>：介绍如何使用Angular模板语法来显示数据和响应用户事件，以及单向和双向数据绑定的概念。</li>
+<li><strong>服务和依赖注入</strong>：讨论服务的概念，这是一种用于封装业务逻辑的方法，以及Angular如何使用依赖注入（DI）模式来提供这些服务。</li>
+</ul>
+<h4 id="第二部分：进阶实战"><a href="#第二部分：进阶实战" class="headerlink" title="第二部分：进阶实战"></a>第二部分：进阶实战</h4><ul>
+<li><strong>路由和导航</strong>：深入探讨Angular路由器的工作原理，如何定义路由规则，以及如何进行导航。</li>
+<li><strong>表单处理</strong>：详细说明如何使用Angular表单模块来创建和验证用户输入表单。</li>
+<li><strong>RxJS和异步编程</strong>：介绍如何使用RxJS库在Angular中处理异步操作，包括Observable和操作符的概念。</li>
+<li><strong>状态管理</strong>：探讨在Angular应用中管理状态的策略，可能包括使用NgRx或其他状态管理库。</li>
+</ul>
+<h4 id="第三部分：项目实战"><a href="#第三部分：项目实战" class="headerlink" title="第三部分：项目实战"></a>第三部分：项目实战</h4><ul>
+<li><strong>构建实际项目</strong>：通过构建一个实际的Angular应用来综合运用前面学到的知识，可能是一个电商平台、博客系统或任务管理器。</li>
+<li><strong>性能优化</strong>：介绍如何分析和提升Angular应用的性能。</li>
+<li><strong>部署和维护</strong>：讨论将Angular应用部署到生产环境的最佳实践，以及如何维护和更新现有应用。</li>
+</ul>
+<h4 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h4><p>《Angular 开发入门与实战》是一本面向希望深入了解Angular框架的前端开发人员的实用指南。通过阅读这本书，开发者不仅能掌握Angular的基础知识，还能学会如何在实际项目中应用这些知识来构建复杂的应用程序。</p>
+<p>这份读书笔记旨在概述书中可能包含的主要内容和概念，真正的学习和理解还需深入阅读原书并实践其中的示例和技巧。</p>
+]]></content>
+      <categories>
+        <category>书籍</category>
+      </categories>
+      <tags>
+        <tag>读书笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Web 性能优化方案</title>
     <url>/2023/06/10/Web%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E6%96%B9%E6%A1%88/</url>
     <content><![CDATA[<h2 id="输入-URL-到页面展示完整过程"><a href="#输入-URL-到页面展示完整过程" class="headerlink" title="输入 URL 到页面展示完整过程"></a>输入 URL 到页面展示完整过程</h2><h3 id="一、网络请求阶段"><a href="#一、网络请求阶段" class="headerlink" title="一、网络请求阶段"></a>一、网络请求阶段</h3><ol>
@@ -267,6 +299,32 @@
       </categories>
       <tags>
         <tag>读书笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【Chrome】使用指南</title>
+    <url>/2022/04/19/%E3%80%90Chrome%E3%80%91%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</url>
+    <content><![CDATA[<p>Google Chrome</p>
+<p>谷歌浏览器</p>
+<h1 id="拓展程序"><a href="#拓展程序" class="headerlink" title="拓展程序"></a>拓展程序</h1><ol>
+<li>【Google 翻译】选中翻译</li>
+<li>【沉浸式翻译】（巨好用）双语对照</li>
+<li>【Proxy SwitchOmega】 管理和切换代理</li>
+<li>【JSON Formatter】</li>
+<li>【CSS Peeper】</li>
+<li>【Lighthouse】分析、改善网页性能</li>
+<li>【React Developer Tools】React 开发</li>
+<li>【Redux DevTools】</li>
+<li>【Shazam】听歌识曲</li>
+<li></li>
+</ol>
+]]></content>
+      <categories>
+        <category>知识库</category>
+        <category>Chrome</category>
+      </categories>
+      <tags>
+        <tag>Chrome</tag>
       </tags>
   </entry>
   <entry>
@@ -493,6 +551,18 @@
       </tags>
   </entry>
   <entry>
+    <title>【TypeScript】笔记</title>
+    <url>/2021/09/20/%E3%80%90TypeScript%E3%80%91%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>知识库</category>
+        <category>TypeScript</category>
+      </categories>
+      <tags>
+        <tag>TypeScript</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>【VSCode】使用笔记</title>
     <url>/2021/10/18/%E3%80%90VSCode%E3%80%91%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<h1 id="必装插件"><a href="#必装插件" class="headerlink" title="必装插件"></a>必装插件</h1><ol>
@@ -572,6 +642,18 @@
       </tags>
   </entry>
   <entry>
+    <title>【微信小程序】</title>
+    <url>/2021/02/21/%E3%80%90%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E3%80%91/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>知识库</category>
+        <category>微信小程序</category>
+      </categories>
+      <tags>
+        <tag>微信小程序</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>【服务器】</title>
     <url>/2023/05/04/%E3%80%90%E6%9C%8D%E5%8A%A1%E5%99%A8%E3%80%91/</url>
     <content><![CDATA[<h1 id="云服务器-ECS"><a href="#云服务器-ECS" class="headerlink" title="云服务器 ECS"></a>云服务器 ECS</h1><blockquote>
@@ -604,8 +686,10 @@
 <h1 id="负载均衡-SLB"><a href="#负载均衡-SLB" class="headerlink" title="负载均衡 SLB"></a>负载均衡 SLB</h1><blockquote>
 <p>负载均衡（Server Load Balancer，简称SLB）是云原生时代应用高可用的基本要素。是一种对流量进行按需分发的服务。通过将流量分发到不同的后端服务来扩展应用系统的服务吞吐能力，消除单点故障并提升应用系统的可用性。</p>
 </blockquote>
-<h1 id="弹性公网"><a href="#弹性公网" class="headerlink" title="弹性公网"></a>弹性公网</h1><p>弹性公网IP EIP（Elastic IP Address）是独立的公网IP资源，可与专有网络VPC类型的云服务器ECS、NAT网关、ENI网卡、私网负载均衡SLB绑定，并可以动态解绑满足灵活管理的要求。弹性公网IP可以给在云上部署的网站提供Internet访问服务。</p>
-<p><strong>EIP与ECS固定公网IP的区别</strong></p>
+<h1 id="弹性公网"><a href="#弹性公网" class="headerlink" title="弹性公网"></a>弹性公网</h1><blockquote>
+<p>弹性公网IP EIP（Elastic IP Address）是独立的公网IP资源，可与专有网络VPC类型的云服务器ECS、NAT网关、ENI网卡、私网负载均衡SLB绑定，并可以动态解绑满足灵活管理的要求。弹性公网IP可以给在云上部署的网站提供Internet访问服务。</p>
+</blockquote>
+<p><strong>EIP 与 ECS固定公网IP 的区别</strong></p>
 <p>下表描述了EIP与ECS固定公网IP的区别。</p>
 <table>
 <thead>
@@ -663,6 +747,18 @@
       </tags>
   </entry>
   <entry>
+    <title>【计算机组成原理】</title>
+    <url>/2020/05/21/%E3%80%90%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E3%80%91/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>知识库</category>
+        <category>计算机组成原理</category>
+      </categories>
+      <tags>
+        <tag>计算机组成原理</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>【计算机网络】</title>
     <url>/2022/06/15/%E3%80%90%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E3%80%91/</url>
     <content><![CDATA[]]></content>
@@ -706,96 +802,59 @@
       </tags>
   </entry>
   <entry>
-    <title>《Angular 开发入门与实战》</title>
-    <url>/2021/09/15/%E3%80%8AAngular%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8%E4%B8%8E%E5%AE%9E%E6%88%98%E3%80%8B/</url>
-    <content><![CDATA[<p>兰泽君 著作</p>
-<h2 id="读书笔记"><a href="#读书笔记" class="headerlink" title="读书笔记"></a>读书笔记</h2><h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>Angular是一种流行的前端框架，由Google维护，专为开发动态单页应用（SPA）而设计。它鼓励使用TypeScript进行开发，这是JavaScript的一个超集，添加了静态类型等特性。</p>
-<h4 id="第一部分：Angular基础"><a href="#第一部分：Angular基础" class="headerlink" title="第一部分：Angular基础"></a>第一部分：Angular基础</h4><ul>
-<li><strong>TypeScript基础</strong>：介绍TypeScript的基本语法，以及如何在Angular项目中使用它。</li>
-<li><strong>组件和模块</strong>：解释Angular应用是如何通过组件来构建用户界面的，每个组件都有自己的逻辑和模板。模块则用来组织这些组件，以及提供服务。</li>
-<li><strong>模板和数据绑定</strong>：介绍如何使用Angular模板语法来显示数据和响应用户事件，以及单向和双向数据绑定的概念。</li>
-<li><strong>服务和依赖注入</strong>：讨论服务的概念，这是一种用于封装业务逻辑的方法，以及Angular如何使用依赖注入（DI）模式来提供这些服务。</li>
+    <title>搭建图床（Typora+Picgo+阿里云 OSS）</title>
+    <url>/2024/03/22/%E6%90%AD%E5%BB%BA%E5%9B%BE%E5%BA%8A%EF%BC%88Typora+Picgo+%E9%98%BF%E9%87%8C%E4%BA%91%20OSS%EF%BC%89/</url>
+    <content><![CDATA[<h1 id="一、Typora"><a href="#一、Typora" class="headerlink" title="一、Typora"></a>一、Typora</h1><p>（PS：若使用 Obisidian 也大同小异）</p>
+<p><img src="https://image-hosting-site.oss-cn-hangzhou.aliyuncs.com/blog/202403220114798.jpg" alt="Snipaste_2024-03-22_01-03-49"></p>
+<h1 id="二、PicGo"><a href="#二、PicGo" class="headerlink" title="二、PicGo"></a>二、PicGo</h1><p>下载链接：<a href="https://molunerfinn.com/PicGo/">https://molunerfinn.com/PicGo/</a></p>
+<h3 id="1-图床设置"><a href="#1-图床设置" class="headerlink" title="1. 图床设置"></a>1. 图床设置</h3><p>需要填 6 个表单项</p>
+<p>1）图床配置名（这个可以随便填，建议和 Bucket 名称一致）</p>
+<p>2）KeyId</p>
+<p>3）KeySecret</p>
+<p>4）Bucket</p>
+<p>5）存储区域</p>
+<p>6）存储路径</p>
+<p>别着急，具体怎么填在下一步</p>
+<p><img src="https://image-hosting-site.oss-cn-hangzhou.aliyuncs.com/blog/202403220117030.png" alt="image-20240322011746976"></p>
+<h3 id="2-PicGo设置"><a href="#2-PicGo设置" class="headerlink" title="2. PicGo设置"></a>2. PicGo设置</h3><p>推荐把 “时间戳重命名” 打开</p>
+<p><img src="https://image-hosting-site.oss-cn-hangzhou.aliyuncs.com/blog/202403220153596.png" alt="image-20240322015324546"></p>
+<h1 id="三、阿里云-OSS"><a href="#三、阿里云-OSS" class="headerlink" title="三、阿里云 OSS"></a>三、阿里云 OSS</h1><p>1）在 <a href="https://www.aliyun.com/?spm=5176.12818093_-1363046575.top-nav.dlogo.2a8b16d0AgFpYt">阿里云官网</a> 找到 对象存储 OSS，并选择立即开通</p>
+<p><img src="https://image-hosting-site.oss-cn-hangzhou.aliyuncs.com/blog/202403220125764.png" alt="image-20240322012504670"></p>
+<p>2）创建 Bucket 存储桶 </p>
+<ul>
+<li>Bucket 名称就是 PicGo 配置中要填的 <strong>Bucket</strong></li>
+<li>Endpoint 就是 PicGo 配置中要填的 <strong>存储区域</strong>（比如 oss-cn-hangzhou）（.aliyuncs.com不需要填）</li>
 </ul>
-<h4 id="第二部分：进阶实战"><a href="#第二部分：进阶实战" class="headerlink" title="第二部分：进阶实战"></a>第二部分：进阶实战</h4><ul>
-<li><strong>路由和导航</strong>：深入探讨Angular路由器的工作原理，如何定义路由规则，以及如何进行导航。</li>
-<li><strong>表单处理</strong>：详细说明如何使用Angular表单模块来创建和验证用户输入表单。</li>
-<li><strong>RxJS和异步编程</strong>：介绍如何使用RxJS库在Angular中处理异步操作，包括Observable和操作符的概念。</li>
-<li><strong>状态管理</strong>：探讨在Angular应用中管理状态的策略，可能包括使用NgRx或其他状态管理库。</li>
+<p><img src="https://image-hosting-site.oss-cn-hangzhou.aliyuncs.com/blog/202403220121089.jpg" alt="OSS"></p>
+<p> 3）创建 AccessKey ID 和 AccessKey Secret</p>
+<ul>
+<li>AccessKey ID 就是 PicGo 配置中要填的 <strong>KeyId</strong></li>
+<li>AccessKey Secret 就是 PicGo 配置中要填的 <strong>KeySecret</strong></li>
 </ul>
-<h4 id="第三部分：项目实战"><a href="#第三部分：项目实战" class="headerlink" title="第三部分：项目实战"></a>第三部分：项目实战</h4><ul>
-<li><strong>构建实际项目</strong>：通过构建一个实际的Angular应用来综合运用前面学到的知识，可能是一个电商平台、博客系统或任务管理器。</li>
-<li><strong>性能优化</strong>：介绍如何分析和提升Angular应用的性能。</li>
-<li><strong>部署和维护</strong>：讨论将Angular应用部署到生产环境的最佳实践，以及如何维护和更新现有应用。</li>
+<p><img src="https://image-hosting-site.oss-cn-hangzhou.aliyuncs.com/blog/202403220134126.png" alt="image-20240322013440047"></p>
+<p>4）在 Bucket 中新建目录</p>
+<ul>
+<li>目录 就是 PicGo 配置中要填的 <strong>存储路径</strong></li>
 </ul>
-<h4 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h4><p>《Angular 开发入门与实战》是一本面向希望深入了解Angular框架的前端开发人员的实用指南。通过阅读这本书，开发者不仅能掌握Angular的基础知识，还能学会如何在实际项目中应用这些知识来构建复杂的应用程序。</p>
-<p>这份读书笔记旨在概述书中可能包含的主要内容和概念，真正的学习和理解还需深入阅读原书并实践其中的示例和技巧。</p>
+<p><img src="https://image-hosting-site.oss-cn-hangzhou.aliyuncs.com/blog/202403220148343.png" alt="image-20240322014845234"></p>
+<h1 id="四、测试"><a href="#四、测试" class="headerlink" title="四、测试"></a>四、测试</h1><p><img src="https://image-hosting-site.oss-cn-hangzhou.aliyuncs.com/blog/202403220151055.png" alt="image-20240322015136442"></p>
+<h1 id="FAQ"><a href="#FAQ" class="headerlink" title="FAQ"></a>FAQ</h1><p>1）Mac系统安装PicGo时打开报错：<strong>“PicGo.app”已损坏，无法打开。 你应该将它移到废纸篓。</strong></p>
+<blockquote>
+<p>解决办法，打开终端输入以下内容，””为安装路径，默认是以下路径</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">sudo xattr -d com.apple.quarantine <span class="string">&quot;/Applications/PicGo.app&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>按照提示输入电脑锁屏密码回车即可</p>
+</blockquote>
+<p>2）都配置好了，但还是上传报错</p>
+<blockquote>
+<p>确认存储区域，就是上面的 Endpoint 的地址 ，比如你的是，oss-cn-beijing.aliyuncs.com 那么这里就是 “oss-cn-beijing”，去掉阿里云的后缀</p>
+</blockquote>
 ]]></content>
       <categories>
-        <category>书籍</category>
+        <category>随笔</category>
       </categories>
       <tags>
-        <tag>读书笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【Chrome】使用指南</title>
-    <url>/2022/04/19/%E3%80%90Chrome%E3%80%91%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</url>
-    <content><![CDATA[<p>Google Chrome</p>
-<p>谷歌浏览器</p>
-<h1 id="拓展程序"><a href="#拓展程序" class="headerlink" title="拓展程序"></a>拓展程序</h1><ol>
-<li>【Google 翻译】选中翻译</li>
-<li>【沉浸式翻译】（巨好用）双语对照</li>
-<li>【Proxy SwitchOmega】 管理和切换代理</li>
-<li>【JSON Formatter】</li>
-<li>【CSS Peeper】</li>
-<li>【Lighthouse】分析、改善网页性能</li>
-<li>【React Developer Tools】React 开发</li>
-<li>【Redux DevTools】</li>
-<li>【Shazam】听歌识曲</li>
-<li></li>
-</ol>
-]]></content>
-      <categories>
-        <category>知识库</category>
-        <category>Chrome</category>
-      </categories>
-      <tags>
-        <tag>Chrome</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【TypeScript】笔记</title>
-    <url>/2021/09/20/%E3%80%90TypeScript%E3%80%91%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>TypeScript</category>
-      </categories>
-      <tags>
-        <tag>TypeScript</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【微信小程序】</title>
-    <url>/2021/02/21/%E3%80%90%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E3%80%91/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>知识库</category>
-        <category>微信小程序</category>
-      </categories>
-      <tags>
-        <tag>微信小程序</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【计算机组成原理】</title>
-    <url>/2020/05/21/%E3%80%90%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E3%80%91/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>知识库</category>
-        <category>计算机组成原理</category>
-      </categories>
-      <tags>
-        <tag>计算机组成原理</tag>
+        <tag>图床</tag>
       </tags>
   </entry>
 </search>
