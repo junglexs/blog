@@ -6,7 +6,7 @@
   <link href="https://junglexs.github.io/atom.xml" rel="self"/>
   
   <link href="https://junglexs.github.io/"/>
-  <updated>2024-03-06T17:10:50.863Z</updated>
+  <updated>2024-03-21T18:00:37.255Z</updated>
   <id>https://junglexs.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>搭建图床（Typora+Picgo+阿里云 OSS）</title>
+    <link href="https://junglexs.github.io/2024/03/21/%E6%90%AD%E5%BB%BA%E5%9B%BE%E5%BA%8A%EF%BC%88Typora+Picgo+%E9%98%BF%E9%87%8C%E4%BA%91%20OSS%EF%BC%89/"/>
+    <id>https://junglexs.github.io/2024/03/21/%E6%90%AD%E5%BB%BA%E5%9B%BE%E5%BA%8A%EF%BC%88Typora+Picgo+%E9%98%BF%E9%87%8C%E4%BA%91%20OSS%EF%BC%89/</id>
+    <published>2024-03-21T13:25:50.000Z</published>
+    <updated>2024-03-21T18:00:37.255Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;一、Typora&quot;&gt;&lt;a href=&quot;#一、Typora&quot; class=&quot;headerlink&quot; title=&quot;一、Typora&quot;&gt;&lt;/a&gt;一、Typora&lt;/h1&gt;&lt;p&gt;（PS：若使用 Obisidian 也大同小异）&lt;/p&gt;
+&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="随笔" scheme="https://junglexs.github.io/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+    <category term="图床" scheme="https://junglexs.github.io/tags/%E5%9B%BE%E5%BA%8A/"/>
+    
+  </entry>
   
   <entry>
     <title>面试官问我按钮级别权限怎么控制，我说v-if，面试官说再见</title>
@@ -327,32 +353,6 @@
     
     
     <category term="React" scheme="https://junglexs.github.io/tags/React/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>搭建图床（Typora+Picgo+阿里云 OSS）</title>
-    <link href="https://junglexs.github.io/2023/03/21/%E6%90%AD%E5%BB%BA%E5%9B%BE%E5%BA%8A%EF%BC%88Typora+Picgo+%E9%98%BF%E9%87%8C%E4%BA%91%20OSS%EF%BC%89/"/>
-    <id>https://junglexs.github.io/2023/03/21/%E6%90%AD%E5%BB%BA%E5%9B%BE%E5%BA%8A%EF%BC%88Typora+Picgo+%E9%98%BF%E9%87%8C%E4%BA%91%20OSS%EF%BC%89/</id>
-    <published>2023-03-21T13:25:50.000Z</published>
-    <updated>2024-03-21T17:57:57.153Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;一、Typora&quot;&gt;&lt;a href=&quot;#一、Typora&quot; class=&quot;headerlink&quot; title=&quot;一、Typora&quot;&gt;&lt;/a&gt;一、Typora&lt;/h1&gt;&lt;p&gt;（PS：若使用 Obisidian 也大同小异）&lt;/p&gt;
-&lt;p&gt;&lt;img</summary>
-        
-      
-    
-    
-    
-    <category term="随笔" scheme="https://junglexs.github.io/categories/%E9%9A%8F%E7%AC%94/"/>
-    
-    
-    <category term="图床" scheme="https://junglexs.github.io/tags/%E5%9B%BE%E5%BA%8A/"/>
     
   </entry>
   
