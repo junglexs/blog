@@ -6,7 +6,7 @@
   <link href="https://junglexs.github.io/atom.xml" rel="self"/>
   
   <link href="https://junglexs.github.io/"/>
-  <updated>2024-03-23T10:02:12.276Z</updated>
+  <updated>2024-03-23T13:22:07.245Z</updated>
   <id>https://junglexs.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://junglexs.github.io/2024/03/21/%E6%90%AD%E5%BB%BA%E5%9B%BE%E5%BA%8A%EF%BC%88Typora+PicGo+%E9%98%BF%E9%87%8C%E4%BA%91OSS%EF%BC%89/"/>
     <id>https://junglexs.github.io/2024/03/21/%E6%90%AD%E5%BB%BA%E5%9B%BE%E5%BA%8A%EF%BC%88Typora+PicGo+%E9%98%BF%E9%87%8C%E4%BA%91OSS%EF%BC%89/</id>
     <published>2024-03-21T13:25:50.000Z</published>
-    <updated>2024-03-23T10:02:12.276Z</updated>
+    <updated>2024-03-23T13:22:07.245Z</updated>
     
     
       
@@ -39,6 +39,12 @@
     
     
     <category term="图床" scheme="https://junglexs.github.io/tags/%E5%9B%BE%E5%BA%8A/"/>
+    
+    <category term="Typora" scheme="https://junglexs.github.io/tags/Typora/"/>
+    
+    <category term="PicGo" scheme="https://junglexs.github.io/tags/PicGo/"/>
+    
+    <category term="阿里云OSS" scheme="https://junglexs.github.io/tags/%E9%98%BF%E9%87%8C%E4%BA%91OSS/"/>
     
   </entry>
   
