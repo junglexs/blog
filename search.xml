@@ -152,38 +152,6 @@
       </tags>
   </entry>
   <entry>
-    <title>《Angular 开发入门与实战》</title>
-    <url>/2021/09/15/%E3%80%8AAngular%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8%E4%B8%8E%E5%AE%9E%E6%88%98%E3%80%8B/</url>
-    <content><![CDATA[<p>兰泽君 著作</p>
-<h2 id="读书笔记"><a href="#读书笔记" class="headerlink" title="读书笔记"></a>读书笔记</h2><h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>Angular是一种流行的前端框架，由Google维护，专为开发动态单页应用（SPA）而设计。它鼓励使用TypeScript进行开发，这是JavaScript的一个超集，添加了静态类型等特性。</p>
-<h4 id="第一部分：Angular基础"><a href="#第一部分：Angular基础" class="headerlink" title="第一部分：Angular基础"></a>第一部分：Angular基础</h4><ul>
-<li><strong>TypeScript基础</strong>：介绍TypeScript的基本语法，以及如何在Angular项目中使用它。</li>
-<li><strong>组件和模块</strong>：解释Angular应用是如何通过组件来构建用户界面的，每个组件都有自己的逻辑和模板。模块则用来组织这些组件，以及提供服务。</li>
-<li><strong>模板和数据绑定</strong>：介绍如何使用Angular模板语法来显示数据和响应用户事件，以及单向和双向数据绑定的概念。</li>
-<li><strong>服务和依赖注入</strong>：讨论服务的概念，这是一种用于封装业务逻辑的方法，以及Angular如何使用依赖注入（DI）模式来提供这些服务。</li>
-</ul>
-<h4 id="第二部分：进阶实战"><a href="#第二部分：进阶实战" class="headerlink" title="第二部分：进阶实战"></a>第二部分：进阶实战</h4><ul>
-<li><strong>路由和导航</strong>：深入探讨Angular路由器的工作原理，如何定义路由规则，以及如何进行导航。</li>
-<li><strong>表单处理</strong>：详细说明如何使用Angular表单模块来创建和验证用户输入表单。</li>
-<li><strong>RxJS和异步编程</strong>：介绍如何使用RxJS库在Angular中处理异步操作，包括Observable和操作符的概念。</li>
-<li><strong>状态管理</strong>：探讨在Angular应用中管理状态的策略，可能包括使用NgRx或其他状态管理库。</li>
-</ul>
-<h4 id="第三部分：项目实战"><a href="#第三部分：项目实战" class="headerlink" title="第三部分：项目实战"></a>第三部分：项目实战</h4><ul>
-<li><strong>构建实际项目</strong>：通过构建一个实际的Angular应用来综合运用前面学到的知识，可能是一个电商平台、博客系统或任务管理器。</li>
-<li><strong>性能优化</strong>：介绍如何分析和提升Angular应用的性能。</li>
-<li><strong>部署和维护</strong>：讨论将Angular应用部署到生产环境的最佳实践，以及如何维护和更新现有应用。</li>
-</ul>
-<h4 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h4><p>《Angular 开发入门与实战》是一本面向希望深入了解Angular框架的前端开发人员的实用指南。通过阅读这本书，开发者不仅能掌握Angular的基础知识，还能学会如何在实际项目中应用这些知识来构建复杂的应用程序。</p>
-<p>这份读书笔记旨在概述书中可能包含的主要内容和概念，真正的学习和理解还需深入阅读原书并实践其中的示例和技巧。</p>
-]]></content>
-      <categories>
-        <category>书籍</category>
-      </categories>
-      <tags>
-        <tag>读书笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Web 性能优化方案</title>
     <url>/2023/06/10/Web%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E6%96%B9%E6%A1%88/</url>
     <content><![CDATA[<h2 id="输入-URL-到页面展示完整过程"><a href="#输入-URL-到页面展示完整过程" class="headerlink" title="输入 URL 到页面展示完整过程"></a>输入 URL 到页面展示完整过程</h2><h3 id="一、网络请求阶段"><a href="#一、网络请求阶段" class="headerlink" title="一、网络请求阶段"></a>一、网络请求阶段</h3><ol>
@@ -251,6 +219,38 @@
       <tags>
         <tag>Web</tag>
         <tag>性能优化</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>《Angular 开发入门与实战》</title>
+    <url>/2021/09/15/%E3%80%8AAngular%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8%E4%B8%8E%E5%AE%9E%E6%88%98%E3%80%8B/</url>
+    <content><![CDATA[<p>兰泽君 著作</p>
+<h2 id="读书笔记"><a href="#读书笔记" class="headerlink" title="读书笔记"></a>读书笔记</h2><h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>Angular是一种流行的前端框架，由Google维护，专为开发动态单页应用（SPA）而设计。它鼓励使用TypeScript进行开发，这是JavaScript的一个超集，添加了静态类型等特性。</p>
+<h4 id="第一部分：Angular基础"><a href="#第一部分：Angular基础" class="headerlink" title="第一部分：Angular基础"></a>第一部分：Angular基础</h4><ul>
+<li><strong>TypeScript基础</strong>：介绍TypeScript的基本语法，以及如何在Angular项目中使用它。</li>
+<li><strong>组件和模块</strong>：解释Angular应用是如何通过组件来构建用户界面的，每个组件都有自己的逻辑和模板。模块则用来组织这些组件，以及提供服务。</li>
+<li><strong>模板和数据绑定</strong>：介绍如何使用Angular模板语法来显示数据和响应用户事件，以及单向和双向数据绑定的概念。</li>
+<li><strong>服务和依赖注入</strong>：讨论服务的概念，这是一种用于封装业务逻辑的方法，以及Angular如何使用依赖注入（DI）模式来提供这些服务。</li>
+</ul>
+<h4 id="第二部分：进阶实战"><a href="#第二部分：进阶实战" class="headerlink" title="第二部分：进阶实战"></a>第二部分：进阶实战</h4><ul>
+<li><strong>路由和导航</strong>：深入探讨Angular路由器的工作原理，如何定义路由规则，以及如何进行导航。</li>
+<li><strong>表单处理</strong>：详细说明如何使用Angular表单模块来创建和验证用户输入表单。</li>
+<li><strong>RxJS和异步编程</strong>：介绍如何使用RxJS库在Angular中处理异步操作，包括Observable和操作符的概念。</li>
+<li><strong>状态管理</strong>：探讨在Angular应用中管理状态的策略，可能包括使用NgRx或其他状态管理库。</li>
+</ul>
+<h4 id="第三部分：项目实战"><a href="#第三部分：项目实战" class="headerlink" title="第三部分：项目实战"></a>第三部分：项目实战</h4><ul>
+<li><strong>构建实际项目</strong>：通过构建一个实际的Angular应用来综合运用前面学到的知识，可能是一个电商平台、博客系统或任务管理器。</li>
+<li><strong>性能优化</strong>：介绍如何分析和提升Angular应用的性能。</li>
+<li><strong>部署和维护</strong>：讨论将Angular应用部署到生产环境的最佳实践，以及如何维护和更新现有应用。</li>
+</ul>
+<h4 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h4><p>《Angular 开发入门与实战》是一本面向希望深入了解Angular框架的前端开发人员的实用指南。通过阅读这本书，开发者不仅能掌握Angular的基础知识，还能学会如何在实际项目中应用这些知识来构建复杂的应用程序。</p>
+<p>这份读书笔记旨在概述书中可能包含的主要内容和概念，真正的学习和理解还需深入阅读原书并实践其中的示例和技巧。</p>
+]]></content>
+      <categories>
+        <category>书籍</category>
+      </categories>
+      <tags>
+        <tag>读书笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -552,7 +552,7 @@
 <p><a href="https://zh-hans.react.dev/learn/start-a-new-react-project">https://zh-hans.react.dev/learn/start-a-new-react-project</a></p>
 <h4 id="JSX"><a href="#JSX" class="headerlink" title="JSX"></a>JSX</h4><p>JavaScript 和XML的缩写</p>
 <p>在 JS 中编写 HTML 模板结构</p>
-<p>通过 Babel 编译</p>
+<p>通过 Babel 编译 成 JS</p>
 <p>组件化开发模式</p>
 <h4 id="useState"><a href="#useState" class="headerlink" title="useState"></a>useState</h4><p>数据驱动视图</p>
 <p>直接修改原对象 是无法改变视图的</p>
@@ -594,7 +594,7 @@
 <li>Auto Rename Tag</li>
 <li>AZ AL Dev Tools&#x2F;AL Code Outline，梳理代码结构的插件</li>
 <li>Better Comments</li>
-<li>Turbo Console Log 自动写console</li>
+<li>Turbo Console Log，自动写console</li>
 <li>Bracket Pair Colorizer2，颜色区分括号</li>
 <li>Chinese</li>
 <li>Code Runner</li>
@@ -604,7 +604,7 @@
 <li>翻译（英汉词典）</li>
 <li>Image preview</li>
 <li>indent-rainbow，缩进高亮</li>
-<li>Regex Previewer 预览正则表达式</li>
+<li>Regex Previewer，预览正则表达式</li>
 <li>Material Icon Theme</li>
 <li>open inbrowser</li>
 <li>Partial Diff</li>
@@ -794,37 +794,6 @@
       </tags>
   </entry>
   <entry>
-    <title>面试官问我按钮级别权限怎么控制，我说v-if，面试官说再见</title>
-    <url>/2024/03/04/%E9%9D%A2%E8%AF%95%E5%AE%98%E9%97%AE%E6%88%91%E6%8C%89%E9%92%AE%E7%BA%A7%E5%88%AB%E6%9D%83%E9%99%90%E6%80%8E%E4%B9%88%E6%8E%A7%E5%88%B6%EF%BC%8C%E6%88%91%E8%AF%B4v-if%EF%BC%8C%E9%9D%A2%E8%AF%95%E5%AE%98%E8%AF%B4%E5%86%8D%E8%A7%81/</url>
-    <content><![CDATA[<p><a href="https://juejin.cn/post/7209648356530896953">文章链接</a></p>
-<p>按钮级别权限控制，怎么做？使用v-if ？可以，但不够通用。</p>
-<p>要做权限控制，肯定需要一个<code>code</code>，无论是权限码还是角色码都可以，一般后端会一次性返回，然后全局存储起来就可以了</p>
-<p>文章作者提供了三个思路</p>
-<ol>
-<li><p>函数方式</p>
-<p>本质上就是通过<code>v-if</code>，只不过是通过一个统一的权限判断方法<code>hasPermission</code></p>
-</li>
-<li><p>组件方式</p>
-<p>使用<code>Authority</code>包裹需要权限控制的按钮即可，该按钮需要的权限码通过<code>value</code>属性传入</p>
-</li>
-<li><p>指令方式</p>
-<p>v-auth</p>
-</li>
-</ol>
-<p>ps：评论区有其他见解</p>
-<p>使用装饰器配置权限标识</p>
-<p>前端无非就是调用后端权限状态集合，根据集合控制相应dom是否渲染，怎么实现都行，麻烦的就是状态集合的约定和维护，要有严格的规范和约定。<br>而且，真正的权限控制只让前端处理是不严谨，后端同时也要确保相应业务功能接口的无权访问，这就要把ui、权限码、api三者关联维护起来，这就考验团队整体素质了。</p>
-]]></content>
-      <categories>
-        <category>阅读</category>
-      </categories>
-      <tags>
-        <tag>每日阅读</tag>
-        <tag>Vue</tag>
-        <tag>权限</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>搭建图床（Typora+PicGo+阿里云OSS）</title>
     <url>/2024/03/21/%E6%90%AD%E5%BB%BA%E5%9B%BE%E5%BA%8A%EF%BC%88Typora+PicGo+%E9%98%BF%E9%87%8C%E4%BA%91OSS%EF%BC%89/</url>
     <content><![CDATA[<h1 id="一、Typora"><a href="#一、Typora" class="headerlink" title="一、Typora"></a>一、Typora</h1><p>（PS：若使用 Obisidian 也大同小异）</p>
@@ -884,6 +853,37 @@
         <tag>Typora</tag>
         <tag>PicGo</tag>
         <tag>阿里云OSS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>面试官问我按钮级别权限怎么控制，我说v-if，面试官说再见</title>
+    <url>/2024/03/04/%E9%9D%A2%E8%AF%95%E5%AE%98%E9%97%AE%E6%88%91%E6%8C%89%E9%92%AE%E7%BA%A7%E5%88%AB%E6%9D%83%E9%99%90%E6%80%8E%E4%B9%88%E6%8E%A7%E5%88%B6%EF%BC%8C%E6%88%91%E8%AF%B4v-if%EF%BC%8C%E9%9D%A2%E8%AF%95%E5%AE%98%E8%AF%B4%E5%86%8D%E8%A7%81/</url>
+    <content><![CDATA[<p><a href="https://juejin.cn/post/7209648356530896953">文章链接</a></p>
+<p>按钮级别权限控制，怎么做？使用v-if ？可以，但不够通用。</p>
+<p>要做权限控制，肯定需要一个<code>code</code>，无论是权限码还是角色码都可以，一般后端会一次性返回，然后全局存储起来就可以了</p>
+<p>文章作者提供了三个思路</p>
+<ol>
+<li><p>函数方式</p>
+<p>本质上就是通过<code>v-if</code>，只不过是通过一个统一的权限判断方法<code>hasPermission</code></p>
+</li>
+<li><p>组件方式</p>
+<p>使用<code>Authority</code>包裹需要权限控制的按钮即可，该按钮需要的权限码通过<code>value</code>属性传入</p>
+</li>
+<li><p>指令方式</p>
+<p>v-auth</p>
+</li>
+</ol>
+<p>ps：评论区有其他见解</p>
+<p>使用装饰器配置权限标识</p>
+<p>前端无非就是调用后端权限状态集合，根据集合控制相应dom是否渲染，怎么实现都行，麻烦的就是状态集合的约定和维护，要有严格的规范和约定。<br>而且，真正的权限控制只让前端处理是不严谨，后端同时也要确保相应业务功能接口的无权访问，这就要把ui、权限码、api三者关联维护起来，这就考验团队整体素质了。</p>
+]]></content>
+      <categories>
+        <category>阅读</category>
+      </categories>
+      <tags>
+        <tag>每日阅读</tag>
+        <tag>Vue</tag>
+        <tag>权限</tag>
       </tags>
   </entry>
 </search>
