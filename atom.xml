@@ -6,7 +6,7 @@
   <link href="https://junglexs.github.io/atom.xml" rel="self"/>
   
   <link href="https://junglexs.github.io/"/>
-  <updated>2024-03-25T13:06:59.455Z</updated>
+  <updated>2024-03-26T14:53:00.021Z</updated>
   <id>https://junglexs.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://junglexs.github.io/2024/03/21/%E6%90%AD%E5%BB%BA%E5%9B%BE%E5%BA%8A%EF%BC%88Typora+PicGo+%E9%98%BF%E9%87%8C%E4%BA%91OSS%EF%BC%89/"/>
     <id>https://junglexs.github.io/2024/03/21/%E6%90%AD%E5%BB%BA%E5%9B%BE%E5%BA%8A%EF%BC%88Typora+PicGo+%E9%98%BF%E9%87%8C%E4%BA%91OSS%EF%BC%89/</id>
     <published>2024-03-21T13:25:50.000Z</published>
-    <updated>2024-03-25T13:06:59.455Z</updated>
+    <updated>2024-03-26T14:53:00.021Z</updated>
     
     
       
@@ -306,19 +306,21 @@
   </entry>
   
   <entry>
-    <title>【服务器】</title>
-    <link href="https://junglexs.github.io/2023/05/04/%E3%80%90%E6%9C%8D%E5%8A%A1%E5%99%A8%E3%80%91/"/>
-    <id>https://junglexs.github.io/2023/05/04/%E3%80%90%E6%9C%8D%E5%8A%A1%E5%99%A8%E3%80%91/</id>
+    <title>【云计算】</title>
+    <link href="https://junglexs.github.io/2023/05/04/%E3%80%90%E4%BA%91%E8%AE%A1%E7%AE%97%E3%80%91%E7%AC%94%E8%AE%B0/"/>
+    <id>https://junglexs.github.io/2023/05/04/%E3%80%90%E4%BA%91%E8%AE%A1%E7%AE%97%E3%80%91%E7%AC%94%E8%AE%B0/</id>
     <published>2023-05-04T12:58:06.000Z</published>
-    <updated>2024-03-21T16:16:59.217Z</updated>
+    <updated>2024-03-26T15:06:05.653Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;云服务器-ECS&quot;&gt;&lt;a href=&quot;#云服务器-ECS&quot; class=&quot;headerlink&quot; title=&quot;云服务器 ECS&quot;&gt;&lt;/a&gt;云服务器 ECS&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;云服务器ECS（Elastic Compute</summary>
+    <summary type="html">&lt;p&gt;云计算服务通常分为三个基本类型：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;基础设施即服务（IaaS）&lt;/strong&gt;：提供虚拟化的计算资源，如虚拟机、存储空间、网络等。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;平台即服务（PaaS）&lt;/strong&gt;：提供应用程序开发和部署的</summary>
         
       
     
@@ -326,12 +328,12 @@
     
     <category term="知识库" scheme="https://junglexs.github.io/categories/%E7%9F%A5%E8%AF%86%E5%BA%93/"/>
     
-    <category term="服务器" scheme="https://junglexs.github.io/categories/%E7%9F%A5%E8%AF%86%E5%BA%93/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    <category term="云计算" scheme="https://junglexs.github.io/categories/%E7%9F%A5%E8%AF%86%E5%BA%93/%E4%BA%91%E8%AE%A1%E7%AE%97/"/>
     
     
     <category term="运维" scheme="https://junglexs.github.io/tags/%E8%BF%90%E7%BB%B4/"/>
     
-    <category term="服务器" scheme="https://junglexs.github.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    <category term="云计算" scheme="https://junglexs.github.io/tags/%E4%BA%91%E8%AE%A1%E7%AE%97/"/>
     
   </entry>
   
@@ -532,7 +534,7 @@
     <link href="https://junglexs.github.io/2021/09/20/%E3%80%90TypeScript%E3%80%91%E7%AC%94%E8%AE%B0/"/>
     <id>https://junglexs.github.io/2021/09/20/%E3%80%90TypeScript%E3%80%91%E7%AC%94%E8%AE%B0/</id>
     <published>2021-09-20T13:17:09.000Z</published>
-    <updated>2024-03-21T13:40:21.208Z</updated>
+    <updated>2024-03-25T17:09:13.860Z</updated>
     
     
     

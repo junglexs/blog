@@ -1,89 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Web性能优化-JS文件添加defer</title>
-    <url>/2023/06/13/Web%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96-JS%E6%96%87%E4%BB%B6%E6%B7%BB%E5%8A%A0defer/</url>
-    <content><![CDATA[<p>为JavaScript文件添加<code>defer</code>属性是优化Web性能的一个常见做法，特别是在改善页面加载时间和用户体验方面。</p>
-<h3 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h3><p>当浏览器加载HTML文档时，它会按照出现的顺序解析文档中的元素。默认情况下，当浏览器遇到一个<code>&lt;script&gt;</code>标签时，它会停止HTML解析过程，立即下载并执行脚本。这种行为会导致两个主要问题：</p>
-<ul>
-<li><strong>阻塞渲染</strong>：脚本的下载和执行会阻塞页面的渲染过程，延迟了首次渲染的时间。</li>
-<li><strong>依赖处理</strong>：如果脚本依赖于页面中尚未解析的DOM元素，那么可能会出现脚本执行错误的问题。</li>
-</ul>
-<p>使用<code>defer</code>属性可以解决这些问题。<code>defer</code>属性指示浏览器应该异步下载脚本，但延迟执行直到HTML文档完全被解析完成。这意味着，使用<code>defer</code>的脚本不会阻塞HTML的解析，同时保证在<code>DOMContentLoaded</code>事件触发前执行，确保了脚本的执行顺序和依赖处理。</p>
-<h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3><ul>
-<li><strong>提升性能</strong>：通过避免阻塞HTML解析，<code>defer</code>可以显著提高页面的加载速度。</li>
-<li><strong>保持脚本执行顺序</strong>：即使脚本是异步下载的，使用<code>defer</code>也能保证脚本按照它们在HTML文档中出现的顺序执行。</li>
-<li><strong>改善用户体验</strong>：更快的页面加载时间意味着用户可以更快地看到并与页面交互，从而改善用户体验。</li>
-</ul>
-<h3 id="使用方式"><a href="#使用方式" class="headerlink" title="使用方式"></a>使用方式</h3><p>给<code>&lt;script&gt;</code>标签添加<code>defer</code>属性非常简单：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;path/to/your/script.js&quot;</span> <span class="attr">defer</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><ul>
-<li><code>defer</code>属性仅适用于带有<code>src</code>属性的<code>&lt;script&gt;</code>标签，即那些引用外部脚本的标签。</li>
-<li>所有现代浏览器都支持<code>defer</code>属性，但如果你需要支持非常老的浏览器（例如，IE9及以下版本），则需要考虑兼容性问题。</li>
-<li>对于依赖于其他脚本或需要立即执行以影响页面加载的脚本（如修改DOM的脚本），使用<code>defer</code>可能不是最佳选择。在这些情况下，可以考虑使用<code>async</code>属性或其他JavaScript加载策略。</li>
-</ul>
-<p>综上所述，合理使用<code>defer</code>属性可以有效提升Web应用的性能和用户体验，是前端开发中常用的优化手段之一。</p>
-<p><code>script-ext-html-webpack-plugin</code>是一个Webpack插件，它扩展了<code>html-webpack-plugin</code>的功能，允许你对HTML文档中的<code>&lt;script&gt;</code>标签进行更细致的控制，例如添加<code>async</code>、<code>defer</code>或<code>type=&quot;module&quot;</code>属性等。这对于优化页面加载性能特别有用，因为你可以指定哪些脚本应该异步加载，哪些应该在文档解析完成后延迟执行，从而不阻塞页面渲染。</p>
-<h3 id="插件实现并安装"><a href="#插件实现并安装" class="headerlink" title="插件实现并安装"></a>插件实现并安装</h3><p>通过npm可以这样安装：</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">npm install script-ext-html-webpack-plugin --save-dev</span><br></pre></td></tr></table></figure>
-
-<p>这个命令会将<code>script-ext-html-webpack-plugin</code>添加到你项目的开发依赖中。</p>
-<h3 id="插件使用方法"><a href="#插件使用方法" class="headerlink" title="插件使用方法"></a>插件使用方法</h3><p>在Webpack配置文件中，首先需要引入<code>html-webpack-plugin</code>和<code>script-ext-html-webpack-plugin</code>，然后在<code>plugins</code>数组中配置它们：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title class_">HtmlWebpackPlugin</span> = <span class="built_in">require</span>(<span class="string">&#x27;html-webpack-plugin&#x27;</span>);</span><br><span class="line"><span class="keyword">const</span> <span class="title class_">ScriptExtHtmlWebpackPlugin</span> = <span class="built_in">require</span>(<span class="string">&#x27;script-ext-html-webpack-plugin&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">    <span class="comment">// 其他webpack配置</span></span><br><span class="line">    <span class="attr">plugins</span>: [</span><br><span class="line">        <span class="keyword">new</span> <span class="title class_">HtmlWebpackPlugin</span>(&#123;</span><br><span class="line">            <span class="comment">// HtmlWebpackPlugin的配置选项</span></span><br><span class="line">        &#125;),</span><br><span class="line">        <span class="keyword">new</span> <span class="title class_">ScriptExtHtmlWebpackPlugin</span>(&#123;</span><br><span class="line">            <span class="attr">defaultAttribute</span>: <span class="string">&#x27;defer&#x27;</span></span><br><span class="line">        &#125;)</span><br><span class="line">    ]</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<p>在这个例子中，<code>ScriptExtHtmlWebpackPlugin</code>被配置为将所有的<code>&lt;script&gt;</code>标签的默认属性设置为<code>defer</code>，这意味着所有通过<code>html-webpack-plugin</code>动态添加到HTML中的脚本都会被自动添加<code>defer</code>属性，从而不会阻塞页面解析。</p>
-<h3 id="注意事项-1"><a href="#注意事项-1" class="headerlink" title="注意事项"></a>注意事项</h3><ul>
-<li>确保你已经安装并正确配置了<code>html-webpack-plugin</code>，因为<code>script-ext-html-webpack-plugin</code>是作为其扩展使用的。</li>
-<li>根据你的项目需求，你可以使用<code>script-ext-html-webpack-plugin</code>提供的其他选项来控制脚本的加载行为，例如<code>async</code>、<code>preload</code>、<code>module</code>等。</li>
-<li>随着Webpack和相关插件的不断更新，建议检查官方文档或npm页面上的最新信息，以获取关于<code>script-ext-html-webpack-plugin</code>的最新用法和最佳实践。</li>
-</ul>
-<p>使用<code>script-ext-html-webpack-plugin</code>可以帮助你更精细地控制网页中脚本的加载和执行，从而进一步优化页面性能。</p>
-]]></content>
-      <categories>
-        <category>知识库</category>
-        <category>Web</category>
-      </categories>
-      <tags>
-        <tag>Web</tag>
-        <tag>性能优化</tag>
-        <tag>Webpack</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Web性能优化-SplitChunks提取公共代码</title>
-    <url>/2023/06/12/Web%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96-SplitChunks%E6%8F%90%E5%8F%96%E5%85%AC%E5%85%B1%E4%BB%A3%E7%A0%81/</url>
-    <content><![CDATA[<p>要在 Angular 项目中引入 <code>splitChunks</code> 插件来进行代码分割和优化，推荐的方式是通过 <code>ngx-build-plus</code> 扩展 Angular CLI 的 Webpack 配置。由于 Angular CLI 默认隐藏了 Webpack 的配置文件，使用 <code>ngx-build-plus</code> 允许你在不直接修改内部配置的情况下，添加自定义的 Webpack 配置。</p>
-<p>以下是引入 <code>splitChunks</code> 的步骤：</p>
-<h3 id="1-安装-ngx-build-plus"><a href="#1-安装-ngx-build-plus" class="headerlink" title="1. 安装 ngx-build-plus"></a>1. 安装 <code>ngx-build-plus</code></h3><p>在你的 Angular 项目中，首先需要安装 <code>ngx-build-plus</code>。打开终端，运行以下命令：</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">npm install ngx-build-plus --save-dev</span><br></pre></td></tr></table></figure>
-
-<h3 id="2-修改-angular-json"><a href="#2-修改-angular-json" class="headerlink" title="2. 修改 angular.json"></a>2. 修改 <code>angular.json</code></h3><p>接下来，需要修改项目根目录下的 <code>angular.json</code> 文件，将默认的 builder 替换为 <code>ngx-build-plus</code>。例如，对于 build 和 serve，你需要做如下修改：</p>
-<p>找到 <code>projects -&gt; &lt;your-project-name&gt; -&gt; architect -&gt; build -&gt; builder</code> 字段，将其值从 <code>@angular-devkit/build-angular:browser</code> 更改为 <code>ngx-build-plus:browser</code>。</p>
-<p>同样，将 <code>projects -&gt; &lt;your-project-name&gt; -&gt; architect -&gt; serve -&gt; builder</code> 字段的值从 <code>@angular-devkit/build-angular:dev-server</code> 更改为 <code>ngx-build-plus:dev-server</code>。</p>
-<h3 id="3-创建-Webpack-配置文件"><a href="#3-创建-Webpack-配置文件" class="headerlink" title="3. 创建 Webpack 配置文件"></a>3. 创建 Webpack 配置文件</h3><p>在项目根目录下创建一个新的 webpack 配置文件，例如 <code>webpack.extra.js</code>，并添加你的自定义配置。对于 <code>splitChunks</code>，配置可能如下：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">  <span class="attr">optimization</span>: &#123;</span><br><span class="line">    <span class="attr">splitChunks</span>: &#123;</span><br><span class="line">      <span class="attr">chunks</span>: <span class="string">&#x27;all&#x27;</span>,</span><br><span class="line">      <span class="attr">maxSize</span>: <span class="number">200000</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<h3 id="4-运行构建或开发服务器"><a href="#4-运行构建或开发服务器" class="headerlink" title="4. 运行构建或开发服务器"></a>4. 运行构建或开发服务器</h3><p>使用 <code>ngx-build-plus</code> 运行构建或开发服务器时，需要通过 <code>--extra-webpack-config</code> 参数指定额外的 webpack 配置文件。例如：</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">ng build --extra-webpack-config webpack.extra.js</span><br></pre></td></tr></table></figure>
-
-<p>或者，对于开发服务器：</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">ng serve --extra-webpack-config webpack.extra.js</span><br></pre></td></tr></table></figure>
-
-<p>通过这种方式，你可以引入 <code>splitChunks</code> 插件来优化你的 Angular 项目的代码分割，而不需要直接修改 Angular CLI 的内部 webpack 配置。这样做既保留了 Angular CLI 提供的便利和稳定性，又增加了配置的灵活性。</p>
-<p><a href="https://juejin.cn/post/6844904198023168013#heading-8">『Webpack系列』—— SplitChunks插件用法详解</a></p>
-]]></content>
-      <categories>
-        <category>知识库</category>
-        <category>Web</category>
-      </categories>
-      <tags>
-        <tag>Web</tag>
-        <tag>性能优化</tag>
-        <tag>Webpack</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Web性能优化-Web Worker</title>
     <url>/2023/06/15/Web%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96-WebWorker/</url>
     <content><![CDATA[<p>Web Worker 提供了一种在主线程之外执行 JavaScript 代码的能力，这意味着你可以在一个后台线程中运行脚本，从而避免影响到主线程的性能，特别是 UI 的响应性和渲染。通过将计算密集型或耗时的任务移到Web Worker中，应用的主线程可以保持流畅，从而提升用户体验。</p>
@@ -120,26 +37,27 @@
       </tags>
   </entry>
   <entry>
-    <title>Web性能优化-提取关键CSS</title>
-    <url>/2023/06/14/Web%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96-%E6%8F%90%E5%8F%96%E5%85%B3%E9%94%AECSS/</url>
-    <content><![CDATA[<h3 id="工作原理"><a href="#工作原理" class="headerlink" title="工作原理"></a>工作原理</h3><p>当你使用 Webpack 构建你的前端资源时，<code>html-critical-webpack-plugin</code> 会分析你的应用程序的HTML输出和CSS文件，自动提取出对首屏渲染至关重要的CSS，并将这些CSS内联到HTML文件的<code>&lt;head&gt;</code>部分。这样做的好处是可以减少外部CSS文件的请求，从而加速页面的加载时间。</p>
-<h3 id="主要特点"><a href="#主要特点" class="headerlink" title="主要特点"></a>主要特点</h3><ul>
-<li><strong>自动提取关键CSS</strong>：无需手动确定哪些样式是关键样式，插件会自动进行提取。</li>
-<li><strong>提升页面加载性能</strong>：通过减少初始加载所需的HTTP请求数量，加速首次内容呈现（FCP）和首次有意义的绘制（FMP）。</li>
-<li><strong>易于集成</strong>：作为一个Webpack插件，它可以轻松地集成到现有的Webpack构建流程中，不需要大量的配置。</li>
-</ul>
-<h3 id="使用方式"><a href="#使用方式" class="headerlink" title="使用方式"></a>使用方式</h3><p>要在你的项目中使用<code>html-critical-webpack-plugin</code>，你需要首先安装这个插件。一般可以通过npm或yarn来安装：</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">npm install html-critical-webpack-plugin --save-dev</span><br></pre></td></tr></table></figure>
+    <title>Web性能优化-SplitChunks提取公共代码</title>
+    <url>/2023/06/12/Web%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96-SplitChunks%E6%8F%90%E5%8F%96%E5%85%AC%E5%85%B1%E4%BB%A3%E7%A0%81/</url>
+    <content><![CDATA[<p>要在 Angular 项目中引入 <code>splitChunks</code> 插件来进行代码分割和优化，推荐的方式是通过 <code>ngx-build-plus</code> 扩展 Angular CLI 的 Webpack 配置。由于 Angular CLI 默认隐藏了 Webpack 的配置文件，使用 <code>ngx-build-plus</code> 允许你在不直接修改内部配置的情况下，添加自定义的 Webpack 配置。</p>
+<p>以下是引入 <code>splitChunks</code> 的步骤：</p>
+<h3 id="1-安装-ngx-build-plus"><a href="#1-安装-ngx-build-plus" class="headerlink" title="1. 安装 ngx-build-plus"></a>1. 安装 <code>ngx-build-plus</code></h3><p>在你的 Angular 项目中，首先需要安装 <code>ngx-build-plus</code>。打开终端，运行以下命令：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">npm install ngx-build-plus --save-dev</span><br></pre></td></tr></table></figure>
 
-<p>然后，在你的webpack配置文件中引入并配置这个插件：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title class_">HtmlCriticalWebpackPlugin</span> = <span class="built_in">require</span>(<span class="string">&#x27;html-critical-webpack-plugin&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">    <span class="comment">// 其他webpack配置...</span></span><br><span class="line">    <span class="attr">plugins</span>: [</span><br><span class="line">        <span class="keyword">new</span> <span class="title class_">HtmlCriticalWebpackPlugin</span>(&#123;</span><br><span class="line">            <span class="attr">base</span>: path.<span class="title function_">join</span>(path.<span class="title function_">resolve</span>(__dirname), <span class="string">&#x27;dist/&#x27;</span>),</span><br><span class="line">            <span class="attr">src</span>: <span class="string">&#x27;index.html&#x27;</span>,</span><br><span class="line">            <span class="attr">dest</span>: <span class="string">&#x27;index.html&#x27;</span>,</span><br><span class="line">            <span class="attr">inline</span>: <span class="literal">true</span>,</span><br><span class="line">            <span class="attr">minify</span>: <span class="literal">true</span>,</span><br><span class="line">            <span class="attr">extract</span>: <span class="literal">true</span>,</span><br><span class="line">            <span class="attr">width</span>: <span class="number">1300</span>,</span><br><span class="line">            <span class="attr">height</span>: <span class="number">900</span>,</span><br><span class="line">            <span class="attr">penthouse</span>: &#123;</span><br><span class="line">                <span class="attr">blockJSRequests</span>: <span class="literal">false</span>,</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">    ]</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="2-修改-angular-json"><a href="#2-修改-angular-json" class="headerlink" title="2. 修改 angular.json"></a>2. 修改 <code>angular.json</code></h3><p>接下来，需要修改项目根目录下的 <code>angular.json</code> 文件，将默认的 builder 替换为 <code>ngx-build-plus</code>。例如，对于 build 和 serve，你需要做如下修改：</p>
+<p>找到 <code>projects -&gt; &lt;your-project-name&gt; -&gt; architect -&gt; build -&gt; builder</code> 字段，将其值从 <code>@angular-devkit/build-angular:browser</code> 更改为 <code>ngx-build-plus:browser</code>。</p>
+<p>同样，将 <code>projects -&gt; &lt;your-project-name&gt; -&gt; architect -&gt; serve -&gt; builder</code> 字段的值从 <code>@angular-devkit/build-angular:dev-server</code> 更改为 <code>ngx-build-plus:dev-server</code>。</p>
+<h3 id="3-创建-Webpack-配置文件"><a href="#3-创建-Webpack-配置文件" class="headerlink" title="3. 创建 Webpack 配置文件"></a>3. 创建 Webpack 配置文件</h3><p>在项目根目录下创建一个新的 webpack 配置文件，例如 <code>webpack.extra.js</code>，并添加你的自定义配置。对于 <code>splitChunks</code>，配置可能如下：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">  <span class="attr">optimization</span>: &#123;</span><br><span class="line">    <span class="attr">splitChunks</span>: &#123;</span><br><span class="line">      <span class="attr">chunks</span>: <span class="string">&#x27;all&#x27;</span>,</span><br><span class="line">      <span class="attr">maxSize</span>: <span class="number">200000</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
-<h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><ul>
-<li><strong>兼容性</strong>：确保你的Webpack版本与插件版本兼容。</li>
-<li><strong>配置选项</strong>：<code>html-critical-webpack-plugin</code> 提供了多种配置选项，包括但不限于页面尺寸（用于模拟设备视口），以及是否内联关键CSS。根据项目的实际需要进行调整。</li>
-<li><strong>构建性能</strong>：提取关键CSS可能会增加构建时间，特别是对于大型项目，建议仅在生产环境构建中启用此插件。</li>
-</ul>
-<p>通过合理配置和使用<code>html-critical-webpack-plugin</code>，可以有效地优化你的前端项目的加载时间，提升用户体验。</p>
+<h3 id="4-运行构建或开发服务器"><a href="#4-运行构建或开发服务器" class="headerlink" title="4. 运行构建或开发服务器"></a>4. 运行构建或开发服务器</h3><p>使用 <code>ngx-build-plus</code> 运行构建或开发服务器时，需要通过 <code>--extra-webpack-config</code> 参数指定额外的 webpack 配置文件。例如：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">ng build --extra-webpack-config webpack.extra.js</span><br></pre></td></tr></table></figure>
+
+<p>或者，对于开发服务器：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">ng serve --extra-webpack-config webpack.extra.js</span><br></pre></td></tr></table></figure>
+
+<p>通过这种方式，你可以引入 <code>splitChunks</code> 插件来优化你的 Angular 项目的代码分割，而不需要直接修改 Angular CLI 的内部 webpack 配置。这样做既保留了 Angular CLI 提供的便利和稳定性，又增加了配置的灵活性。</p>
+<p><a href="https://juejin.cn/post/6844904198023168013#heading-8">『Webpack系列』—— SplitChunks插件用法详解</a></p>
 ]]></content>
       <categories>
         <category>知识库</category>
@@ -149,6 +67,54 @@
         <tag>Web</tag>
         <tag>性能优化</tag>
         <tag>Webpack</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>《JavsScript百炼成仙》</title>
+    <url>/2021/02/12/%E3%80%8AJavsScript%E7%99%BE%E7%82%BC%E6%88%90%E4%BB%99%E3%80%8B/</url>
+    <content><![CDATA[<p>杨逸飞 编著</p>
+<h2 id="读书笔记"><a href="#读书笔记" class="headerlink" title="读书笔记"></a>读书笔记</h2><h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><ul>
+<li>本书旨在通过独特的角度和轻松的方式介绍JavaScript的核心概念和高级技巧，使读者能够深入理解并灵活运用JavaScript。</li>
+</ul>
+<h4 id="第一章：JavaScript基础精要"><a href="#第一章：JavaScript基础精要" class="headerlink" title="第一章：JavaScript基础精要"></a>第一章：JavaScript基础精要</h4><ul>
+<li>理解JavaScript语言的基本结构和语法。</li>
+<li>学习变量、类型、表达式、运算符的使用。</li>
+<li>函数定义、作用域和闭包的概念及其重要性。</li>
+</ul>
+<h4 id="第二章：函数七重关秘籍"><a href="#第二章：函数七重关秘籍" class="headerlink" title="第二章：函数七重关秘籍"></a>第二章：函数七重关秘籍</h4><ul>
+<li>深入探讨函数的定义方式、作用域链、闭包、高阶函数等高级主题。</li>
+<li>理解并实践回调函数、Promise和异步编程的模式。</li>
+</ul>
+<h4 id="第三章：DOM的艺术"><a href="#第三章：DOM的艺术" class="headerlink" title="第三章：DOM的艺术"></a>第三章：DOM的艺术</h4><ul>
+<li>使用JavaScript操作DOM，包括元素选择、属性修改、事件处理等。</li>
+<li>掌握使用jQuery简化DOM操作的技巧。</li>
+</ul>
+<h4 id="第四章：面向对象的奥义"><a href="#第四章：面向对象的奥义" class="headerlink" title="第四章：面向对象的奥义"></a>第四章：面向对象的奥义</h4><ul>
+<li>探索JavaScript的面向对象编程，包括原型链、继承、类的使用。</li>
+<li>理解ES6引入的类语法及其与传统原型链的关联。</li>
+</ul>
+<h4 id="第五章：前端框架的选择：Vue篇"><a href="#第五章：前端框架的选择：Vue篇" class="headerlink" title="第五章：前端框架的选择：Vue篇"></a>第五章：前端框架的选择：Vue篇</h4><ul>
+<li>学习Vue.js框架的核心概念，包括响应式原理、组件系统、Vue实例、指令等。</li>
+<li>实践Vue的基本用法，构建交云悍数据驱动的Web应用。</li>
+</ul>
+<h4 id="第六章：实战演练"><a href="#第六章：实战演练" class="headerlink" title="第六章：实战演练"></a>第六章：实战演练</h4><ul>
+<li>结合实际案例，深入理解书中介绍的概念和技术。</li>
+<li>掌握从零开始构建一个现代化的前端项目的步骤和方法。</li>
+</ul>
+<h4 id="附录：JavaScript进阶资源"><a href="#附录：JavaScript进阶资源" class="headerlink" title="附录：JavaScript进阶资源"></a>附录：JavaScript进阶资源</h4><ul>
+<li>推荐进一步学习的书籍、在线资源和社区。</li>
+<li>提供进阶学习路径，包括Node.js、React、Angular等其他流行技术的入门指导。</li>
+</ul>
+<h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><ul>
+<li>《JavaScript百炼成仙》不仅是一本技术书籍，也是一次探索JavaScript世界的奇妙旅程。</li>
+<li>通过本书的学习，读者可以掌握JavaScript的核心概念、高级技巧以及前端开发的最佳实践，为成为前端开发高手打下坚实的基础。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>书籍</category>
+      </categories>
+      <tags>
+        <tag>读书笔记</tag>
       </tags>
   </entry>
   <entry>
@@ -222,86 +188,6 @@
       </tags>
   </entry>
   <entry>
-    <title>《Angular 开发入门与实战》</title>
-    <url>/2021/09/15/%E3%80%8AAngular%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8%E4%B8%8E%E5%AE%9E%E6%88%98%E3%80%8B/</url>
-    <content><![CDATA[<p>兰泽君 著作</p>
-<h2 id="读书笔记"><a href="#读书笔记" class="headerlink" title="读书笔记"></a>读书笔记</h2><h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>Angular是一种流行的前端框架，由Google维护，专为开发动态单页应用（SPA）而设计。它鼓励使用TypeScript进行开发，这是JavaScript的一个超集，添加了静态类型等特性。</p>
-<h4 id="第一部分：Angular基础"><a href="#第一部分：Angular基础" class="headerlink" title="第一部分：Angular基础"></a>第一部分：Angular基础</h4><ul>
-<li><strong>TypeScript基础</strong>：介绍TypeScript的基本语法，以及如何在Angular项目中使用它。</li>
-<li><strong>组件和模块</strong>：解释Angular应用是如何通过组件来构建用户界面的，每个组件都有自己的逻辑和模板。模块则用来组织这些组件，以及提供服务。</li>
-<li><strong>模板和数据绑定</strong>：介绍如何使用Angular模板语法来显示数据和响应用户事件，以及单向和双向数据绑定的概念。</li>
-<li><strong>服务和依赖注入</strong>：讨论服务的概念，这是一种用于封装业务逻辑的方法，以及Angular如何使用依赖注入（DI）模式来提供这些服务。</li>
-</ul>
-<h4 id="第二部分：进阶实战"><a href="#第二部分：进阶实战" class="headerlink" title="第二部分：进阶实战"></a>第二部分：进阶实战</h4><ul>
-<li><strong>路由和导航</strong>：深入探讨Angular路由器的工作原理，如何定义路由规则，以及如何进行导航。</li>
-<li><strong>表单处理</strong>：详细说明如何使用Angular表单模块来创建和验证用户输入表单。</li>
-<li><strong>RxJS和异步编程</strong>：介绍如何使用RxJS库在Angular中处理异步操作，包括Observable和操作符的概念。</li>
-<li><strong>状态管理</strong>：探讨在Angular应用中管理状态的策略，可能包括使用NgRx或其他状态管理库。</li>
-</ul>
-<h4 id="第三部分：项目实战"><a href="#第三部分：项目实战" class="headerlink" title="第三部分：项目实战"></a>第三部分：项目实战</h4><ul>
-<li><strong>构建实际项目</strong>：通过构建一个实际的Angular应用来综合运用前面学到的知识，可能是一个电商平台、博客系统或任务管理器。</li>
-<li><strong>性能优化</strong>：介绍如何分析和提升Angular应用的性能。</li>
-<li><strong>部署和维护</strong>：讨论将Angular应用部署到生产环境的最佳实践，以及如何维护和更新现有应用。</li>
-</ul>
-<h4 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h4><p>《Angular 开发入门与实战》是一本面向希望深入了解Angular框架的前端开发人员的实用指南。通过阅读这本书，开发者不仅能掌握Angular的基础知识，还能学会如何在实际项目中应用这些知识来构建复杂的应用程序。</p>
-<p>这份读书笔记旨在概述书中可能包含的主要内容和概念，真正的学习和理解还需深入阅读原书并实践其中的示例和技巧。</p>
-]]></content>
-      <categories>
-        <category>书籍</category>
-      </categories>
-      <tags>
-        <tag>读书笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>《JavsScript百炼成仙》</title>
-    <url>/2021/02/12/%E3%80%8AJavsScript%E7%99%BE%E7%82%BC%E6%88%90%E4%BB%99%E3%80%8B/</url>
-    <content><![CDATA[<p>杨逸飞 编著</p>
-<h2 id="读书笔记"><a href="#读书笔记" class="headerlink" title="读书笔记"></a>读书笔记</h2><h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><ul>
-<li>本书旨在通过独特的角度和轻松的方式介绍JavaScript的核心概念和高级技巧，使读者能够深入理解并灵活运用JavaScript。</li>
-</ul>
-<h4 id="第一章：JavaScript基础精要"><a href="#第一章：JavaScript基础精要" class="headerlink" title="第一章：JavaScript基础精要"></a>第一章：JavaScript基础精要</h4><ul>
-<li>理解JavaScript语言的基本结构和语法。</li>
-<li>学习变量、类型、表达式、运算符的使用。</li>
-<li>函数定义、作用域和闭包的概念及其重要性。</li>
-</ul>
-<h4 id="第二章：函数七重关秘籍"><a href="#第二章：函数七重关秘籍" class="headerlink" title="第二章：函数七重关秘籍"></a>第二章：函数七重关秘籍</h4><ul>
-<li>深入探讨函数的定义方式、作用域链、闭包、高阶函数等高级主题。</li>
-<li>理解并实践回调函数、Promise和异步编程的模式。</li>
-</ul>
-<h4 id="第三章：DOM的艺术"><a href="#第三章：DOM的艺术" class="headerlink" title="第三章：DOM的艺术"></a>第三章：DOM的艺术</h4><ul>
-<li>使用JavaScript操作DOM，包括元素选择、属性修改、事件处理等。</li>
-<li>掌握使用jQuery简化DOM操作的技巧。</li>
-</ul>
-<h4 id="第四章：面向对象的奥义"><a href="#第四章：面向对象的奥义" class="headerlink" title="第四章：面向对象的奥义"></a>第四章：面向对象的奥义</h4><ul>
-<li>探索JavaScript的面向对象编程，包括原型链、继承、类的使用。</li>
-<li>理解ES6引入的类语法及其与传统原型链的关联。</li>
-</ul>
-<h4 id="第五章：前端框架的选择：Vue篇"><a href="#第五章：前端框架的选择：Vue篇" class="headerlink" title="第五章：前端框架的选择：Vue篇"></a>第五章：前端框架的选择：Vue篇</h4><ul>
-<li>学习Vue.js框架的核心概念，包括响应式原理、组件系统、Vue实例、指令等。</li>
-<li>实践Vue的基本用法，构建交云悍数据驱动的Web应用。</li>
-</ul>
-<h4 id="第六章：实战演练"><a href="#第六章：实战演练" class="headerlink" title="第六章：实战演练"></a>第六章：实战演练</h4><ul>
-<li>结合实际案例，深入理解书中介绍的概念和技术。</li>
-<li>掌握从零开始构建一个现代化的前端项目的步骤和方法。</li>
-</ul>
-<h4 id="附录：JavaScript进阶资源"><a href="#附录：JavaScript进阶资源" class="headerlink" title="附录：JavaScript进阶资源"></a>附录：JavaScript进阶资源</h4><ul>
-<li>推荐进一步学习的书籍、在线资源和社区。</li>
-<li>提供进阶学习路径，包括Node.js、React、Angular等其他流行技术的入门指导。</li>
-</ul>
-<h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><ul>
-<li>《JavaScript百炼成仙》不仅是一本技术书籍，也是一次探索JavaScript世界的奇妙旅程。</li>
-<li>通过本书的学习，读者可以掌握JavaScript的核心概念、高级技巧以及前端开发的最佳实践，为成为前端开发高手打下坚实的基础。</li>
-</ul>
-]]></content>
-      <categories>
-        <category>书籍</category>
-      </categories>
-      <tags>
-        <tag>读书笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>【Chrome】使用指南</title>
     <url>/2022/04/19/%E3%80%90Chrome%E3%80%91%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</url>
     <content><![CDATA[<p>Google Chrome</p>
@@ -325,6 +211,51 @@
       </categories>
       <tags>
         <tag>Chrome</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【Hexo】使用笔记</title>
+    <url>/2023/07/29/%E3%80%90Hexo%E3%80%91%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<h2 id="一、初识Hexo"><a href="#一、初识Hexo" class="headerlink" title="一、初识Hexo"></a>一、初识Hexo</h2><h4 id="1-config-yml"><a href="#1-config-yml" class="headerlink" title="1._config.yml"></a>1._config.yml</h4><p>了解<code>_config.yml</code>配置文件的参数信息。网站的 <a href="https://hexo.io/zh-cn/docs/configuration">配置</a> 信息，可以在此配置大部分的参数。</p>
+<h4 id="2-生成文章"><a href="#2-生成文章" class="headerlink" title="2.生成文章"></a>2.生成文章</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hexo new &quot;post title with whitespace&quot;</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-生成静态文件"><a href="#3-生成静态文件" class="headerlink" title="3.生成静态文件"></a>3.生成静态文件</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-部署"><a href="#4-部署" class="headerlink" title="4.部署"></a>4.部署</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h2 id="二、配置"><a href="#二、配置" class="headerlink" title="二、配置"></a>二、配置</h2><p>开启文章资源文件夹</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">post_asset_folder = <span class="literal"><span class="keyword">true</span></span></span><br></pre></td></tr></table></figure>
+
+<h2 id="三、分类"><a href="#三、分类" class="headerlink" title="三、分类"></a>三、分类</h2><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">hexo new page categories</span><br></pre></td></tr></table></figure>
+
+<h2 id="四、搜索"><a href="#四、搜索" class="headerlink" title="四、搜索"></a>四、搜索</h2><ul>
+<li><a href="https://github.com/theme-next/hexo-generator-searchdb">hexo-generator-searchdb</a> 用于搜索</li>
+</ul>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-searchdb --save</span><br></pre></td></tr></table></figure>
+
+<p>然后将以下配置复制到你博客根目录下的 <code>_config.yml</code> 里:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># hexo-generator-searchdb</span><br><span class="line">search:</span><br><span class="line">  path: search.xml</span><br><span class="line">  field: post</span><br><span class="line">  format: html</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><a href="https://github.com/hexojs/hexo-generator-feed">hexo-generator-feed</a> 用于生成 RSS 订阅</li>
+</ul>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-feed --save</span><br></pre></td></tr></table></figure>
+
+<p>然后将以下配置复制到你博客根目录下的 <code>_config.yml</code> 里:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">feed:</span><br><span class="line">  type: atom</span><br><span class="line">  path: atom.xml</span><br><span class="line">  limit: 20</span><br><span class="line">  hub:</span><br><span class="line">  content:</span><br><span class="line">  content_limit: 140</span><br><span class="line">  content_limit_delim: &quot; &quot;</span><br><span class="line">  order_by: -date</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>知识库</category>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>博客</tag>
       </tags>
   </entry>
   <entry>
@@ -387,51 +318,6 @@
       </tags>
   </entry>
   <entry>
-    <title>【Hexo】使用笔记</title>
-    <url>/2023/07/29/%E3%80%90Hexo%E3%80%91%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<h2 id="一、初识Hexo"><a href="#一、初识Hexo" class="headerlink" title="一、初识Hexo"></a>一、初识Hexo</h2><h4 id="1-config-yml"><a href="#1-config-yml" class="headerlink" title="1._config.yml"></a>1._config.yml</h4><p>了解<code>_config.yml</code>配置文件的参数信息。网站的 <a href="https://hexo.io/zh-cn/docs/configuration">配置</a> 信息，可以在此配置大部分的参数。</p>
-<h4 id="2-生成文章"><a href="#2-生成文章" class="headerlink" title="2.生成文章"></a>2.生成文章</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hexo new &quot;post title with whitespace&quot;</span><br></pre></td></tr></table></figure>
-
-<h4 id="3-生成静态文件"><a href="#3-生成静态文件" class="headerlink" title="3.生成静态文件"></a>3.生成静态文件</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
-
-<h4 id="4-部署"><a href="#4-部署" class="headerlink" title="4.部署"></a>4.部署</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h2 id="二、配置"><a href="#二、配置" class="headerlink" title="二、配置"></a>二、配置</h2><p>开启文章资源文件夹</p>
-<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">post_asset_folder = <span class="literal"><span class="keyword">true</span></span></span><br></pre></td></tr></table></figure>
-
-<h2 id="三、分类"><a href="#三、分类" class="headerlink" title="三、分类"></a>三、分类</h2><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">hexo new page categories</span><br></pre></td></tr></table></figure>
-
-<h2 id="四、搜索"><a href="#四、搜索" class="headerlink" title="四、搜索"></a>四、搜索</h2><ul>
-<li><a href="https://github.com/theme-next/hexo-generator-searchdb">hexo-generator-searchdb</a> 用于搜索</li>
-</ul>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-searchdb --save</span><br></pre></td></tr></table></figure>
-
-<p>然后将以下配置复制到你博客根目录下的 <code>_config.yml</code> 里:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># hexo-generator-searchdb</span><br><span class="line">search:</span><br><span class="line">  path: search.xml</span><br><span class="line">  field: post</span><br><span class="line">  format: html</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><a href="https://github.com/hexojs/hexo-generator-feed">hexo-generator-feed</a> 用于生成 RSS 订阅</li>
-</ul>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-feed --save</span><br></pre></td></tr></table></figure>
-
-<p>然后将以下配置复制到你博客根目录下的 <code>_config.yml</code> 里:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">feed:</span><br><span class="line">  type: atom</span><br><span class="line">  path: atom.xml</span><br><span class="line">  limit: 20</span><br><span class="line">  hub:</span><br><span class="line">  content:</span><br><span class="line">  content_limit: 140</span><br><span class="line">  content_limit_delim: &quot; &quot;</span><br><span class="line">  order_by: -date</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>知识库</category>
-        <category>Hexo</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>博客</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>【LeetCode】</title>
     <url>/2023/07/27/%E3%80%90LeetCode%E3%80%91/</url>
     <content><![CDATA[]]></content>
@@ -444,59 +330,53 @@
       </tags>
   </entry>
   <entry>
-    <title>【MacOS】使用笔记</title>
-    <url>/2021/11/25/%E3%80%90MacOS%E3%80%91%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<h1 id="日常"><a href="#日常" class="headerlink" title="日常"></a>日常</h1><ul>
-<li><code>command + C</code> 复制</li>
-<li><code>command + V</code> 粘贴</li>
-<li><code>option + command + V</code>  （正常复制后）剪贴</li>
-<li><code>command + Z</code> 撤销</li>
-<li><code>shift + command + Z</code> 重做（相当于撤销上一步的撤销）</li>
-<li><code>command + tab</code> 向后切换应用</li>
-<li><code>command + ～</code> 向前切换应用 &#x2F; 切换同一个应用的不同窗口</li>
-<li><code>command + M</code> 最小化窗口</li>
-<li><code>command + W</code>  关闭窗口</li>
-<li><code>command + Q</code> 退出程序</li>
-<li><code>command + shift + 4</code> 截屏</li>
-<li><code>command + shift + 5</code> 录屏</li>
-<li><code>control + A</code> 定位当前行首</li>
-<li><code>control + E</code> 定位当前行尾</li>
-</ul>
-<h1 id="访达"><a href="#访达" class="headerlink" title="访达"></a>访达</h1><ul>
-<li><code>enter</code> 重命名某文件</li>
-<li><code>command + O</code> 打开某文件</li>
-<li><code>command + delete</code> 删除某文件到废纸篓</li>
-<li><code>command + [</code> 前往上一个文件夹</li>
-<li><code>command + ]</code> 前往下一个文件夹</li>
-<li><code>command + 上方向键</code> 前往上层文件夹</li>
-<li><code>command + E</code> 推出磁盘映像</li>
-</ul>
-<h1 id="VSCode"><a href="#VSCode" class="headerlink" title="VSCode"></a>VSCode</h1><ul>
-<li><code>control + G</code> 定位某行 </li>
-<li><code>control + C </code>结束终端当前进程</li>
-<li><code>command + shift + K</code> 删除整行代码 </li>
-<li><code>option + command + F </code> 当前文件替换 </li>
-<li><code>option + shift + 向上/向下箭头</code> 复制一行 </li>
-<li><code>option + shift + F</code> 格式化代码</li>
-</ul>
-<h1 id="终端"><a href="#终端" class="headerlink" title="终端"></a>终端</h1><p>当遇到提示：“你不能使用以点“.”开头的名称,因为这些名称已被系统预留。请选取其他名称。”可以使用以下命令</p>
+    <title>Web性能优化-JS文件添加defer</title>
+    <url>/2023/06/13/Web%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96-JS%E6%96%87%E4%BB%B6%E6%B7%BB%E5%8A%A0defer/</url>
+    <content><![CDATA[<p>为JavaScript文件添加<code>defer</code>属性是优化Web性能的一个常见做法，特别是在改善页面加载时间和用户体验方面。</p>
+<h3 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h3><p>当浏览器加载HTML文档时，它会按照出现的顺序解析文档中的元素。默认情况下，当浏览器遇到一个<code>&lt;script&gt;</code>标签时，它会停止HTML解析过程，立即下载并执行脚本。这种行为会导致两个主要问题：</p>
 <ul>
-<li>显示隐藏文件</li>
+<li><strong>阻塞渲染</strong>：脚本的下载和执行会阻塞页面的渲染过程，延迟了首次渲染的时间。</li>
+<li><strong>依赖处理</strong>：如果脚本依赖于页面中尚未解析的DOM元素，那么可能会出现脚本执行错误的问题。</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">defaults write com.apple.finder AppleShowAllFiles -boolean <span class="literal">true</span> ; killall Finder</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>隐藏隐藏文件</li>
+<p>使用<code>defer</code>属性可以解决这些问题。<code>defer</code>属性指示浏览器应该异步下载脚本，但延迟执行直到HTML文档完全被解析完成。这意味着，使用<code>defer</code>的脚本不会阻塞HTML的解析，同时保证在<code>DOMContentLoaded</code>事件触发前执行，确保了脚本的执行顺序和依赖处理。</p>
+<h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3><ul>
+<li><strong>提升性能</strong>：通过避免阻塞HTML解析，<code>defer</code>可以显著提高页面的加载速度。</li>
+<li><strong>保持脚本执行顺序</strong>：即使脚本是异步下载的，使用<code>defer</code>也能保证脚本按照它们在HTML文档中出现的顺序执行。</li>
+<li><strong>改善用户体验</strong>：更快的页面加载时间意味着用户可以更快地看到并与页面交互，从而改善用户体验。</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">defaults write com.apple.finder AppleShowAllFiles FALSE ; killall Finder</span><br></pre></td></tr></table></figure>
+<h3 id="使用方式"><a href="#使用方式" class="headerlink" title="使用方式"></a>使用方式</h3><p>给<code>&lt;script&gt;</code>标签添加<code>defer</code>属性非常简单：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;path/to/your/script.js&quot;</span> <span class="attr">defer</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
+<h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><ul>
+<li><code>defer</code>属性仅适用于带有<code>src</code>属性的<code>&lt;script&gt;</code>标签，即那些引用外部脚本的标签。</li>
+<li>所有现代浏览器都支持<code>defer</code>属性，但如果你需要支持非常老的浏览器（例如，IE9及以下版本），则需要考虑兼容性问题。</li>
+<li>对于依赖于其他脚本或需要立即执行以影响页面加载的脚本（如修改DOM的脚本），使用<code>defer</code>可能不是最佳选择。在这些情况下，可以考虑使用<code>async</code>属性或其他JavaScript加载策略。</li>
+</ul>
+<p>综上所述，合理使用<code>defer</code>属性可以有效提升Web应用的性能和用户体验，是前端开发中常用的优化手段之一。</p>
+<p><code>script-ext-html-webpack-plugin</code>是一个Webpack插件，它扩展了<code>html-webpack-plugin</code>的功能，允许你对HTML文档中的<code>&lt;script&gt;</code>标签进行更细致的控制，例如添加<code>async</code>、<code>defer</code>或<code>type=&quot;module&quot;</code>属性等。这对于优化页面加载性能特别有用，因为你可以指定哪些脚本应该异步加载，哪些应该在文档解析完成后延迟执行，从而不阻塞页面渲染。</p>
+<h3 id="插件实现并安装"><a href="#插件实现并安装" class="headerlink" title="插件实现并安装"></a>插件实现并安装</h3><p>通过npm可以这样安装：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">npm install script-ext-html-webpack-plugin --save-dev</span><br></pre></td></tr></table></figure>
+
+<p>这个命令会将<code>script-ext-html-webpack-plugin</code>添加到你项目的开发依赖中。</p>
+<h3 id="插件使用方法"><a href="#插件使用方法" class="headerlink" title="插件使用方法"></a>插件使用方法</h3><p>在Webpack配置文件中，首先需要引入<code>html-webpack-plugin</code>和<code>script-ext-html-webpack-plugin</code>，然后在<code>plugins</code>数组中配置它们：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title class_">HtmlWebpackPlugin</span> = <span class="built_in">require</span>(<span class="string">&#x27;html-webpack-plugin&#x27;</span>);</span><br><span class="line"><span class="keyword">const</span> <span class="title class_">ScriptExtHtmlWebpackPlugin</span> = <span class="built_in">require</span>(<span class="string">&#x27;script-ext-html-webpack-plugin&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">    <span class="comment">// 其他webpack配置</span></span><br><span class="line">    <span class="attr">plugins</span>: [</span><br><span class="line">        <span class="keyword">new</span> <span class="title class_">HtmlWebpackPlugin</span>(&#123;</span><br><span class="line">            <span class="comment">// HtmlWebpackPlugin的配置选项</span></span><br><span class="line">        &#125;),</span><br><span class="line">        <span class="keyword">new</span> <span class="title class_">ScriptExtHtmlWebpackPlugin</span>(&#123;</span><br><span class="line">            <span class="attr">defaultAttribute</span>: <span class="string">&#x27;defer&#x27;</span></span><br><span class="line">        &#125;)</span><br><span class="line">    ]</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>在这个例子中，<code>ScriptExtHtmlWebpackPlugin</code>被配置为将所有的<code>&lt;script&gt;</code>标签的默认属性设置为<code>defer</code>，这意味着所有通过<code>html-webpack-plugin</code>动态添加到HTML中的脚本都会被自动添加<code>defer</code>属性，从而不会阻塞页面解析。</p>
+<h3 id="注意事项-1"><a href="#注意事项-1" class="headerlink" title="注意事项"></a>注意事项</h3><ul>
+<li>确保你已经安装并正确配置了<code>html-webpack-plugin</code>，因为<code>script-ext-html-webpack-plugin</code>是作为其扩展使用的。</li>
+<li>根据你的项目需求，你可以使用<code>script-ext-html-webpack-plugin</code>提供的其他选项来控制脚本的加载行为，例如<code>async</code>、<code>preload</code>、<code>module</code>等。</li>
+<li>随着Webpack和相关插件的不断更新，建议检查官方文档或npm页面上的最新信息，以获取关于<code>script-ext-html-webpack-plugin</code>的最新用法和最佳实践。</li>
+</ul>
+<p>使用<code>script-ext-html-webpack-plugin</code>可以帮助你更精细地控制网页中脚本的加载和执行，从而进一步优化页面性能。</p>
 ]]></content>
       <categories>
         <category>知识库</category>
-        <category>MacOS</category>
+        <category>Web</category>
       </categories>
       <tags>
-        <tag>MacOS</tag>
+        <tag>Web</tag>
+        <tag>性能优化</tag>
+        <tag>Webpack</tag>
       </tags>
   </entry>
   <entry>
@@ -537,6 +417,38 @@
       </categories>
       <tags>
         <tag>Markdown</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Web性能优化-提取关键CSS</title>
+    <url>/2023/06/14/Web%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96-%E6%8F%90%E5%8F%96%E5%85%B3%E9%94%AECSS/</url>
+    <content><![CDATA[<h3 id="工作原理"><a href="#工作原理" class="headerlink" title="工作原理"></a>工作原理</h3><p>当你使用 Webpack 构建你的前端资源时，<code>html-critical-webpack-plugin</code> 会分析你的应用程序的HTML输出和CSS文件，自动提取出对首屏渲染至关重要的CSS，并将这些CSS内联到HTML文件的<code>&lt;head&gt;</code>部分。这样做的好处是可以减少外部CSS文件的请求，从而加速页面的加载时间。</p>
+<h3 id="主要特点"><a href="#主要特点" class="headerlink" title="主要特点"></a>主要特点</h3><ul>
+<li><strong>自动提取关键CSS</strong>：无需手动确定哪些样式是关键样式，插件会自动进行提取。</li>
+<li><strong>提升页面加载性能</strong>：通过减少初始加载所需的HTTP请求数量，加速首次内容呈现（FCP）和首次有意义的绘制（FMP）。</li>
+<li><strong>易于集成</strong>：作为一个Webpack插件，它可以轻松地集成到现有的Webpack构建流程中，不需要大量的配置。</li>
+</ul>
+<h3 id="使用方式"><a href="#使用方式" class="headerlink" title="使用方式"></a>使用方式</h3><p>要在你的项目中使用<code>html-critical-webpack-plugin</code>，你需要首先安装这个插件。一般可以通过npm或yarn来安装：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">npm install html-critical-webpack-plugin --save-dev</span><br></pre></td></tr></table></figure>
+
+<p>然后，在你的webpack配置文件中引入并配置这个插件：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title class_">HtmlCriticalWebpackPlugin</span> = <span class="built_in">require</span>(<span class="string">&#x27;html-critical-webpack-plugin&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">    <span class="comment">// 其他webpack配置...</span></span><br><span class="line">    <span class="attr">plugins</span>: [</span><br><span class="line">        <span class="keyword">new</span> <span class="title class_">HtmlCriticalWebpackPlugin</span>(&#123;</span><br><span class="line">            <span class="attr">base</span>: path.<span class="title function_">join</span>(path.<span class="title function_">resolve</span>(__dirname), <span class="string">&#x27;dist/&#x27;</span>),</span><br><span class="line">            <span class="attr">src</span>: <span class="string">&#x27;index.html&#x27;</span>,</span><br><span class="line">            <span class="attr">dest</span>: <span class="string">&#x27;index.html&#x27;</span>,</span><br><span class="line">            <span class="attr">inline</span>: <span class="literal">true</span>,</span><br><span class="line">            <span class="attr">minify</span>: <span class="literal">true</span>,</span><br><span class="line">            <span class="attr">extract</span>: <span class="literal">true</span>,</span><br><span class="line">            <span class="attr">width</span>: <span class="number">1300</span>,</span><br><span class="line">            <span class="attr">height</span>: <span class="number">900</span>,</span><br><span class="line">            <span class="attr">penthouse</span>: &#123;</span><br><span class="line">                <span class="attr">blockJSRequests</span>: <span class="literal">false</span>,</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">    ]</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><ul>
+<li><strong>兼容性</strong>：确保你的Webpack版本与插件版本兼容。</li>
+<li><strong>配置选项</strong>：<code>html-critical-webpack-plugin</code> 提供了多种配置选项，包括但不限于页面尺寸（用于模拟设备视口），以及是否内联关键CSS。根据项目的实际需要进行调整。</li>
+<li><strong>构建性能</strong>：提取关键CSS可能会增加构建时间，特别是对于大型项目，建议仅在生产环境构建中启用此插件。</li>
+</ul>
+<p>通过合理配置和使用<code>html-critical-webpack-plugin</code>，可以有效地优化你的前端项目的加载时间，提升用户体验。</p>
+]]></content>
+      <categories>
+        <category>知识库</category>
+        <category>Web</category>
+      </categories>
+      <tags>
+        <tag>Web</tag>
+        <tag>性能优化</tag>
+        <tag>Webpack</tag>
       </tags>
   </entry>
   <entry>
@@ -665,21 +577,15 @@
       </tags>
   </entry>
   <entry>
-    <title>【微信小程序】</title>
-    <url>/2021/02/21/%E3%80%90%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E3%80%91/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>知识库</category>
-        <category>微信小程序</category>
-      </categories>
-      <tags>
-        <tag>微信小程序</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【服务器】</title>
-    <url>/2023/05/04/%E3%80%90%E6%9C%8D%E5%8A%A1%E5%99%A8%E3%80%91/</url>
-    <content><![CDATA[<h1 id="云服务器-ECS"><a href="#云服务器-ECS" class="headerlink" title="云服务器 ECS"></a>云服务器 ECS</h1><blockquote>
+    <title>【云计算】</title>
+    <url>/2023/05/04/%E3%80%90%E4%BA%91%E8%AE%A1%E7%AE%97%E3%80%91%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<p>云计算服务通常分为三个基本类型：</p>
+<ul>
+<li><strong>基础设施即服务（IaaS）</strong>：提供虚拟化的计算资源，如虚拟机、存储空间、网络等。</li>
+<li><strong>平台即服务（PaaS）</strong>：提供应用程序开发和部署的平台，包括操作系统、数据库管理系统、开发工具等。</li>
+<li><strong>软件即服务（SaaS）</strong>：提供通过互联网访问的应用软件，客户无需安装即可使用这些应用。</li>
+</ul>
+<h1 id="云服务器-ECS"><a href="#云服务器-ECS" class="headerlink" title="云服务器 ECS"></a>云服务器 ECS</h1><blockquote>
 <p>云服务器ECS（Elastic Compute Service）是提供可弹性伸缩的计算能力的IaaS级别云计算服务。即虚拟的物理服务器，由服务商搭建维护，用户按需租赁使用。</p>
 </blockquote>
 <p>用户可以通过互联网远程访问这些虚拟化的计算资源，并且可以根据业务需求快速地调整资源配置，例如CPU、内存、硬盘空间等。ECS消除了传统物理服务器的硬件投资和维护成本，提供了灵活、高效、可靠的计算服务。</p>
@@ -762,11 +668,23 @@
 ]]></content>
       <categories>
         <category>知识库</category>
-        <category>服务器</category>
+        <category>云计算</category>
       </categories>
       <tags>
         <tag>运维</tag>
-        <tag>服务器</tag>
+        <tag>云计算</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【微信小程序】</title>
+    <url>/2021/02/21/%E3%80%90%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E3%80%91/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>知识库</category>
+        <category>微信小程序</category>
+      </categories>
+      <tags>
+        <tag>微信小程序</tag>
       </tags>
   </entry>
   <entry>
@@ -884,6 +802,94 @@
         <tag>每日阅读</tag>
         <tag>Vue</tag>
         <tag>权限</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【MacOS】使用笔记</title>
+    <url>/2021/11/25/%E3%80%90MacOS%E3%80%91%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<h1 id="日常"><a href="#日常" class="headerlink" title="日常"></a>日常</h1><ul>
+<li><code>command + C</code> 复制</li>
+<li><code>command + V</code> 粘贴</li>
+<li><code>option + command + V</code>  （正常复制后）剪贴</li>
+<li><code>command + Z</code> 撤销</li>
+<li><code>shift + command + Z</code> 重做（相当于撤销上一步的撤销）</li>
+<li><code>command + tab</code> 向后切换应用</li>
+<li><code>command + ～</code> 向前切换应用 &#x2F; 切换同一个应用的不同窗口</li>
+<li><code>command + M</code> 最小化窗口</li>
+<li><code>command + W</code>  关闭窗口</li>
+<li><code>command + Q</code> 退出程序</li>
+<li><code>command + shift + 4</code> 截屏</li>
+<li><code>command + shift + 5</code> 录屏</li>
+<li><code>control + A</code> 定位当前行首</li>
+<li><code>control + E</code> 定位当前行尾</li>
+</ul>
+<h1 id="访达"><a href="#访达" class="headerlink" title="访达"></a>访达</h1><ul>
+<li><code>enter</code> 重命名某文件</li>
+<li><code>command + O</code> 打开某文件</li>
+<li><code>command + delete</code> 删除某文件到废纸篓</li>
+<li><code>command + [</code> 前往上一个文件夹</li>
+<li><code>command + ]</code> 前往下一个文件夹</li>
+<li><code>command + 上方向键</code> 前往上层文件夹</li>
+<li><code>command + E</code> 推出磁盘映像</li>
+</ul>
+<h1 id="VSCode"><a href="#VSCode" class="headerlink" title="VSCode"></a>VSCode</h1><ul>
+<li><code>control + G</code> 定位某行 </li>
+<li><code>control + C </code>结束终端当前进程</li>
+<li><code>command + shift + K</code> 删除整行代码 </li>
+<li><code>option + command + F </code> 当前文件替换 </li>
+<li><code>option + shift + 向上/向下箭头</code> 复制一行 </li>
+<li><code>option + shift + F</code> 格式化代码</li>
+</ul>
+<h1 id="终端"><a href="#终端" class="headerlink" title="终端"></a>终端</h1><p>当遇到提示：“你不能使用以点“.”开头的名称,因为这些名称已被系统预留。请选取其他名称。”可以使用以下命令</p>
+<ul>
+<li>显示隐藏文件</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">defaults write com.apple.finder AppleShowAllFiles -boolean <span class="literal">true</span> ; killall Finder</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>隐藏隐藏文件</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">defaults write com.apple.finder AppleShowAllFiles FALSE ; killall Finder</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>知识库</category>
+        <category>MacOS</category>
+      </categories>
+      <tags>
+        <tag>MacOS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>《Angular 开发入门与实战》</title>
+    <url>/2021/09/15/%E3%80%8AAngular%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8%E4%B8%8E%E5%AE%9E%E6%88%98%E3%80%8B/</url>
+    <content><![CDATA[<p>兰泽君 著作</p>
+<h2 id="读书笔记"><a href="#读书笔记" class="headerlink" title="读书笔记"></a>读书笔记</h2><h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>Angular是一种流行的前端框架，由Google维护，专为开发动态单页应用（SPA）而设计。它鼓励使用TypeScript进行开发，这是JavaScript的一个超集，添加了静态类型等特性。</p>
+<h4 id="第一部分：Angular基础"><a href="#第一部分：Angular基础" class="headerlink" title="第一部分：Angular基础"></a>第一部分：Angular基础</h4><ul>
+<li><strong>TypeScript基础</strong>：介绍TypeScript的基本语法，以及如何在Angular项目中使用它。</li>
+<li><strong>组件和模块</strong>：解释Angular应用是如何通过组件来构建用户界面的，每个组件都有自己的逻辑和模板。模块则用来组织这些组件，以及提供服务。</li>
+<li><strong>模板和数据绑定</strong>：介绍如何使用Angular模板语法来显示数据和响应用户事件，以及单向和双向数据绑定的概念。</li>
+<li><strong>服务和依赖注入</strong>：讨论服务的概念，这是一种用于封装业务逻辑的方法，以及Angular如何使用依赖注入（DI）模式来提供这些服务。</li>
+</ul>
+<h4 id="第二部分：进阶实战"><a href="#第二部分：进阶实战" class="headerlink" title="第二部分：进阶实战"></a>第二部分：进阶实战</h4><ul>
+<li><strong>路由和导航</strong>：深入探讨Angular路由器的工作原理，如何定义路由规则，以及如何进行导航。</li>
+<li><strong>表单处理</strong>：详细说明如何使用Angular表单模块来创建和验证用户输入表单。</li>
+<li><strong>RxJS和异步编程</strong>：介绍如何使用RxJS库在Angular中处理异步操作，包括Observable和操作符的概念。</li>
+<li><strong>状态管理</strong>：探讨在Angular应用中管理状态的策略，可能包括使用NgRx或其他状态管理库。</li>
+</ul>
+<h4 id="第三部分：项目实战"><a href="#第三部分：项目实战" class="headerlink" title="第三部分：项目实战"></a>第三部分：项目实战</h4><ul>
+<li><strong>构建实际项目</strong>：通过构建一个实际的Angular应用来综合运用前面学到的知识，可能是一个电商平台、博客系统或任务管理器。</li>
+<li><strong>性能优化</strong>：介绍如何分析和提升Angular应用的性能。</li>
+<li><strong>部署和维护</strong>：讨论将Angular应用部署到生产环境的最佳实践，以及如何维护和更新现有应用。</li>
+</ul>
+<h4 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h4><p>《Angular 开发入门与实战》是一本面向希望深入了解Angular框架的前端开发人员的实用指南。通过阅读这本书，开发者不仅能掌握Angular的基础知识，还能学会如何在实际项目中应用这些知识来构建复杂的应用程序。</p>
+<p>这份读书笔记旨在概述书中可能包含的主要内容和概念，真正的学习和理解还需深入阅读原书并实践其中的示例和技巧。</p>
+]]></content>
+      <categories>
+        <category>书籍</category>
+      </categories>
+      <tags>
+        <tag>读书笔记</tag>
       </tags>
   </entry>
 </search>
