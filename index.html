@@ -131,6 +131,67 @@
     
     
     <article
+  id="post-深入掌握 OSS：最完美的 OSS 上传方案！"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2024/03/22/%E6%B7%B1%E5%85%A5%E6%8E%8C%E6%8F%A1%20OSS%EF%BC%9A%E6%9C%80%E5%AE%8C%E7%BE%8E%E7%9A%84%20OSS%20%E4%B8%8A%E4%BC%A0%E6%96%B9%E6%A1%88%EF%BC%81/"
+    >深入掌握 OSS：最完美的 OSS 上传方案！</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2024/03/22/%E6%B7%B1%E5%85%A5%E6%8E%8C%E6%8F%A1%20OSS%EF%BC%9A%E6%9C%80%E5%AE%8C%E7%BE%8E%E7%9A%84%20OSS%20%E4%B8%8A%E4%BC%A0%E6%96%B9%E6%A1%88%EF%BC%81/" class="article-date">
+  <time datetime="2024-03-22T15:52:52.000Z" itemprop="datePublished">2024-03-22</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E9%98%85%E8%AF%BB/">阅读</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h2 id="原文链接"><a href="#原文链接" class="headerlink" title="原文链接"></a><a target="_blank" rel="noopener" href="https://juejin.cn/post/7325495635455868938">原文链接</a></h2><p>上传文件一般不会直接存在服务器目录下，这样不好扩展，一般我们会用阿里云的 OSS（Object Storage Service）对象存储服务，它会自己做弹性扩展，所以存储空间是无限的。</p>
+<p>OSS 对象存储是在一个 bucket 桶下，存放多个文件。</p>
+<p>它是用 key-value 存储的，没有目录的概念，阿里云 OSS 的目录只是用元信息来模拟实现的。</p>
+<p>上传文件后，我们能拿到文件 URL，但生产环境下我们不会直接用 OSS 的 URL 访问，而是会开启 CDN，用网站域名访问，最终回源到 OSS 服务。因此还需要开通 CDN 服务</p>
+<p>不管在哪里上传，都需要 acessKeyId 和 acessKeySecret。</p>
+<p>这个是阿里云的安全策略，因为直接用用户名密码，一旦泄漏就很麻烦，而 acessKey 泄漏了也可以禁用。而且建议用 RAM 子用户的方式生成 accessKey，这样可以最小化权限，进一步减少泄漏的风险。</p>
+<p>客户端直传 OSS 的方式不需要消耗服务器的资源，但是会有泄漏 acessKey 的风险，所以一般都是用服务端生成临时的签名等信息，然后用这些信息来上传。</p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/OSS/" rel="tag">OSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%AF%8F%E6%97%A5%E9%98%85%E8%AF%BB/" rel="tag">每日阅读</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+   
+  
+</article>
+
+    
+    <article
   id="post-搭建图床（Typora+PicGo+阿里云OSS）"
   class="article article-type-post"
   itemscope
@@ -155,7 +216,7 @@
   <time datetime="2024-03-21T13:25:50.000Z" itemprop="datePublished">2024-03-21</time>
 </a> 
   <div class="article-category">
-    <a class="article-category-link" href="/categories/%E9%9A%8F%E7%AC%94/">随笔</a>
+    <a class="article-category-link" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a>
   </div>
    
     </div>
@@ -220,7 +281,7 @@
     
     <footer class="article-footer">
        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/PicGo/" rel="tag">PicGo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Typora/" rel="tag">Typora</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%9B%BE%E5%BA%8A/" rel="tag">图床</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%98%BF%E9%87%8C%E4%BA%91OSS/" rel="tag">阿里云OSS</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/OSS/" rel="tag">OSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/PicGo/" rel="tag">PicGo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Typora/" rel="tag">Typora</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%9B%BE%E5%BA%8A/" rel="tag">图床</a></li></ul>
 
     </footer>
   </div>
@@ -264,8 +325,7 @@
       
     <div class="article-entry" itemprop="articleBody">
        
-  <p><a target="_blank" rel="noopener" href="https://juejin.cn/post/7209648356530896953">文章链接</a></p>
-<p>按钮级别权限控制，怎么做？使用v-if ？可以，但不够通用。</p>
+  <h2 id="原文链接"><a href="#原文链接" class="headerlink" title="原文链接"></a><a target="_blank" rel="noopener" href="https://juejin.cn/post/7209648356530896953">原文链接</a></h2><p>按钮级别权限控制，怎么做？使用v-if ？可以，但不够通用。</p>
 <p>要做权限控制，肯定需要一个<code>code</code>，无论是权限码还是角色码都可以，一般后端会一次性返回，然后全局存储起来就可以了</p>
 <p>文章作者提供了三个思路</p>
 <ol>
@@ -524,7 +584,7 @@
 
     
     <article
-  id="post-Web性能优化-WebWorker"
+  id="post-【云计算】笔记"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -535,8 +595,8 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2023/06/15/Web%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96-WebWorker/"
-    >Web性能优化-Web Worker</a> 
+  <a class="article-title" href="/2023/05/04/%E3%80%90%E4%BA%91%E8%AE%A1%E7%AE%97%E3%80%91%E7%AC%94%E8%AE%B0/"
+    >【云计算】</a> 
 </h2>
  
 
@@ -544,202 +604,106 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2023/06/15/Web%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96-WebWorker/" class="article-date">
-  <time datetime="2023-06-15T14:46:41.000Z" itemprop="datePublished">2023-06-15</time>
+      <a href="/2023/05/04/%E3%80%90%E4%BA%91%E8%AE%A1%E7%AE%97%E3%80%91%E7%AC%94%E8%AE%B0/" class="article-date">
+  <time datetime="2023-05-04T12:58:06.000Z" itemprop="datePublished">2023-05-04</time>
 </a> 
   <div class="article-category">
-    <a class="article-category-link" href="/categories/%E7%9F%A5%E8%AF%86%E5%BA%93/">知识库</a> / <a class="article-category-link" href="/categories/%E7%9F%A5%E8%AF%86%E5%BA%93/Web/">Web</a>
+    <a class="article-category-link" href="/categories/%E7%9F%A5%E8%AF%86%E5%BA%93/">知识库</a> / <a class="article-category-link" href="/categories/%E7%9F%A5%E8%AF%86%E5%BA%93/%E4%BA%91%E8%AE%A1%E7%AE%97/">云计算</a>
   </div>
    
     </div>
       
     <div class="article-entry" itemprop="articleBody">
        
-  <p>Web Worker 提供了一种在主线程之外执行 JavaScript 代码的能力，这意味着你可以在一个后台线程中运行脚本，从而避免影响到主线程的性能，特别是 UI 的响应性和渲染。通过将计算密集型或耗时的任务移到Web Worker中，应用的主线程可以保持流畅，从而提升用户体验。</p>
-<h3 id="如何提高应用的性能"><a href="#如何提高应用的性能" class="headerlink" title="如何提高应用的性能"></a>如何提高应用的性能</h3><ol>
-<li><strong>异步执行复杂计算</strong>：将复杂的数据处理或计算任务放在Web Worker中执行，避免阻塞UI线程。</li>
-<li><strong>背景数据处理</strong>：在Web Worker中处理后台任务，如索引数据库操作、大量数据的排序或筛选，不会导致UI的卡顿或延迟。</li>
-<li><strong>实现多线程</strong>：虽然JavaScript是单线程的，但通过Web Worker可以模拟出多线程环境，允许并行处理任务。</li>
-</ol>
-<h3 id="如何使用"><a href="#如何使用" class="headerlink" title="如何使用"></a>如何使用</h3><p>基本步骤包括创建Worker文件、启动Worker、向Worker发送消息、在Worker内处理消息、以及从Worker返回结果。</p>
-<h4 id="创建Web-Worker"><a href="#创建Web-Worker" class="headerlink" title="创建Web Worker"></a>创建Web Worker</h4><p>首先，你需要创建一个JavaScript文件，这个文件将作为Web Worker的脚本运行。例如，创建<code>worker.js</code>:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// worker.js</span></span><br><span class="line">self.<span class="title function_">addEventListener</span>(<span class="string">&#x27;message&#x27;</span>, <span class="keyword">function</span>(<span class="params">e</span>) &#123;</span><br><span class="line">  <span class="comment">// 接收主线程消息的处理</span></span><br><span class="line">  <span class="keyword">var</span> result = <span class="string">&#x27;处理结果&#x27;</span>;</span><br><span class="line">  self.<span class="title function_">postMessage</span>(result); <span class="comment">// 向主线程发送消息</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-<h4 id="在主线程中使用Web-Worker"><a href="#在主线程中使用Web-Worker" class="headerlink" title="在主线程中使用Web Worker"></a>在主线程中使用Web Worker</h4><p>然后，在你的主JavaScript文件或Web应用中，可以这样启动和使用Web Worker：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (<span class="variable language_">window</span>.<span class="property">Worker</span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> myWorker = <span class="keyword">new</span> <span class="title class_">Worker</span>(<span class="string">&#x27;worker.js&#x27;</span>);</span><br><span class="line"></span><br><span class="line">  myWorker.<span class="title function_">postMessage</span>(<span class="string">&#x27;Hello Worker&#x27;</span>); <span class="comment">// 向Worker发送消息</span></span><br><span class="line"></span><br><span class="line">  myWorker.<span class="title function_">addEventListener</span>(<span class="string">&#x27;message&#x27;</span>, <span class="keyword">function</span>(<span class="params">e</span>) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;从Worker接收到消息:&#x27;</span>, e.<span class="property">data</span>);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="使用Angular中的Web-Worker"><a href="#使用Angular中的Web-Worker" class="headerlink" title="使用Angular中的Web Worker"></a>使用Angular中的Web Worker</h4><p>对于Angular应用，你可以使用Angular CLI来生成Web Worker。例如，<code>ng generate web-worker [name]</code>命令可以在你的项目中创建一个新的Web Worker。如果你想要为<code>app</code>模块生成一个Web Worker，你可以运行：</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ng generate web-worker app</span><br></pre></td></tr></table></figure>
-
-<p>这将在Angular项目中创建一个Web Worker文件，并配置好相关的构建设置。之后，你可以按照上面提到的方式在Angular组件或服务中与Web Worker通信。</p>
-<h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><ul>
-<li><strong>Web Worker运行在与主线程分离的全新环境中</strong>：它们不能直接访问DOM、window对象或其他与UI直接相关的JavaScript对象。</li>
-<li><strong>通信基于消息传递</strong>：主线程和Web Worker之间的数据交换是通过消息传递实现的，意味着数据是被复制而非共享。</li>
-<li><strong>使用合适</strong>：虽然Web Worker对于提升性能有显著效果，但创建和维护Worker也会带来额外的开销，因此应当在确实需要时才使用。</li>
-</ul>
-<p>通过合理利用Web Worker来处理耗时任务，可以显著提升Web应用的性能和用户体验。</p>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Web/" rel="tag">Web</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/" rel="tag">性能优化</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-   
-  
-</article>
-
-    
-    <article
-  id="post-Web性能优化-提取关键CSS"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2023/06/14/Web%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96-%E6%8F%90%E5%8F%96%E5%85%B3%E9%94%AECSS/"
-    >Web性能优化-提取关键CSS</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2023/06/14/Web%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96-%E6%8F%90%E5%8F%96%E5%85%B3%E9%94%AECSS/" class="article-date">
-  <time datetime="2023-06-14T14:34:52.000Z" itemprop="datePublished">2023-06-14</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E7%9F%A5%E8%AF%86%E5%BA%93/">知识库</a> / <a class="article-category-link" href="/categories/%E7%9F%A5%E8%AF%86%E5%BA%93/Web/">Web</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <h3 id="工作原理"><a href="#工作原理" class="headerlink" title="工作原理"></a>工作原理</h3><p>当你使用 Webpack 构建你的前端资源时，<code>html-critical-webpack-plugin</code> 会分析你的应用程序的HTML输出和CSS文件，自动提取出对首屏渲染至关重要的CSS，并将这些CSS内联到HTML文件的<code>&lt;head&gt;</code>部分。这样做的好处是可以减少外部CSS文件的请求，从而加速页面的加载时间。</p>
-<h3 id="主要特点"><a href="#主要特点" class="headerlink" title="主要特点"></a>主要特点</h3><ul>
-<li><strong>自动提取关键CSS</strong>：无需手动确定哪些样式是关键样式，插件会自动进行提取。</li>
-<li><strong>提升页面加载性能</strong>：通过减少初始加载所需的HTTP请求数量，加速首次内容呈现（FCP）和首次有意义的绘制（FMP）。</li>
-<li><strong>易于集成</strong>：作为一个Webpack插件，它可以轻松地集成到现有的Webpack构建流程中，不需要大量的配置。</li>
-</ul>
-<h3 id="使用方式"><a href="#使用方式" class="headerlink" title="使用方式"></a>使用方式</h3><p>要在你的项目中使用<code>html-critical-webpack-plugin</code>，你需要首先安装这个插件。一般可以通过npm或yarn来安装：</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install html-critical-webpack-plugin --save-dev</span><br></pre></td></tr></table></figure>
-
-<p>然后，在你的webpack配置文件中引入并配置这个插件：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title class_">HtmlCriticalWebpackPlugin</span> = <span class="built_in">require</span>(<span class="string">&#x27;html-critical-webpack-plugin&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">    <span class="comment">// 其他webpack配置...</span></span><br><span class="line">    <span class="attr">plugins</span>: [</span><br><span class="line">        <span class="keyword">new</span> <span class="title class_">HtmlCriticalWebpackPlugin</span>(&#123;</span><br><span class="line">            <span class="attr">base</span>: path.<span class="title function_">join</span>(path.<span class="title function_">resolve</span>(__dirname), <span class="string">&#x27;dist/&#x27;</span>),</span><br><span class="line">            <span class="attr">src</span>: <span class="string">&#x27;index.html&#x27;</span>,</span><br><span class="line">            <span class="attr">dest</span>: <span class="string">&#x27;index.html&#x27;</span>,</span><br><span class="line">            <span class="attr">inline</span>: <span class="literal">true</span>,</span><br><span class="line">            <span class="attr">minify</span>: <span class="literal">true</span>,</span><br><span class="line">            <span class="attr">extract</span>: <span class="literal">true</span>,</span><br><span class="line">            <span class="attr">width</span>: <span class="number">1300</span>,</span><br><span class="line">            <span class="attr">height</span>: <span class="number">900</span>,</span><br><span class="line">            <span class="attr">penthouse</span>: &#123;</span><br><span class="line">                <span class="attr">blockJSRequests</span>: <span class="literal">false</span>,</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">    ]</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><ul>
-<li><strong>兼容性</strong>：确保你的Webpack版本与插件版本兼容。</li>
-<li><strong>配置选项</strong>：<code>html-critical-webpack-plugin</code> 提供了多种配置选项，包括但不限于页面尺寸（用于模拟设备视口），以及是否内联关键CSS。根据项目的实际需要进行调整。</li>
-<li><strong>构建性能</strong>：提取关键CSS可能会增加构建时间，特别是对于大型项目，建议仅在生产环境构建中启用此插件。</li>
-</ul>
-<p>通过合理配置和使用<code>html-critical-webpack-plugin</code>，可以有效地优化你的前端项目的加载时间，提升用户体验。</p>
- 
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Web/" rel="tag">Web</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Webpack/" rel="tag">Webpack</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/" rel="tag">性能优化</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-   
-  
-</article>
-
-    
-    <article
-  id="post-Web性能优化-JS文件添加defer"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2023/06/13/Web%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96-JS%E6%96%87%E4%BB%B6%E6%B7%BB%E5%8A%A0defer/"
-    >Web性能优化-JS文件添加defer</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2023/06/13/Web%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96-JS%E6%96%87%E4%BB%B6%E6%B7%BB%E5%8A%A0defer/" class="article-date">
-  <time datetime="2023-06-13T14:37:40.000Z" itemprop="datePublished">2023-06-13</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E7%9F%A5%E8%AF%86%E5%BA%93/">知识库</a> / <a class="article-category-link" href="/categories/%E7%9F%A5%E8%AF%86%E5%BA%93/Web/">Web</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-  <p>为JavaScript文件添加<code>defer</code>属性是优化Web性能的一个常见做法，特别是在改善页面加载时间和用户体验方面。</p>
-<h3 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h3><p>当浏览器加载HTML文档时，它会按照出现的顺序解析文档中的元素。默认情况下，当浏览器遇到一个<code>&lt;script&gt;</code>标签时，它会停止HTML解析过程，立即下载并执行脚本。这种行为会导致两个主要问题：</p>
+  <p>云计算服务通常分为三个基本类型：</p>
 <ul>
-<li><strong>阻塞渲染</strong>：脚本的下载和执行会阻塞页面的渲染过程，延迟了首次渲染的时间。</li>
-<li><strong>依赖处理</strong>：如果脚本依赖于页面中尚未解析的DOM元素，那么可能会出现脚本执行错误的问题。</li>
+<li><strong>基础设施即服务（IaaS）</strong>：提供虚拟化的计算资源，如虚拟机、存储空间、网络等。</li>
+<li><strong>平台即服务（PaaS）</strong>：提供应用程序开发和部署的平台，包括操作系统、数据库管理系统、开发工具等。</li>
+<li><strong>软件即服务（SaaS）</strong>：提供通过互联网访问的应用软件，客户无需安装即可使用这些应用。</li>
 </ul>
-<p>使用<code>defer</code>属性可以解决这些问题。<code>defer</code>属性指示浏览器应该异步下载脚本，但延迟执行直到HTML文档完全被解析完成。这意味着，使用<code>defer</code>的脚本不会阻塞HTML的解析，同时保证在<code>DOMContentLoaded</code>事件触发前执行，确保了脚本的执行顺序和依赖处理。</p>
-<h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3><ul>
-<li><strong>提升性能</strong>：通过避免阻塞HTML解析，<code>defer</code>可以显著提高页面的加载速度。</li>
-<li><strong>保持脚本执行顺序</strong>：即使脚本是异步下载的，使用<code>defer</code>也能保证脚本按照它们在HTML文档中出现的顺序执行。</li>
-<li><strong>改善用户体验</strong>：更快的页面加载时间意味着用户可以更快地看到并与页面交互，从而改善用户体验。</li>
+<h1 id="云服务器-ECS"><a href="#云服务器-ECS" class="headerlink" title="云服务器 ECS"></a>云服务器 ECS</h1><blockquote>
+<p>云服务器ECS（Elastic Compute Service）是提供可弹性伸缩的计算能力的IaaS级别云计算服务。即虚拟的物理服务器，由服务商搭建维护，用户按需租赁使用。</p>
+</blockquote>
+<p>用户可以通过互联网远程访问这些虚拟化的计算资源，并且可以根据业务需求快速地调整资源配置，例如CPU、内存、硬盘空间等。ECS消除了传统物理服务器的硬件投资和维护成本，提供了灵活、高效、可靠的计算服务。</p>
+<p>PS：不同厂商对云计算服务有不同的叫法，</p>
+<ul>
+<li>阿里云 叫 <strong>云服务器 ECS</strong>（Elastic Compute Service）</li>
+<li>腾讯云 叫 <strong>云服务器 CVM</strong>（Cloud Virtual Machine）</li>
+<li>移动云 叫 <strong>云主机 ECS</strong></li>
 </ul>
-<h3 id="使用方式"><a href="#使用方式" class="headerlink" title="使用方式"></a>使用方式</h3><p>给<code>&lt;script&gt;</code>标签添加<code>defer</code>属性非常简单：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;path/to/your/script.js&quot;</span> <span class="attr">defer</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><ul>
-<li><code>defer</code>属性仅适用于带有<code>src</code>属性的<code>&lt;script&gt;</code>标签，即那些引用外部脚本的标签。</li>
-<li>所有现代浏览器都支持<code>defer</code>属性，但如果你需要支持非常老的浏览器（例如，IE9及以下版本），则需要考虑兼容性问题。</li>
-<li>对于依赖于其他脚本或需要立即执行以影响页面加载的脚本（如修改DOM的脚本），使用<code>defer</code>可能不是最佳选择。在这些情况下，可以考虑使用<code>async</code>属性或其他JavaScript加载策略。</li>
+<h2 id="云服务器-ECS-由什么组成？"><a href="#云服务器-ECS-由什么组成？" class="headerlink" title="云服务器 ECS 由什么组成？"></a>云服务器 ECS 由什么组成？</h2><p>云服务器通常包含实例、镜像、块存储、安全组、快照、网络等功能组件。</p>
+<ul>
+<li>实例：等同于一台虚拟服务器，内含 vCPU、内存、操作系统、网络额配置、磁盘等基础计算组件。</li>
+<li>镜像：等同于“装机盘”，为 ECS 实例提供操作系统和预装的软件。</li>
+<li>块存储：分布式数据存储设备。</li>
+<li>安全组：一种虚拟防火墙，划分安全隔离区域，实现网络访问控制</li>
+<li>快照：某一时间点云盘的实时副本，常用于数据备份&#x2F;恢复、应用容灾、制作镜像等。</li>
+<li>网络：主要是有专有网络 VPC，在逻辑上可彻底隔离的云上私有网络。</li>
 </ul>
-<p>综上所述，合理使用<code>defer</code>属性可以有效提升Web应用的性能和用户体验，是前端开发中常用的优化手段之一。</p>
-<p><code>script-ext-html-webpack-plugin</code>是一个Webpack插件，它扩展了<code>html-webpack-plugin</code>的功能，允许你对HTML文档中的<code>&lt;script&gt;</code>标签进行更细致的控制，例如添加<code>async</code>、<code>defer</code>或<code>type=&quot;module&quot;</code>属性等。这对于优化页面加载性能特别有用，因为你可以指定哪些脚本应该异步加载，哪些应该在文档解析完成后延迟执行，从而不阻塞页面渲染。</p>
-<h3 id="插件实现并安装"><a href="#插件实现并安装" class="headerlink" title="插件实现并安装"></a>插件实现并安装</h3><p>通过npm可以这样安装：</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install script-ext-html-webpack-plugin --save-dev</span><br></pre></td></tr></table></figure>
-
-<p>这个命令会将<code>script-ext-html-webpack-plugin</code>添加到你项目的开发依赖中。</p>
-<h3 id="插件使用方法"><a href="#插件使用方法" class="headerlink" title="插件使用方法"></a>插件使用方法</h3><p>在Webpack配置文件中，首先需要引入<code>html-webpack-plugin</code>和<code>script-ext-html-webpack-plugin</code>，然后在<code>plugins</code>数组中配置它们：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title class_">HtmlWebpackPlugin</span> = <span class="built_in">require</span>(<span class="string">&#x27;html-webpack-plugin&#x27;</span>);</span><br><span class="line"><span class="keyword">const</span> <span class="title class_">ScriptExtHtmlWebpackPlugin</span> = <span class="built_in">require</span>(<span class="string">&#x27;script-ext-html-webpack-plugin&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">    <span class="comment">// 其他webpack配置</span></span><br><span class="line">    <span class="attr">plugins</span>: [</span><br><span class="line">        <span class="keyword">new</span> <span class="title class_">HtmlWebpackPlugin</span>(&#123;</span><br><span class="line">            <span class="comment">// HtmlWebpackPlugin的配置选项</span></span><br><span class="line">        &#125;),</span><br><span class="line">        <span class="keyword">new</span> <span class="title class_">ScriptExtHtmlWebpackPlugin</span>(&#123;</span><br><span class="line">            <span class="attr">defaultAttribute</span>: <span class="string">&#x27;defer&#x27;</span></span><br><span class="line">        &#125;)</span><br><span class="line">    ]</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<p>在这个例子中，<code>ScriptExtHtmlWebpackPlugin</code>被配置为将所有的<code>&lt;script&gt;</code>标签的默认属性设置为<code>defer</code>，这意味着所有通过<code>html-webpack-plugin</code>动态添加到HTML中的脚本都会被自动添加<code>defer</code>属性，从而不会阻塞页面解析。</p>
-<h3 id="注意事项-1"><a href="#注意事项-1" class="headerlink" title="注意事项"></a>注意事项</h3><ul>
-<li>确保你已经安装并正确配置了<code>html-webpack-plugin</code>，因为<code>script-ext-html-webpack-plugin</code>是作为其扩展使用的。</li>
-<li>根据你的项目需求，你可以使用<code>script-ext-html-webpack-plugin</code>提供的其他选项来控制脚本的加载行为，例如<code>async</code>、<code>preload</code>、<code>module</code>等。</li>
-<li>随着Webpack和相关插件的不断更新，建议检查官方文档或npm页面上的最新信息，以获取关于<code>script-ext-html-webpack-plugin</code>的最新用法和最佳实践。</li>
+<p>以下是移动云的例子 </p>
+<p><strong>实例</strong>：提供各种实例规格（CPU、内存），不同 CPU 内存比，从“1核2G”到“80核1280G”，移动云的通用型s5云主机规格，s5.large.2，vCPU 2 个，内存 4GB，s5.xlarge.2则是 4C8G</p>
+<p><strong>镜像</strong>：是用于创建 ECS 的模板。支持多种 Windows 和 Linux 操作系统，可以选择公共镜像、私有镜像（已部署好业务的 ECS 可创建为自定义镜像，镜像文件.qcow2）</p>
+<p><strong>块存储</strong>：移动云的云硬盘，有多种类型：容量型、性能型、性能优化型、高性能型</p>
+<p><strong>网络</strong>：虚拟私有云 <strong>VPC</strong>（Virtual Private Cloud）基于先进的SDN 技术，为云服务器、云容器、云数据库等云上资源构建隔离、私密的虚拟网络环境，使用户能够构建独立的网络空间。支持<strong>子网管理</strong>（子网是由一组IP地址组成的地址池，每个子网相当于一个分布式虚拟交换机），支持<strong>多网卡功能</strong>（创建云主机时系统自动创建一个虚拟网卡，为云主机提供虚拟网络功能）<a target="_blank" rel="noopener" href="https://ecloud.10086.cn/op-help-center/doc/article/24853">应用场景</a></p>
+<h1 id="专有宿主机-DDH"><a href="#专有宿主机-DDH" class="headerlink" title="专有宿主机 DDH"></a>专有宿主机 DDH</h1><blockquote>
+<p>专有宿主机 （Dedicated Host，简称DDH）是专为企业用户定制优化的解决方案。具有物理资源独享、部署更灵活、配置更丰富、性价比更高等特点。专有宿主机为单租户独享物理资源，同时宿主机上可以灵活创建ECS云服务器，并和其他ECS云服务器一样，可以挂载云盘，可以通过VPC联通，具有高度的灵活性和使用便捷性。</p>
+</blockquote>
+<h1 id="负载均衡-SLB"><a href="#负载均衡-SLB" class="headerlink" title="负载均衡 SLB"></a>负载均衡 SLB</h1><blockquote>
+<p>负载均衡（Server Load Balancer，简称SLB）是云原生时代应用高可用的基本要素。是一种对流量进行按需分发的服务。通过将流量分发到不同的后端服务来扩展应用系统的服务吞吐能力，消除单点故障并提升应用系统的可用性。</p>
+</blockquote>
+<h1 id="弹性公网"><a href="#弹性公网" class="headerlink" title="弹性公网"></a>弹性公网</h1><blockquote>
+<p>弹性公网IP EIP（Elastic IP Address）是独立的公网IP资源，可与专有网络VPC类型的云服务器ECS、NAT网关、ENI网卡、私网负载均衡SLB绑定，并可以动态解绑满足灵活管理的要求。弹性公网IP可以给在云上部署的网站提供Internet访问服务。</p>
+</blockquote>
+<p><strong>EIP 与 ECS固定公网IP 的区别</strong></p>
+<p>下表描述了EIP与ECS固定公网IP的区别。</p>
+<table>
+<thead>
+<tr>
+<th>比较点</th>
+<th>EIP</th>
+<th>ECS固定公网IP</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>支持的网络环境</td>
+<td>专有网络</td>
+<td>专有网络和经典网络</td>
+</tr>
+<tr>
+<td>是否支持单独持有</td>
+<td>支持</td>
+<td>不支持</td>
+</tr>
+<tr>
+<td>是否支持在ECS实例上的弹性插拔</td>
+<td>支持</td>
+<td></td>
+</tr>
+</tbody></table>
+<p><strong>产品优势</strong></p>
+<p>EIP的优势如下：</p>
+<ul>
+<li><strong>独立购买与持有</strong><br> 您可以单独持有一个EIP，作为您账号下一个独立的资源存在，无需与其它计算资源或存储资源绑定购买。</li>
+<li><strong>弹性绑定</strong><br> 您可以在需要时将EIP绑定到指定的资源上，在不需要时将EIP解绑并释放，避免不必要的计费。</li>
+<li><strong>灵活配置的网络能力</strong><br> 您可以根据业务需求随时调整EIP的带宽峰值，带宽峰值的修改即时生效。</li>
+<li><strong>计费灵活、成本低</strong><br> 多种计费策略，支持包年包月、按固定带宽和按使用流量计费。EIP加入共享带宽后可以降低带宽成本。</li>
 </ul>
-<p>使用<code>script-ext-html-webpack-plugin</code>可以帮助你更精细地控制网页中脚本的加载和执行，从而进一步优化页面性能。</p>
+<h1 id="虚拟私有云-VPC"><a href="#虚拟私有云-VPC" class="headerlink" title="虚拟私有云 VPC"></a>虚拟私有云 VPC</h1><blockquote>
+<p>虚拟私有云VPC（Virtual Private Cloud，简称VPC）是一个公共云计算资源的动态配置池，需要使用加密协议、隧道协议和其他安全程序，在民营企业和云服务提供商之间传输数据。一个VPC基本上把提供商的多租户架构变成单租户架构。</p>
+</blockquote>
+<p>每个专有网络都由至少一个私网网段、一个虚拟路由器和至少一个交换机组成。</p>
+<h1 id="NAT-网关"><a href="#NAT-网关" class="headerlink" title="NAT 网关"></a>NAT 网关</h1><blockquote>
+<p>NAT网关（NAT Gateway，简称NAT）提供公网NAT和私网NAT两种功能。公网NAT网关通过自定义SNAT、DNAT规则可为云上服务器提供对外公网服务、及主动访问公网能力；私网NAT网关(也即VPC NAT网关)可使VPC内的ECS实例通过私网地址转换服务，实现VPC与VPC之间、及VPC与线下IDC互访能力。</p>
+</blockquote>
+<h1 id="SSL-证书"><a href="#SSL-证书" class="headerlink" title="SSL 证书"></a>SSL 证书</h1><blockquote>
+<p>SSL证书（Secure Sockets Layer证书）是一种安全协议，用于在互联网上的服务器和浏览器之间建立加密链接。这意味着所有在服务器和浏览器之间传输的数据都是加密的，这有助于保护敏感信息免受黑客攻击，如信用卡信息、登录凭据和个人信息等。</p>
+</blockquote>
+<p>SSL证书的工作原理是通过使用公钥和私钥来加密数据。当用户访问使用SSL的网站时，浏览器和服务器会进行一个称为”握手”的过程，以建立一个加密连接。SSL证书还包含了证书持有人的身份信息，并由第三方机构（证书颁发机构，CA）签发和验证，以确保用户访问的网站是合法的。</p>
+<p>可以在阿里云，申请免费证书，但免费证书的签发有效期是 3 个月（之前是 12 个月），到期要重新申请。</p>
+<p>PS：在宝塔面板中添加 SSL 证书的<strong>密钥（key）</strong>和<strong>证书（pem）</strong>，并打开强制 HTTPS，别忘了安全组里要开放 <strong>https（443）</strong>端口</p>
+<h1 id="对象存储-OSS"><a href="#对象存储-OSS" class="headerlink" title="对象存储 OSS"></a>对象存储 OSS</h1><blockquote>
+<p>对象存储 OSS（Object Storage Service）是一款海量、安全、低成本、高可靠的云存储服务，提供最高可达 99.995 % 的服务可用性。多种存储类型供选择，全面优化存储成本。</p>
+</blockquote>
  
       <!-- reward -->
       
@@ -750,7 +714,7 @@
     
     <footer class="article-footer">
        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Web/" rel="tag">Web</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Webpack/" rel="tag">Webpack</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/" rel="tag">性能优化</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%BA%91%E8%AE%A1%E7%AE%97/" rel="tag">云计算</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%BF%90%E7%BB%B4/" rel="tag">运维</a></li></ul>
 
     </footer>
   </div>
@@ -763,7 +727,7 @@
 
     
     <article
-  id="post-Web性能优化-SplitChunks提取公共代码"
+  id="post-【React】笔记"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -774,8 +738,8 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2023/06/12/Web%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96-SplitChunks%E6%8F%90%E5%8F%96%E5%85%AC%E5%85%B1%E4%BB%A3%E7%A0%81/"
-    >Web性能优化-SplitChunks提取公共代码</a> 
+  <a class="article-title" href="/2023/03/25/%E3%80%90React%E3%80%91%E7%AC%94%E8%AE%B0/"
+    >【React】笔记</a> 
 </h2>
  
 
@@ -783,36 +747,39 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2023/06/12/Web%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96-SplitChunks%E6%8F%90%E5%8F%96%E5%85%AC%E5%85%B1%E4%BB%A3%E7%A0%81/" class="article-date">
-  <time datetime="2023-06-12T11:57:47.000Z" itemprop="datePublished">2023-06-12</time>
+      <a href="/2023/03/25/%E3%80%90React%E3%80%91%E7%AC%94%E8%AE%B0/" class="article-date">
+  <time datetime="2023-03-25T13:36:20.000Z" itemprop="datePublished">2023-03-25</time>
 </a> 
   <div class="article-category">
-    <a class="article-category-link" href="/categories/%E7%9F%A5%E8%AF%86%E5%BA%93/">知识库</a> / <a class="article-category-link" href="/categories/%E7%9F%A5%E8%AF%86%E5%BA%93/Web/">Web</a>
+    <a class="article-category-link" href="/categories/%E7%9F%A5%E8%AF%86%E5%BA%93/">知识库</a> / <a class="article-category-link" href="/categories/%E7%9F%A5%E8%AF%86%E5%BA%93/React/">React</a>
   </div>
    
     </div>
       
     <div class="article-entry" itemprop="articleBody">
        
-  <p>要在 Angular 项目中引入 <code>splitChunks</code> 插件来进行代码分割和优化，推荐的方式是通过 <code>ngx-build-plus</code> 扩展 Angular CLI 的 Webpack 配置。由于 Angular CLI 默认隐藏了 Webpack 的配置文件，使用 <code>ngx-build-plus</code> 允许你在不直接修改内部配置的情况下，添加自定义的 Webpack 配置。</p>
-<p>以下是引入 <code>splitChunks</code> 的步骤：</p>
-<h3 id="1-安装-ngx-build-plus"><a href="#1-安装-ngx-build-plus" class="headerlink" title="1. 安装 ngx-build-plus"></a>1. 安装 <code>ngx-build-plus</code></h3><p>在你的 Angular 项目中，首先需要安装 <code>ngx-build-plus</code>。打开终端，运行以下命令：</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install ngx-build-plus --save-dev</span><br></pre></td></tr></table></figure>
+  <h4 id="创建-react-项目"><a href="#创建-react-项目" class="headerlink" title="创建 react 项目"></a>创建 react 项目</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npx create-react-app react-basic</span><br></pre></td></tr></table></figure>
 
-<h3 id="2-修改-angular-json"><a href="#2-修改-angular-json" class="headerlink" title="2. 修改 angular.json"></a>2. 修改 <code>angular.json</code></h3><p>接下来，需要修改项目根目录下的 <code>angular.json</code> 文件，将默认的 builder 替换为 <code>ngx-build-plus</code>。例如，对于 build 和 serve，你需要做如下修改：</p>
-<p>找到 <code>projects -&gt; &lt;your-project-name&gt; -&gt; architect -&gt; build -&gt; builder</code> 字段，将其值从 <code>@angular-devkit/build-angular:browser</code> 更改为 <code>ngx-build-plus:browser</code>。</p>
-<p>同样，将 <code>projects -&gt; &lt;your-project-name&gt; -&gt; architect -&gt; serve -&gt; builder</code> 字段的值从 <code>@angular-devkit/build-angular:dev-server</code> 更改为 <code>ngx-build-plus:dev-server</code>。</p>
-<h3 id="3-创建-Webpack-配置文件"><a href="#3-创建-Webpack-配置文件" class="headerlink" title="3. 创建 Webpack 配置文件"></a>3. 创建 Webpack 配置文件</h3><p>在项目根目录下创建一个新的 webpack 配置文件，例如 <code>webpack.extra.js</code>，并添加你的自定义配置。对于 <code>splitChunks</code>，配置可能如下：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">  <span class="attr">optimization</span>: &#123;</span><br><span class="line">    <span class="attr">splitChunks</span>: &#123;</span><br><span class="line">      <span class="attr">chunks</span>: <span class="string">&#x27;all&#x27;</span>,</span><br><span class="line">      <span class="attr">maxSize</span>: <span class="number">200000</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
-<h3 id="4-运行构建或开发服务器"><a href="#4-运行构建或开发服务器" class="headerlink" title="4. 运行构建或开发服务器"></a>4. 运行构建或开发服务器</h3><p>使用 <code>ngx-build-plus</code> 运行构建或开发服务器时，需要通过 <code>--extra-webpack-config</code> 参数指定额外的 webpack 配置文件。例如：</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ng build --extra-webpack-config webpack.extra.js</span><br></pre></td></tr></table></figure>
 
-<p>或者，对于开发服务器：</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ng serve --extra-webpack-config webpack.extra.js</span><br></pre></td></tr></table></figure>
+<p>index.js</p>
+<p>App.js</p>
+<p>创建 react</p>
+<p><a target="_blank" rel="noopener" href="https://zh-hans.react.dev/learn/start-a-new-react-project">https://zh-hans.react.dev/learn/start-a-new-react-project</a></p>
+<h4 id="JSX"><a href="#JSX" class="headerlink" title="JSX"></a>JSX</h4><p>JavaScript 和XML的缩写</p>
+<p>在 JS 中编写 HTML 模板结构</p>
+<p>通过 Babel 编译 成 JS</p>
+<p>组件化开发模式</p>
+<h4 id="useState"><a href="#useState" class="headerlink" title="useState"></a>useState</h4><p>数据驱动视图</p>
+<p>直接修改原对象 是无法改变视图的</p>
+<p>需要替换整个对象</p>
+<p>组件样式</p>
+<p>拓展：tailwind 样式是什么？</p>
+<p>浏览器插件：React Developer Tools</p>
+<p>利用 lodash 实现排序</p>
+<p>_.ordeBy</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install classnames</span><br></pre></td></tr></table></figure>
 
-<p>通过这种方式，你可以引入 <code>splitChunks</code> 插件来优化你的 Angular 项目的代码分割，而不需要直接修改 Angular CLI 的内部 webpack 配置。这样做既保留了 Angular CLI 提供的便利和稳定性，又增加了配置的灵活性。</p>
-<p><a target="_blank" rel="noopener" href="https://juejin.cn/post/6844904198023168013#heading-8">『Webpack系列』—— SplitChunks插件用法详解</a></p>
  
       <!-- reward -->
       
@@ -823,7 +790,7 @@
     
     <footer class="article-footer">
        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Web/" rel="tag">Web</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Webpack/" rel="tag">Webpack</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/" rel="tag">性能优化</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/React/" rel="tag">React</a></li></ul>
 
     </footer>
   </div>
@@ -836,7 +803,7 @@
 
     
     <article
-  id="post-Web性能优化方案"
+  id="post-【Markdown】使用笔记（MacOS）"
   class="article article-type-post"
   itemscope
   itemprop="blogPost"
@@ -847,8 +814,8 @@
     <header class="article-header">
        
 <h2 itemprop="name">
-  <a class="article-title" href="/2023/06/10/Web%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E6%96%B9%E6%A1%88/"
-    >Web 性能优化方案</a> 
+  <a class="article-title" href="/2022/06/29/%E3%80%90Markdown%E3%80%91%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0%EF%BC%88MacOS%EF%BC%89/"
+    >【Markdown】使用笔记（MacOS）</a> 
 </h2>
  
 
@@ -856,74 +823,45 @@
     </header>
      
     <div class="article-meta">
-      <a href="/2023/06/10/Web%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E6%96%B9%E6%A1%88/" class="article-date">
-  <time datetime="2023-06-10T13:00:16.000Z" itemprop="datePublished">2023-06-10</time>
+      <a href="/2022/06/29/%E3%80%90Markdown%E3%80%91%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0%EF%BC%88MacOS%EF%BC%89/" class="article-date">
+  <time datetime="2022-06-29T14:55:00.000Z" itemprop="datePublished">2022-06-29</time>
 </a> 
   <div class="article-category">
-    <a class="article-category-link" href="/categories/%E7%9F%A5%E8%AF%86%E5%BA%93/">知识库</a> / <a class="article-category-link" href="/categories/%E7%9F%A5%E8%AF%86%E5%BA%93/Web/">Web</a>
+    <a class="article-category-link" href="/categories/%E7%9F%A5%E8%AF%86%E5%BA%93/">知识库</a> / <a class="article-category-link" href="/categories/%E7%9F%A5%E8%AF%86%E5%BA%93/Markdown/">Markdown</a>
   </div>
    
     </div>
       
     <div class="article-entry" itemprop="articleBody">
        
-  <h2 id="输入-URL-到页面展示完整过程"><a href="#输入-URL-到页面展示完整过程" class="headerlink" title="输入 URL 到页面展示完整过程"></a>输入 URL 到页面展示完整过程</h2><h3 id="一、网络请求阶段"><a href="#一、网络请求阶段" class="headerlink" title="一、网络请求阶段"></a>一、网络请求阶段</h3><ol>
-<li><strong>解析URL</strong>：浏览器首先解析输入的URL（统一资源定位符），以确定要请求的资源的位置。URL通常包含协议（如HTTP或HTTPS）、服务器地址（IP地址或域名）和资源路径。</li>
-<li><strong>DNS查询</strong>：如果URL包含域名，浏览器需要将域名解析为IP地址。这是通过查询DNS（域名系统）服务器完成的。如果IP地址已经缓存（之前访问过的域名），则可以跳过这一步。</li>
-<li><strong>建立连接</strong>：浏览器根据解析得到的IP地址，尝试与服务器建立连接。对于HTTP协议，这通常意味着建立一个TCP连接。如果是HTTPS协议，则还需要建立一个安全层（SSL&#x2F;TLS）以确保数据加密。</li>
-<li><strong>发送请求</strong>：一旦连接建立，浏览器就会发送一个HTTP请求到服务器。请求包含了请求的资源（通过URL指定）、请求方法（如GET或POST）和一些头信息，这些头信息可能包括用户代理（浏览器类型和版本）、接受的内容类型等。</li>
-<li><strong>接收响应</strong>：服务器接收到请求后，会处理该请求，并将响应发送回浏览器。响应通常包含一个状态码（如200表示成功，404表示未找到等）、响应头（如内容类型、缓存控制等）和响应体（即请求的资源内容）。</li>
-</ol>
-<h3 id="二、关键渲染路径"><a href="#二、关键渲染路径" class="headerlink" title="二、关键渲染路径"></a>二、关键渲染路径</h3><blockquote>
-<p>关键渲染路径（Critical Rendering Path）是指浏览器从收到网页资源开始，到能够解析并呈现页面的过程中，必须执行的一系列步骤。这个过程涵盖了从接收 HTML、CSS、JavaScript 等文件，到解析这些文件并将其转换成可视化网页的整个流程。</p>
-</blockquote>
-<p>主要包括以下步骤：</p>
-<ol>
-<li><strong>HTML解析</strong>：浏览器从服务器接收到HTML文件，并开始逐行解析。这个过程中，浏览器会构建DOM（文档对象模型）树。</li>
-<li><strong>CSS解析</strong>：浏览器处理所有的CSS样式信息，包括外部的CSS文件和页面内的样式。这些信息被用来生成CSSOM（CSS对象模型）树。</li>
-<li><strong>渲染树构建</strong>：DOM树和CSSOM树合并后形成渲染树（Render Tree）。渲染树反映了将要显示在页面上的所有可视元素及其样式信息。</li>
-<li><strong>布局（Layout&#x2F;Reflow）</strong>：浏览器计算渲染树中每个节点的准确位置和大小。这个过程也称为重排。</li>
-<li><strong>绘制（Paint）</strong>：浏览器根据渲染树来绘制页面上的所有元素。这包括颜色、图像和文字等的具体呈现，也称为重绘。</li>
-<li><strong>合成（Composite）</strong>：如果页面中有层叠的元素（例如，使用了CSS的<code>z-index</code>属性），浏览器会在这一步骤中进行合成，确保正确的元素覆盖关系。</li>
-</ol>
-<h2 id="策略"><a href="#策略" class="headerlink" title="策略"></a>策略</h2><p>缓存机制优化</p>
-<p>1、如果当前页面注册了Service Worker那么它可以拦截当前网站所有的请求，进行判断是否需要向远程发送网络请求，如果不需要发送网络请求，则取本地文件。</p>
-<p>2、根据ur&#x2F;查询本地是否已经有强制缓存，如果有则判断缓存是否过期，如果没过期则直接返回缓存内容。</p>
-<p>3、如果服务端返回的状态码为304则直接代表协商缓存生效，直接取本地的缓存文件。</p>
-<p>优化手段</p>
-<p>Service Worker 强制缓存，协商缓存？&#x2F;&#x2F; TODO</p>
-<p>渲染优化策略</p>
-<p>优化手段</p>
-<p>服务端渲染（SSR）,提取关键 CSS，关键渲染路径，减少包体体积</p>
-<h2 id="方案"><a href="#方案" class="headerlink" title="方案"></a>方案</h2><h3 id="减小包的体积"><a href="#减小包的体积" class="headerlink" title="减小包的体积"></a>减小包的体积</h3><ul>
-<li>拆分包的大小 splitChunks</li>
-<li>Angular应用 懒加载</li>
-<li>组件库 按需加载</li>
+  <p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/632381789">Markdown教程</a></p>
+<h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><ul>
+<li>生成代码块 <code>option + command + C</code> </li>
+<li>源码模式 <code>command + /</code></li>
+<li>标题 <code>comand + 1</code> 或 2 、 3、 4</li>
+<li>查找 <code>comand + F</code></li>
+<li>超链接 <code>command + K</code></li>
+<li>查找并替换 <code>option + command + F</code></li>
+<li>无序列表 <code>option + command + U</code>  或 <code>- + tab</code></li>
+<li>有序列表 <code>option + command + L</code> 或 <code>1. + tab</code> </li>
+<li>代码  <code>control + ` </code></li>
+<li>代码块 <code>option + command + C</code></li>
+<li>引用 <code>option + command + Q</code></li>
+<li>放大&#x2F;缩小 <code>shift + command + =</code> &#x2F; <code>shift + command + -</code></li>
 </ul>
-<h3 id="提高-HTML-解析效率"><a href="#提高-HTML-解析效率" class="headerlink" title="提高 HTML 解析效率"></a>提高 HTML 解析效率</h3><ul>
-<li>提取关键 css</li>
-<li>为 js 文件添加 defer 模式</li>
-</ul>
-<h3 id="减少卡顿"><a href="#减少卡顿" class="headerlink" title="减少卡顿"></a>减少卡顿</h3><ul>
-<li>优化路由守卫，简化路由逻辑</li>
-<li>webworker</li>
-</ul>
-<blockquote>
-<p>Web Worker 提供了一种在主线程之外执行JavaScript代码的能力，这意味着你可以在一个后台线程中运行脚本，从而避免影响到主线程的性能，特别是UI的响应性和渲染。通过将计算密集型或耗时的任务移到Web Worker中，应用的主线程可以保持流畅，从而提升用户体验。</p>
-</blockquote>
-<h3 id="提升页面易用性"><a href="#提升页面易用性" class="headerlink" title="提升页面易用性"></a>提升页面易用性</h3><ul>
-<li>确保文本在网页字体加载期间保持可见状态，使用font-display：swap</li>
-<li>图片设置明确的 width 和height</li>
-<li>使用被动式监听器来提高滚动性能</li>
-<li>pagehide 代替 unload</li>
-<li>lighthouse 分析说明</li>
-</ul>
-<h2 id="性能指标"><a href="#性能指标" class="headerlink" title="性能指标"></a>性能指标</h2><ul>
-<li>首次渲染时间（白屏时间）（FPT First Paint Time）</li>
-<li>首次可交互时间（TTI Time to Interact）</li>
-<li>DOM Ready时间（Ready）</li>
-<li>页面完全加载时间 （onLoad）</li>
-</ul>
+<h2 id="语法与文本内容冲突"><a href="#语法与文本内容冲突" class="headerlink" title="语法与文本内容冲突"></a>语法与文本内容冲突</h2><h4 id="使用反斜杠-来将这些字符进行转义"><a href="#使用反斜杠-来将这些字符进行转义" class="headerlink" title="使用反斜杠\来将这些字符进行转义"></a>使用反斜杠<code>\</code>来将这些字符进行转义</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">*\*这样里面的文字就不会加粗了\*\*</span><br></pre></td></tr></table></figure>
+
+<h4 id="使用多个反引号来创建代码块"><a href="#使用多个反引号来创建代码块" class="headerlink" title="使用多个反引号来创建代码块"></a>使用多个反引号来创建代码块</h4><p>如果你发现转义字符不起作用（例如，在某些Markdown解析器中可能会有差异），另一个方法是使用更多的反引号来创建代码块，并在里面放置你的代码</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">`` control + ` ``</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
  
       <!-- reward -->
       
@@ -934,7 +872,61 @@
     
     <footer class="article-footer">
        
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Web/" rel="tag">Web</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/" rel="tag">性能优化</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Markdown/" rel="tag">Markdown</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+   
+  
+</article>
+
+    
+    <article
+  id="post-【计算机网络】"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2022/06/15/%E3%80%90%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E3%80%91/"
+    >【计算机网络】</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2022/06/15/%E3%80%90%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E3%80%91/" class="article-date">
+  <time datetime="2022-06-15T13:37:54.000Z" itemprop="datePublished">2022-06-15</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E7%9F%A5%E8%AF%86%E5%BA%93/">知识库</a> / <a class="article-category-link" href="/categories/%E7%9F%A5%E8%AF%86%E5%BA%93/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">计算机网络</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+   
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" rel="tag">计算机网络</a></li></ul>
 
     </footer>
   </div>
@@ -952,7 +944,7 @@
   
   <nav class="page-nav">
     
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">下一页</a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">下一页</a>
   </nav>
   
 </section>

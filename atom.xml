@@ -6,7 +6,7 @@
   <link href="https://junglexs.github.io/atom.xml" rel="self"/>
   
   <link href="https://junglexs.github.io/"/>
-  <updated>2024-03-26T14:53:00.021Z</updated>
+  <updated>2024-03-26T16:55:16.923Z</updated>
   <id>https://junglexs.github.io/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>深入掌握 OSS：最完美的 OSS 上传方案！</title>
+    <link href="https://junglexs.github.io/2024/03/22/%E6%B7%B1%E5%85%A5%E6%8E%8C%E6%8F%A1%20OSS%EF%BC%9A%E6%9C%80%E5%AE%8C%E7%BE%8E%E7%9A%84%20OSS%20%E4%B8%8A%E4%BC%A0%E6%96%B9%E6%A1%88%EF%BC%81/"/>
+    <id>https://junglexs.github.io/2024/03/22/%E6%B7%B1%E5%85%A5%E6%8E%8C%E6%8F%A1%20OSS%EF%BC%9A%E6%9C%80%E5%AE%8C%E7%BE%8E%E7%9A%84%20OSS%20%E4%B8%8A%E4%BC%A0%E6%96%B9%E6%A1%88%EF%BC%81/</id>
+    <published>2024-03-22T15:52:52.000Z</published>
+    <updated>2024-03-26T16:55:16.923Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;原文链接&quot;&gt;&lt;a href=&quot;#原文链接&quot; class=&quot;headerlink&quot; title=&quot;原文链接&quot;&gt;&lt;/a&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="阅读" scheme="https://junglexs.github.io/categories/%E9%98%85%E8%AF%BB/"/>
+    
+    
+    <category term="每日阅读" scheme="https://junglexs.github.io/tags/%E6%AF%8F%E6%97%A5%E9%98%85%E8%AF%BB/"/>
+    
+    <category term="OSS" scheme="https://junglexs.github.io/tags/OSS/"/>
+    
+  </entry>
+  
+  <entry>
     <title>搭建图床（Typora+PicGo+阿里云OSS）</title>
     <link href="https://junglexs.github.io/2024/03/21/%E6%90%AD%E5%BB%BA%E5%9B%BE%E5%BA%8A%EF%BC%88Typora+PicGo+%E9%98%BF%E9%87%8C%E4%BA%91OSS%EF%BC%89/"/>
     <id>https://junglexs.github.io/2024/03/21/%E6%90%AD%E5%BB%BA%E5%9B%BE%E5%BA%8A%EF%BC%88Typora+PicGo+%E9%98%BF%E9%87%8C%E4%BA%91OSS%EF%BC%89/</id>
     <published>2024-03-21T13:25:50.000Z</published>
-    <updated>2024-03-26T14:53:00.021Z</updated>
+    <updated>2024-03-26T16:00:48.806Z</updated>
     
     
       
@@ -35,7 +62,7 @@
     
     
     
-    <category term="随笔" scheme="https://junglexs.github.io/categories/%E9%9A%8F%E7%AC%94/"/>
+    <category term="笔记" scheme="https://junglexs.github.io/categories/%E7%AC%94%E8%AE%B0/"/>
     
     
     <category term="图床" scheme="https://junglexs.github.io/tags/%E5%9B%BE%E5%BA%8A/"/>
@@ -44,7 +71,7 @@
     
     <category term="PicGo" scheme="https://junglexs.github.io/tags/PicGo/"/>
     
-    <category term="阿里云OSS" scheme="https://junglexs.github.io/tags/%E9%98%BF%E9%87%8C%E4%BA%91OSS/"/>
+    <category term="OSS" scheme="https://junglexs.github.io/tags/OSS/"/>
     
   </entry>
   
@@ -53,15 +80,14 @@
     <link href="https://junglexs.github.io/2024/03/04/%E9%9D%A2%E8%AF%95%E5%AE%98%E9%97%AE%E6%88%91%E6%8C%89%E9%92%AE%E7%BA%A7%E5%88%AB%E6%9D%83%E9%99%90%E6%80%8E%E4%B9%88%E6%8E%A7%E5%88%B6%EF%BC%8C%E6%88%91%E8%AF%B4v-if%EF%BC%8C%E9%9D%A2%E8%AF%95%E5%AE%98%E8%AF%B4%E5%86%8D%E8%A7%81/"/>
     <id>https://junglexs.github.io/2024/03/04/%E9%9D%A2%E8%AF%95%E5%AE%98%E9%97%AE%E6%88%91%E6%8C%89%E9%92%AE%E7%BA%A7%E5%88%AB%E6%9D%83%E9%99%90%E6%80%8E%E4%B9%88%E6%8E%A7%E5%88%B6%EF%BC%8C%E6%88%91%E8%AF%B4v-if%EF%BC%8C%E9%9D%A2%E8%AF%95%E5%AE%98%E8%AF%B4%E5%86%8D%E8%A7%81/</id>
     <published>2024-03-04T15:13:03.000Z</published>
-    <updated>2024-03-06T17:10:50.863Z</updated>
+    <updated>2024-03-26T16:02:37.524Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://juejin.cn/post/7209648356530896953&quot;&gt;文章链接&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;按钮级别权限控制，怎么做？使用v-if</summary>
+    <summary type="html">&lt;h2 id=&quot;原文链接&quot;&gt;&lt;a href=&quot;#原文链接&quot; class=&quot;headerlink&quot; title=&quot;原文链接&quot;&gt;&lt;/a&gt;&lt;a</summary>
         
       
     
@@ -154,163 +180,11 @@
   </entry>
   
   <entry>
-    <title>Web性能优化-Web Worker</title>
-    <link href="https://junglexs.github.io/2023/06/15/Web%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96-WebWorker/"/>
-    <id>https://junglexs.github.io/2023/06/15/Web%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96-WebWorker/</id>
-    <published>2023-06-15T14:46:41.000Z</published>
-    <updated>2024-03-15T13:53:14.456Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;Web Worker 提供了一种在主线程之外执行 JavaScript 代码的能力，这意味着你可以在一个后台线程中运行脚本，从而避免影响到主线程的性能，特别是 UI 的响应性和渲染。通过将计算密集型或耗时的任务移到Web</summary>
-        
-      
-    
-    
-    
-    <category term="知识库" scheme="https://junglexs.github.io/categories/%E7%9F%A5%E8%AF%86%E5%BA%93/"/>
-    
-    <category term="Web" scheme="https://junglexs.github.io/categories/%E7%9F%A5%E8%AF%86%E5%BA%93/Web/"/>
-    
-    
-    <category term="Web" scheme="https://junglexs.github.io/tags/Web/"/>
-    
-    <category term="性能优化" scheme="https://junglexs.github.io/tags/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Web性能优化-提取关键CSS</title>
-    <link href="https://junglexs.github.io/2023/06/14/Web%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96-%E6%8F%90%E5%8F%96%E5%85%B3%E9%94%AECSS/"/>
-    <id>https://junglexs.github.io/2023/06/14/Web%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96-%E6%8F%90%E5%8F%96%E5%85%B3%E9%94%AECSS/</id>
-    <published>2023-06-14T14:34:52.000Z</published>
-    <updated>2024-03-15T13:53:10.877Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;工作原理&quot;&gt;&lt;a href=&quot;#工作原理&quot; class=&quot;headerlink&quot; title=&quot;工作原理&quot;&gt;&lt;/a&gt;工作原理&lt;/h3&gt;&lt;p&gt;当你使用 Webpack</summary>
-        
-      
-    
-    
-    
-    <category term="知识库" scheme="https://junglexs.github.io/categories/%E7%9F%A5%E8%AF%86%E5%BA%93/"/>
-    
-    <category term="Web" scheme="https://junglexs.github.io/categories/%E7%9F%A5%E8%AF%86%E5%BA%93/Web/"/>
-    
-    
-    <category term="Web" scheme="https://junglexs.github.io/tags/Web/"/>
-    
-    <category term="性能优化" scheme="https://junglexs.github.io/tags/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
-    
-    <category term="Webpack" scheme="https://junglexs.github.io/tags/Webpack/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Web性能优化-JS文件添加defer</title>
-    <link href="https://junglexs.github.io/2023/06/13/Web%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96-JS%E6%96%87%E4%BB%B6%E6%B7%BB%E5%8A%A0defer/"/>
-    <id>https://junglexs.github.io/2023/06/13/Web%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96-JS%E6%96%87%E4%BB%B6%E6%B7%BB%E5%8A%A0defer/</id>
-    <published>2023-06-13T14:37:40.000Z</published>
-    <updated>2024-03-15T13:53:06.274Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;为JavaScript文件添加&lt;code&gt;defer&lt;/code&gt;属性是优化Web性能的一个常见做法，特别是在改善页面加载时间和用户体验方面。&lt;/p&gt;
-&lt;h3 id=&quot;原理&quot;&gt;&lt;a href=&quot;#原理&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="知识库" scheme="https://junglexs.github.io/categories/%E7%9F%A5%E8%AF%86%E5%BA%93/"/>
-    
-    <category term="Web" scheme="https://junglexs.github.io/categories/%E7%9F%A5%E8%AF%86%E5%BA%93/Web/"/>
-    
-    
-    <category term="Web" scheme="https://junglexs.github.io/tags/Web/"/>
-    
-    <category term="性能优化" scheme="https://junglexs.github.io/tags/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
-    
-    <category term="Webpack" scheme="https://junglexs.github.io/tags/Webpack/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Web性能优化-SplitChunks提取公共代码</title>
-    <link href="https://junglexs.github.io/2023/06/12/Web%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96-SplitChunks%E6%8F%90%E5%8F%96%E5%85%AC%E5%85%B1%E4%BB%A3%E7%A0%81/"/>
-    <id>https://junglexs.github.io/2023/06/12/Web%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96-SplitChunks%E6%8F%90%E5%8F%96%E5%85%AC%E5%85%B1%E4%BB%A3%E7%A0%81/</id>
-    <published>2023-06-12T11:57:47.000Z</published>
-    <updated>2024-03-15T13:53:18.182Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;要在 Angular 项目中引入 &lt;code&gt;splitChunks&lt;/code&gt; 插件来进行代码分割和优化，推荐的方式是通过 &lt;code&gt;ngx-build-plus&lt;/code&gt; 扩展 Angular CLI 的 Webpack 配置。由于 Angular CLI</summary>
-        
-      
-    
-    
-    
-    <category term="知识库" scheme="https://junglexs.github.io/categories/%E7%9F%A5%E8%AF%86%E5%BA%93/"/>
-    
-    <category term="Web" scheme="https://junglexs.github.io/categories/%E7%9F%A5%E8%AF%86%E5%BA%93/Web/"/>
-    
-    
-    <category term="Web" scheme="https://junglexs.github.io/tags/Web/"/>
-    
-    <category term="性能优化" scheme="https://junglexs.github.io/tags/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
-    
-    <category term="Webpack" scheme="https://junglexs.github.io/tags/Webpack/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Web 性能优化方案</title>
-    <link href="https://junglexs.github.io/2023/06/10/Web%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E6%96%B9%E6%A1%88/"/>
-    <id>https://junglexs.github.io/2023/06/10/Web%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E6%96%B9%E6%A1%88/</id>
-    <published>2023-06-10T13:00:16.000Z</published>
-    <updated>2024-03-15T13:52:58.315Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;输入-URL-到页面展示完整过程&quot;&gt;&lt;a href=&quot;#输入-URL-到页面展示完整过程&quot; class=&quot;headerlink&quot; title=&quot;输入 URL 到页面展示完整过程&quot;&gt;&lt;/a&gt;输入 URL 到页面展示完整过程&lt;/h2&gt;&lt;h3</summary>
-        
-      
-    
-    
-    
-    <category term="知识库" scheme="https://junglexs.github.io/categories/%E7%9F%A5%E8%AF%86%E5%BA%93/"/>
-    
-    <category term="Web" scheme="https://junglexs.github.io/categories/%E7%9F%A5%E8%AF%86%E5%BA%93/Web/"/>
-    
-    
-    <category term="Web" scheme="https://junglexs.github.io/tags/Web/"/>
-    
-    <category term="性能优化" scheme="https://junglexs.github.io/tags/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
-    
-  </entry>
-  
-  <entry>
     <title>【云计算】</title>
     <link href="https://junglexs.github.io/2023/05/04/%E3%80%90%E4%BA%91%E8%AE%A1%E7%AE%97%E3%80%91%E7%AC%94%E8%AE%B0/"/>
     <id>https://junglexs.github.io/2023/05/04/%E3%80%90%E4%BA%91%E8%AE%A1%E7%AE%97%E3%80%91%E7%AC%94%E8%AE%B0/</id>
     <published>2023-05-04T12:58:06.000Z</published>
-    <updated>2024-03-26T15:06:05.653Z</updated>
+    <updated>2024-03-26T15:08:12.809Z</updated>
     
     
       
@@ -475,7 +349,7 @@
     <link href="https://junglexs.github.io/2021/11/25/%E3%80%90MacOS%E3%80%91%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/"/>
     <id>https://junglexs.github.io/2021/11/25/%E3%80%90MacOS%E3%80%91%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/</id>
     <published>2021-11-25T13:59:51.000Z</published>
-    <updated>2024-03-23T13:16:57.170Z</updated>
+    <updated>2024-03-26T15:24:10.236Z</updated>
     
     
       
@@ -571,6 +445,70 @@
     
     
     <category term="读书笔记" scheme="https://junglexs.github.io/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【微信小程序】</title>
+    <link href="https://junglexs.github.io/2021/02/21/%E3%80%90%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E3%80%91/"/>
+    <id>https://junglexs.github.io/2021/02/21/%E3%80%90%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E3%80%91/</id>
+    <published>2021-02-21T13:13:49.000Z</published>
+    <updated>2024-03-21T13:18:49.876Z</updated>
+    
+    
+    
+    
+    <category term="知识库" scheme="https://junglexs.github.io/categories/%E7%9F%A5%E8%AF%86%E5%BA%93/"/>
+    
+    <category term="微信小程序" scheme="https://junglexs.github.io/categories/%E7%9F%A5%E8%AF%86%E5%BA%93/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    
+    
+    <category term="微信小程序" scheme="https://junglexs.github.io/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《JavsScript百炼成仙》</title>
+    <link href="https://junglexs.github.io/2021/02/12/%E3%80%8AJavsScript%E7%99%BE%E7%82%BC%E6%88%90%E4%BB%99%E3%80%8B/"/>
+    <id>https://junglexs.github.io/2021/02/12/%E3%80%8AJavsScript%E7%99%BE%E7%82%BC%E6%88%90%E4%BB%99%E3%80%8B/</id>
+    <published>2021-02-12T12:44:37.000Z</published>
+    <updated>2024-03-12T13:09:54.541Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;杨逸飞 编著&lt;/p&gt;
+&lt;h2 id=&quot;读书笔记&quot;&gt;&lt;a href=&quot;#读书笔记&quot; class=&quot;headerlink&quot; title=&quot;读书笔记&quot;&gt;&lt;/a&gt;读书笔记&lt;/h2&gt;&lt;h4 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="书籍" scheme="https://junglexs.github.io/categories/%E4%B9%A6%E7%B1%8D/"/>
+    
+    
+    <category term="读书笔记" scheme="https://junglexs.github.io/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【计算机组成原理】</title>
+    <link href="https://junglexs.github.io/2020/05/21/%E3%80%90%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E3%80%91/"/>
+    <id>https://junglexs.github.io/2020/05/21/%E3%80%90%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E3%80%91/</id>
+    <published>2020-05-21T13:13:35.000Z</published>
+    <updated>2024-03-21T13:16:34.137Z</updated>
+    
+    
+    
+    
+    <category term="知识库" scheme="https://junglexs.github.io/categories/%E7%9F%A5%E8%AF%86%E5%BA%93/"/>
+    
+    <category term="计算机组成原理" scheme="https://junglexs.github.io/categories/%E7%9F%A5%E8%AF%86%E5%BA%93/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/"/>
+    
+    
+    <category term="计算机组成原理" scheme="https://junglexs.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/"/>
     
   </entry>
   
