@@ -6,7 +6,7 @@
   <link href="https://junglexs.github.io/atom.xml" rel="self"/>
   
   <link href="https://junglexs.github.io/"/>
-  <updated>2024-03-26T16:55:16.923Z</updated>
+  <updated>2024-03-29T11:36:39.127Z</updated>
   <id>https://junglexs.github.io/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【English】记录帖</title>
+    <link href="https://junglexs.github.io/2024/03/29/%E3%80%90English%E3%80%91%E8%AE%B0%E5%BD%95%E5%B8%96/"/>
+    <id>https://junglexs.github.io/2024/03/29/%E3%80%90English%E3%80%91%E8%AE%B0%E5%BD%95%E5%B8%96/</id>
+    <published>2024-03-29T11:35:15.000Z</published>
+    <updated>2024-03-29T11:36:39.127Z</updated>
+    
+    
+    
+    
+    <category term="学习" scheme="https://junglexs.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="English" scheme="https://junglexs.github.io/categories/%E5%AD%A6%E4%B9%A0/English/"/>
+    
+    
+    <category term="English" scheme="https://junglexs.github.io/tags/English/"/>
+    
+  </entry>
   
   <entry>
     <title>深入掌握 OSS：最完美的 OSS 上传方案！</title>
@@ -286,6 +305,25 @@
   </entry>
   
   <entry>
+    <title>【DevOps】笔记</title>
+    <link href="https://junglexs.github.io/2022/05/28/%E3%80%90DevOps%E3%80%91%E7%AC%94%E8%AE%B0/"/>
+    <id>https://junglexs.github.io/2022/05/28/%E3%80%90DevOps%E3%80%91%E7%AC%94%E8%AE%B0/</id>
+    <published>2022-05-28T12:00:54.000Z</published>
+    <updated>2024-03-29T11:18:29.224Z</updated>
+    
+    
+    
+    
+    <category term="DevOps" scheme="https://junglexs.github.io/categories/DevOps/"/>
+    
+    
+    <category term="DevOps" scheme="https://junglexs.github.io/tags/DevOps/"/>
+    
+    <category term="CI/CD" scheme="https://junglexs.github.io/tags/CI-CD/"/>
+    
+  </entry>
+  
+  <entry>
     <title>【Git&amp;GitHub】使用指南</title>
     <link href="https://junglexs.github.io/2022/05/18/%E3%80%90Git&amp;GitHub%E3%80%91%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/"/>
     <id>https://junglexs.github.io/2022/05/18/%E3%80%90Git&amp;GitHub%E3%80%91%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</id>
@@ -490,25 +528,6 @@
     
     
     <category term="读书笔记" scheme="https://junglexs.github.io/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【计算机组成原理】</title>
-    <link href="https://junglexs.github.io/2020/05/21/%E3%80%90%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E3%80%91/"/>
-    <id>https://junglexs.github.io/2020/05/21/%E3%80%90%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E3%80%91/</id>
-    <published>2020-05-21T13:13:35.000Z</published>
-    <updated>2024-03-21T13:16:34.137Z</updated>
-    
-    
-    
-    
-    <category term="知识库" scheme="https://junglexs.github.io/categories/%E7%9F%A5%E8%AF%86%E5%BA%93/"/>
-    
-    <category term="计算机组成原理" scheme="https://junglexs.github.io/categories/%E7%9F%A5%E8%AF%86%E5%BA%93/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/"/>
-    
-    
-    <category term="计算机组成原理" scheme="https://junglexs.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/"/>
     
   </entry>
   
