@@ -1,45 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>《JavsScript百炼成仙》</title>
-    <url>/2021/02/12/%E3%80%8AJavsScript%E7%99%BE%E7%82%BC%E6%88%90%E4%BB%99%E3%80%8B/</url>
-    <content><![CDATA[<p>杨逸飞 编著</p>
-<h2 id="读书笔记"><a href="#读书笔记" class="headerlink" title="读书笔记"></a>读书笔记</h2><h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><ul>
-<li>本书旨在通过独特的角度和轻松的方式介绍JavaScript的核心概念和高级技巧，使读者能够深入理解并灵活运用JavaScript。</li>
+    <title>《Angular 开发入门与实战》</title>
+    <url>/2021/09/15/%E3%80%8AAngular%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8%E4%B8%8E%E5%AE%9E%E6%88%98%E3%80%8B/</url>
+    <content><![CDATA[<p>兰泽君 著作</p>
+<h2 id="读书笔记"><a href="#读书笔记" class="headerlink" title="读书笔记"></a>读书笔记</h2><h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>Angular是一种流行的前端框架，由Google维护，专为开发动态单页应用（SPA）而设计。它鼓励使用TypeScript进行开发，这是JavaScript的一个超集，添加了静态类型等特性。</p>
+<h4 id="第一部分：Angular基础"><a href="#第一部分：Angular基础" class="headerlink" title="第一部分：Angular基础"></a>第一部分：Angular基础</h4><ul>
+<li><strong>TypeScript基础</strong>：介绍TypeScript的基本语法，以及如何在Angular项目中使用它。</li>
+<li><strong>组件和模块</strong>：解释Angular应用是如何通过组件来构建用户界面的，每个组件都有自己的逻辑和模板。模块则用来组织这些组件，以及提供服务。</li>
+<li><strong>模板和数据绑定</strong>：介绍如何使用Angular模板语法来显示数据和响应用户事件，以及单向和双向数据绑定的概念。</li>
+<li><strong>服务和依赖注入</strong>：讨论服务的概念，这是一种用于封装业务逻辑的方法，以及Angular如何使用依赖注入（DI）模式来提供这些服务。</li>
 </ul>
-<h4 id="第一章：JavaScript基础精要"><a href="#第一章：JavaScript基础精要" class="headerlink" title="第一章：JavaScript基础精要"></a>第一章：JavaScript基础精要</h4><ul>
-<li>理解JavaScript语言的基本结构和语法。</li>
-<li>学习变量、类型、表达式、运算符的使用。</li>
-<li>函数定义、作用域和闭包的概念及其重要性。</li>
+<h4 id="第二部分：进阶实战"><a href="#第二部分：进阶实战" class="headerlink" title="第二部分：进阶实战"></a>第二部分：进阶实战</h4><ul>
+<li><strong>路由和导航</strong>：深入探讨Angular路由器的工作原理，如何定义路由规则，以及如何进行导航。</li>
+<li><strong>表单处理</strong>：详细说明如何使用Angular表单模块来创建和验证用户输入表单。</li>
+<li><strong>RxJS和异步编程</strong>：介绍如何使用RxJS库在Angular中处理异步操作，包括Observable和操作符的概念。</li>
+<li><strong>状态管理</strong>：探讨在Angular应用中管理状态的策略，可能包括使用NgRx或其他状态管理库。</li>
 </ul>
-<h4 id="第二章：函数七重关秘籍"><a href="#第二章：函数七重关秘籍" class="headerlink" title="第二章：函数七重关秘籍"></a>第二章：函数七重关秘籍</h4><ul>
-<li>深入探讨函数的定义方式、作用域链、闭包、高阶函数等高级主题。</li>
-<li>理解并实践回调函数、Promise和异步编程的模式。</li>
+<h4 id="第三部分：项目实战"><a href="#第三部分：项目实战" class="headerlink" title="第三部分：项目实战"></a>第三部分：项目实战</h4><ul>
+<li><strong>构建实际项目</strong>：通过构建一个实际的Angular应用来综合运用前面学到的知识，可能是一个电商平台、博客系统或任务管理器。</li>
+<li><strong>性能优化</strong>：介绍如何分析和提升Angular应用的性能。</li>
+<li><strong>部署和维护</strong>：讨论将Angular应用部署到生产环境的最佳实践，以及如何维护和更新现有应用。</li>
 </ul>
-<h4 id="第三章：DOM的艺术"><a href="#第三章：DOM的艺术" class="headerlink" title="第三章：DOM的艺术"></a>第三章：DOM的艺术</h4><ul>
-<li>使用JavaScript操作DOM，包括元素选择、属性修改、事件处理等。</li>
-<li>掌握使用jQuery简化DOM操作的技巧。</li>
-</ul>
-<h4 id="第四章：面向对象的奥义"><a href="#第四章：面向对象的奥义" class="headerlink" title="第四章：面向对象的奥义"></a>第四章：面向对象的奥义</h4><ul>
-<li>探索JavaScript的面向对象编程，包括原型链、继承、类的使用。</li>
-<li>理解ES6引入的类语法及其与传统原型链的关联。</li>
-</ul>
-<h4 id="第五章：前端框架的选择：Vue篇"><a href="#第五章：前端框架的选择：Vue篇" class="headerlink" title="第五章：前端框架的选择：Vue篇"></a>第五章：前端框架的选择：Vue篇</h4><ul>
-<li>学习Vue.js框架的核心概念，包括响应式原理、组件系统、Vue实例、指令等。</li>
-<li>实践Vue的基本用法，构建交云悍数据驱动的Web应用。</li>
-</ul>
-<h4 id="第六章：实战演练"><a href="#第六章：实战演练" class="headerlink" title="第六章：实战演练"></a>第六章：实战演练</h4><ul>
-<li>结合实际案例，深入理解书中介绍的概念和技术。</li>
-<li>掌握从零开始构建一个现代化的前端项目的步骤和方法。</li>
-</ul>
-<h4 id="附录：JavaScript进阶资源"><a href="#附录：JavaScript进阶资源" class="headerlink" title="附录：JavaScript进阶资源"></a>附录：JavaScript进阶资源</h4><ul>
-<li>推荐进一步学习的书籍、在线资源和社区。</li>
-<li>提供进阶学习路径，包括Node.js、React、Angular等其他流行技术的入门指导。</li>
-</ul>
-<h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><ul>
-<li>《JavaScript百炼成仙》不仅是一本技术书籍，也是一次探索JavaScript世界的奇妙旅程。</li>
-<li>通过本书的学习，读者可以掌握JavaScript的核心概念、高级技巧以及前端开发的最佳实践，为成为前端开发高手打下坚实的基础。</li>
-</ul>
+<h4 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h4><p>《Angular 开发入门与实战》是一本面向希望深入了解Angular框架的前端开发人员的实用指南。通过阅读这本书，开发者不仅能掌握Angular的基础知识，还能学会如何在实际项目中应用这些知识来构建复杂的应用程序。</p>
+<p>这份读书笔记旨在概述书中可能包含的主要内容和概念，真正的学习和理解还需深入阅读原书并实践其中的示例和技巧。</p>
 ]]></content>
       <categories>
         <category>书籍</category>
@@ -75,48 +59,27 @@
       </tags>
   </entry>
   <entry>
-    <title>【Hexo】使用笔记</title>
-    <url>/2023/07/29/%E3%80%90Hexo%E3%80%91%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<h2 id="一、初识Hexo"><a href="#一、初识Hexo" class="headerlink" title="一、初识Hexo"></a>一、初识Hexo</h2><h4 id="1-config-yml"><a href="#1-config-yml" class="headerlink" title="1._config.yml"></a>1._config.yml</h4><p>了解<code>_config.yml</code>配置文件的参数信息。网站的 <a href="https://hexo.io/zh-cn/docs/configuration">配置</a> 信息，可以在此配置大部分的参数。</p>
-<h4 id="2-生成文章"><a href="#2-生成文章" class="headerlink" title="2.生成文章"></a>2.生成文章</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hexo new &quot;post title with whitespace&quot;</span><br></pre></td></tr></table></figure>
-
-<h4 id="3-生成静态文件"><a href="#3-生成静态文件" class="headerlink" title="3.生成静态文件"></a>3.生成静态文件</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
-
-<h4 id="4-部署"><a href="#4-部署" class="headerlink" title="4.部署"></a>4.部署</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h2 id="二、配置"><a href="#二、配置" class="headerlink" title="二、配置"></a>二、配置</h2><p>开启文章资源文件夹</p>
-<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">post_asset_folder = <span class="literal"><span class="keyword">true</span></span></span><br></pre></td></tr></table></figure>
-
-<h2 id="三、分类"><a href="#三、分类" class="headerlink" title="三、分类"></a>三、分类</h2><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">hexo new page categories</span><br></pre></td></tr></table></figure>
-
-<h2 id="四、搜索"><a href="#四、搜索" class="headerlink" title="四、搜索"></a>四、搜索</h2><ul>
-<li><a href="https://github.com/theme-next/hexo-generator-searchdb">hexo-generator-searchdb</a> 用于搜索</li>
-</ul>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-searchdb --save</span><br></pre></td></tr></table></figure>
-
-<p>然后将以下配置复制到你博客根目录下的 <code>_config.yml</code> 里:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># hexo-generator-searchdb</span><br><span class="line">search:</span><br><span class="line">  path: search.xml</span><br><span class="line">  field: post</span><br><span class="line">  format: html</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><a href="https://github.com/hexojs/hexo-generator-feed">hexo-generator-feed</a> 用于生成 RSS 订阅</li>
-</ul>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-feed --save</span><br></pre></td></tr></table></figure>
-
-<p>然后将以下配置复制到你博客根目录下的 <code>_config.yml</code> 里:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">feed:</span><br><span class="line">  type: atom</span><br><span class="line">  path: atom.xml</span><br><span class="line">  limit: 20</span><br><span class="line">  hub:</span><br><span class="line">  content:</span><br><span class="line">  content_limit: 140</span><br><span class="line">  content_limit_delim: &quot; &quot;</span><br><span class="line">  order_by: -date</span><br></pre></td></tr></table></figure>
-
-]]></content>
+    <title>【English】记录帖</title>
+    <url>/2024/03/29/%E3%80%90English%E3%80%91%E8%AE%B0%E5%BD%95%E5%B8%96/</url>
+    <content><![CDATA[]]></content>
       <categories>
-        <category>知识库</category>
-        <category>Hexo</category>
+        <category>学习</category>
+        <category>English</category>
       </categories>
       <tags>
-        <tag>Hexo</tag>
-        <tag>博客</tag>
+        <tag>English</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【DevOps】笔记</title>
+    <url>/2022/05/28/%E3%80%90DevOps%E3%80%91%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>DevOps</category>
+      </categories>
+      <tags>
+        <tag>DevOps</tag>
+        <tag>CI/CD</tag>
       </tags>
   </entry>
   <entry>
@@ -179,6 +142,99 @@
       </tags>
   </entry>
   <entry>
+    <title>【Hexo】使用笔记</title>
+    <url>/2023/07/29/%E3%80%90Hexo%E3%80%91%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<h2 id="一、初识Hexo"><a href="#一、初识Hexo" class="headerlink" title="一、初识Hexo"></a>一、初识Hexo</h2><h4 id="1-config-yml"><a href="#1-config-yml" class="headerlink" title="1._config.yml"></a>1._config.yml</h4><p>了解<code>_config.yml</code>配置文件的参数信息。网站的 <a href="https://hexo.io/zh-cn/docs/configuration">配置</a> 信息，可以在此配置大部分的参数。</p>
+<h4 id="2-生成文章"><a href="#2-生成文章" class="headerlink" title="2.生成文章"></a>2.生成文章</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hexo new &quot;post title with whitespace&quot;</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-生成静态文件"><a href="#3-生成静态文件" class="headerlink" title="3.生成静态文件"></a>3.生成静态文件</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-部署"><a href="#4-部署" class="headerlink" title="4.部署"></a>4.部署</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h2 id="二、配置"><a href="#二、配置" class="headerlink" title="二、配置"></a>二、配置</h2><p>开启文章资源文件夹</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">post_asset_folder = <span class="literal"><span class="keyword">true</span></span></span><br></pre></td></tr></table></figure>
+
+<h2 id="三、分类"><a href="#三、分类" class="headerlink" title="三、分类"></a>三、分类</h2><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">hexo new page categories</span><br></pre></td></tr></table></figure>
+
+<h2 id="四、搜索"><a href="#四、搜索" class="headerlink" title="四、搜索"></a>四、搜索</h2><ul>
+<li><a href="https://github.com/theme-next/hexo-generator-searchdb">hexo-generator-searchdb</a> 用于搜索</li>
+</ul>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-searchdb --save</span><br></pre></td></tr></table></figure>
+
+<p>然后将以下配置复制到你博客根目录下的 <code>_config.yml</code> 里:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># hexo-generator-searchdb</span><br><span class="line">search:</span><br><span class="line">  path: search.xml</span><br><span class="line">  field: post</span><br><span class="line">  format: html</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><a href="https://github.com/hexojs/hexo-generator-feed">hexo-generator-feed</a> 用于生成 RSS 订阅</li>
+</ul>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-feed --save</span><br></pre></td></tr></table></figure>
+
+<p>然后将以下配置复制到你博客根目录下的 <code>_config.yml</code> 里:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">feed:</span><br><span class="line">  type: atom</span><br><span class="line">  path: atom.xml</span><br><span class="line">  limit: 20</span><br><span class="line">  hub:</span><br><span class="line">  content:</span><br><span class="line">  content_limit: 140</span><br><span class="line">  content_limit_delim: &quot; &quot;</span><br><span class="line">  order_by: -date</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>知识库</category>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>博客</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>《JavsScript百炼成仙》</title>
+    <url>/2021/02/12/%E3%80%8AJavsScript%E7%99%BE%E7%82%BC%E6%88%90%E4%BB%99%E3%80%8B/</url>
+    <content><![CDATA[<p>杨逸飞 编著</p>
+<h2 id="读书笔记"><a href="#读书笔记" class="headerlink" title="读书笔记"></a>读书笔记</h2><h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><ul>
+<li>本书旨在通过独特的角度和轻松的方式介绍JavaScript的核心概念和高级技巧，使读者能够深入理解并灵活运用JavaScript。</li>
+</ul>
+<h4 id="第一章：JavaScript基础精要"><a href="#第一章：JavaScript基础精要" class="headerlink" title="第一章：JavaScript基础精要"></a>第一章：JavaScript基础精要</h4><ul>
+<li>理解JavaScript语言的基本结构和语法。</li>
+<li>学习变量、类型、表达式、运算符的使用。</li>
+<li>函数定义、作用域和闭包的概念及其重要性。</li>
+</ul>
+<h4 id="第二章：函数七重关秘籍"><a href="#第二章：函数七重关秘籍" class="headerlink" title="第二章：函数七重关秘籍"></a>第二章：函数七重关秘籍</h4><ul>
+<li>深入探讨函数的定义方式、作用域链、闭包、高阶函数等高级主题。</li>
+<li>理解并实践回调函数、Promise和异步编程的模式。</li>
+</ul>
+<h4 id="第三章：DOM的艺术"><a href="#第三章：DOM的艺术" class="headerlink" title="第三章：DOM的艺术"></a>第三章：DOM的艺术</h4><ul>
+<li>使用JavaScript操作DOM，包括元素选择、属性修改、事件处理等。</li>
+<li>掌握使用jQuery简化DOM操作的技巧。</li>
+</ul>
+<h4 id="第四章：面向对象的奥义"><a href="#第四章：面向对象的奥义" class="headerlink" title="第四章：面向对象的奥义"></a>第四章：面向对象的奥义</h4><ul>
+<li>探索JavaScript的面向对象编程，包括原型链、继承、类的使用。</li>
+<li>理解ES6引入的类语法及其与传统原型链的关联。</li>
+</ul>
+<h4 id="第五章：前端框架的选择：Vue篇"><a href="#第五章：前端框架的选择：Vue篇" class="headerlink" title="第五章：前端框架的选择：Vue篇"></a>第五章：前端框架的选择：Vue篇</h4><ul>
+<li>学习Vue.js框架的核心概念，包括响应式原理、组件系统、Vue实例、指令等。</li>
+<li>实践Vue的基本用法，构建交云悍数据驱动的Web应用。</li>
+</ul>
+<h4 id="第六章：实战演练"><a href="#第六章：实战演练" class="headerlink" title="第六章：实战演练"></a>第六章：实战演练</h4><ul>
+<li>结合实际案例，深入理解书中介绍的概念和技术。</li>
+<li>掌握从零开始构建一个现代化的前端项目的步骤和方法。</li>
+</ul>
+<h4 id="附录：JavaScript进阶资源"><a href="#附录：JavaScript进阶资源" class="headerlink" title="附录：JavaScript进阶资源"></a>附录：JavaScript进阶资源</h4><ul>
+<li>推荐进一步学习的书籍、在线资源和社区。</li>
+<li>提供进阶学习路径，包括Node.js、React、Angular等其他流行技术的入门指导。</li>
+</ul>
+<h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><ul>
+<li>《JavaScript百炼成仙》不仅是一本技术书籍，也是一次探索JavaScript世界的奇妙旅程。</li>
+<li>通过本书的学习，读者可以掌握JavaScript的核心概念、高级技巧以及前端开发的最佳实践，为成为前端开发高手打下坚实的基础。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>书籍</category>
+      </categories>
+      <tags>
+        <tag>读书笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>【LeetCode】</title>
     <url>/2023/07/27/%E3%80%90LeetCode%E3%80%91/</url>
     <content><![CDATA[]]></content>
@@ -188,6 +244,69 @@
       </categories>
       <tags>
         <tag>LeetCode</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【MacOS】使用笔记</title>
+    <url>/2021/11/25/%E3%80%90MacOS%E3%80%91%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<h1 id="日常"><a href="#日常" class="headerlink" title="日常"></a>日常</h1><ul>
+<li><code>command + C</code> 复制</li>
+<li><code>command + V</code> 粘贴</li>
+<li><code>option + command + V</code>  （正常复制后）剪贴</li>
+<li><code>command + Z</code> 撤销</li>
+<li><code>shift + command + Z</code> 重做（相当于撤销上一步的撤销）</li>
+<li><code>command + tab</code> 向后切换应用</li>
+<li><code>command + ～</code> 向前切换应用 &#x2F; 切换同一个应用的不同窗口</li>
+<li><code>command + M</code> 最小化窗口</li>
+<li><code>command + W</code>  关闭窗口</li>
+<li><code>command + Q</code> 退出程序</li>
+<li><code>command + shift + 4</code> 截屏</li>
+<li><code>command + shift + 5</code> 录屏</li>
+<li><code>control + A</code> 定位当前行首</li>
+<li><code>control + E</code> 定位当前行尾</li>
+</ul>
+<h1 id="访达"><a href="#访达" class="headerlink" title="访达"></a>访达</h1><ul>
+<li><code>enter</code> 重命名某文件</li>
+<li><code>command + O</code> 打开某文件</li>
+<li><code>command + delete</code> 删除某文件到废纸篓</li>
+<li><code>command + [</code> 前往上一个文件夹</li>
+<li><code>command + ]</code> 前往下一个文件夹</li>
+<li><code>command + 上方向键</code> 前往上层文件夹</li>
+<li><code>command + E</code> 推出磁盘映像</li>
+</ul>
+<h1 id="VSCode"><a href="#VSCode" class="headerlink" title="VSCode"></a>VSCode</h1><ul>
+<li><code>control + G</code> 定位某行 </li>
+<li><code>control + C </code>结束终端当前进程</li>
+<li><code>command + shift + K</code> 删除整行代码 </li>
+<li><code>option + command + F </code> 当前文件替换 </li>
+<li><code>option + shift + 向上/向下箭头</code> 复制一行 </li>
+<li><code>option + shift + F</code> 格式化代码</li>
+</ul>
+<h1 id="终端"><a href="#终端" class="headerlink" title="终端"></a>终端</h1><p>当遇到提示：“你不能使用以点“.”开头的名称,因为这些名称已被系统预留。请选取其他名称。”可以使用以下命令</p>
+<ul>
+<li>显示隐藏文件</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">defaults write com.apple.finder AppleShowAllFiles -boolean <span class="literal">true</span> ; killall Finder</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>隐藏隐藏文件</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">defaults write com.apple.finder AppleShowAllFiles FALSE ; killall Finder</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h1 id="FAQ"><a href="#FAQ" class="headerlink" title="FAQ"></a>FAQ</h1><h5 id="无法打开“xxx-app”，因为无法验证开发者。"><a href="#无法打开“xxx-app”，因为无法验证开发者。" class="headerlink" title="无法打开“xxx.app”，因为无法验证开发者。"></a><strong>无法打开“xxx.app”，因为无法验证开发者。</strong></h5><blockquote>
+<p>打开【设置】，找到【隐私与安全性】，选择信任该 app即可。</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>知识库</category>
+        <category>MacOS</category>
+      </categories>
+      <tags>
+        <tag>MacOS</tag>
       </tags>
   </entry>
   <entry>
@@ -556,6 +675,25 @@
       </tags>
   </entry>
   <entry>
+    <title>深入掌握 OSS：最完美的 OSS 上传方案！</title>
+    <url>/2024/03/22/%E6%B7%B1%E5%85%A5%E6%8E%8C%E6%8F%A1%20OSS%EF%BC%9A%E6%9C%80%E5%AE%8C%E7%BE%8E%E7%9A%84%20OSS%20%E4%B8%8A%E4%BC%A0%E6%96%B9%E6%A1%88%EF%BC%81/</url>
+    <content><![CDATA[<h2 id="原文链接"><a href="#原文链接" class="headerlink" title="原文链接"></a><a href="https://juejin.cn/post/7325495635455868938">原文链接</a></h2><p>上传文件一般不会直接存在服务器目录下，这样不好扩展，一般我们会用阿里云的 OSS（Object Storage Service）对象存储服务，它会自己做弹性扩展，所以存储空间是无限的。</p>
+<p>OSS 对象存储是在一个 bucket 桶下，存放多个文件。</p>
+<p>它是用 key-value 存储的，没有目录的概念，阿里云 OSS 的目录只是用元信息来模拟实现的。</p>
+<p>上传文件后，我们能拿到文件 URL，但生产环境下我们不会直接用 OSS 的 URL 访问，而是会开启 CDN，用网站域名访问，最终回源到 OSS 服务。因此还需要开通 CDN 服务</p>
+<p>不管在哪里上传，都需要 acessKeyId 和 acessKeySecret。</p>
+<p>这个是阿里云的安全策略，因为直接用用户名密码，一旦泄漏就很麻烦，而 acessKey 泄漏了也可以禁用。而且建议用 RAM 子用户的方式生成 accessKey，这样可以最小化权限，进一步减少泄漏的风险。</p>
+<p>客户端直传 OSS 的方式不需要消耗服务器的资源，但是会有泄漏 acessKey 的风险，所以一般都是用服务端生成临时的签名等信息，然后用这些信息来上传。</p>
+]]></content>
+      <categories>
+        <category>阅读</category>
+      </categories>
+      <tags>
+        <tag>OSS</tag>
+        <tag>每日阅读</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>面试官问我按钮级别权限怎么控制，我说v-if，面试官说再见</title>
     <url>/2024/03/04/%E9%9D%A2%E8%AF%95%E5%AE%98%E9%97%AE%E6%88%91%E6%8C%89%E9%92%AE%E7%BA%A7%E5%88%AB%E6%9D%83%E9%99%90%E6%80%8E%E4%B9%88%E6%8E%A7%E5%88%B6%EF%BC%8C%E6%88%91%E8%AF%B4v-if%EF%BC%8C%E9%9D%A2%E8%AF%95%E5%AE%98%E8%AF%B4%E5%86%8D%E8%A7%81/</url>
     <content><![CDATA[<h2 id="原文链接"><a href="#原文链接" class="headerlink" title="原文链接"></a><a href="https://juejin.cn/post/7209648356530896953">原文链接</a></h2><p>按钮级别权限控制，怎么做？使用v-if ？可以，但不够通用。</p>
@@ -583,144 +721,6 @@
         <tag>每日阅读</tag>
         <tag>Vue</tag>
         <tag>权限</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【MacOS】使用笔记</title>
-    <url>/2021/11/25/%E3%80%90MacOS%E3%80%91%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<h1 id="日常"><a href="#日常" class="headerlink" title="日常"></a>日常</h1><ul>
-<li><code>command + C</code> 复制</li>
-<li><code>command + V</code> 粘贴</li>
-<li><code>option + command + V</code>  （正常复制后）剪贴</li>
-<li><code>command + Z</code> 撤销</li>
-<li><code>shift + command + Z</code> 重做（相当于撤销上一步的撤销）</li>
-<li><code>command + tab</code> 向后切换应用</li>
-<li><code>command + ～</code> 向前切换应用 &#x2F; 切换同一个应用的不同窗口</li>
-<li><code>command + M</code> 最小化窗口</li>
-<li><code>command + W</code>  关闭窗口</li>
-<li><code>command + Q</code> 退出程序</li>
-<li><code>command + shift + 4</code> 截屏</li>
-<li><code>command + shift + 5</code> 录屏</li>
-<li><code>control + A</code> 定位当前行首</li>
-<li><code>control + E</code> 定位当前行尾</li>
-</ul>
-<h1 id="访达"><a href="#访达" class="headerlink" title="访达"></a>访达</h1><ul>
-<li><code>enter</code> 重命名某文件</li>
-<li><code>command + O</code> 打开某文件</li>
-<li><code>command + delete</code> 删除某文件到废纸篓</li>
-<li><code>command + [</code> 前往上一个文件夹</li>
-<li><code>command + ]</code> 前往下一个文件夹</li>
-<li><code>command + 上方向键</code> 前往上层文件夹</li>
-<li><code>command + E</code> 推出磁盘映像</li>
-</ul>
-<h1 id="VSCode"><a href="#VSCode" class="headerlink" title="VSCode"></a>VSCode</h1><ul>
-<li><code>control + G</code> 定位某行 </li>
-<li><code>control + C </code>结束终端当前进程</li>
-<li><code>command + shift + K</code> 删除整行代码 </li>
-<li><code>option + command + F </code> 当前文件替换 </li>
-<li><code>option + shift + 向上/向下箭头</code> 复制一行 </li>
-<li><code>option + shift + F</code> 格式化代码</li>
-</ul>
-<h1 id="终端"><a href="#终端" class="headerlink" title="终端"></a>终端</h1><p>当遇到提示：“你不能使用以点“.”开头的名称,因为这些名称已被系统预留。请选取其他名称。”可以使用以下命令</p>
-<ul>
-<li>显示隐藏文件</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">defaults write com.apple.finder AppleShowAllFiles -boolean <span class="literal">true</span> ; killall Finder</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>隐藏隐藏文件</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">defaults write com.apple.finder AppleShowAllFiles FALSE ; killall Finder</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h1 id="FAQ"><a href="#FAQ" class="headerlink" title="FAQ"></a>FAQ</h1><h5 id="无法打开“xxx-app”，因为无法验证开发者。"><a href="#无法打开“xxx-app”，因为无法验证开发者。" class="headerlink" title="无法打开“xxx.app”，因为无法验证开发者。"></a><strong>无法打开“xxx.app”，因为无法验证开发者。</strong></h5><blockquote>
-<p>打开【设置】，找到【隐私与安全性】，选择信任该 app即可。</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>知识库</category>
-        <category>MacOS</category>
-      </categories>
-      <tags>
-        <tag>MacOS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>《Angular 开发入门与实战》</title>
-    <url>/2021/09/15/%E3%80%8AAngular%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8%E4%B8%8E%E5%AE%9E%E6%88%98%E3%80%8B/</url>
-    <content><![CDATA[<p>兰泽君 著作</p>
-<h2 id="读书笔记"><a href="#读书笔记" class="headerlink" title="读书笔记"></a>读书笔记</h2><h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>Angular是一种流行的前端框架，由Google维护，专为开发动态单页应用（SPA）而设计。它鼓励使用TypeScript进行开发，这是JavaScript的一个超集，添加了静态类型等特性。</p>
-<h4 id="第一部分：Angular基础"><a href="#第一部分：Angular基础" class="headerlink" title="第一部分：Angular基础"></a>第一部分：Angular基础</h4><ul>
-<li><strong>TypeScript基础</strong>：介绍TypeScript的基本语法，以及如何在Angular项目中使用它。</li>
-<li><strong>组件和模块</strong>：解释Angular应用是如何通过组件来构建用户界面的，每个组件都有自己的逻辑和模板。模块则用来组织这些组件，以及提供服务。</li>
-<li><strong>模板和数据绑定</strong>：介绍如何使用Angular模板语法来显示数据和响应用户事件，以及单向和双向数据绑定的概念。</li>
-<li><strong>服务和依赖注入</strong>：讨论服务的概念，这是一种用于封装业务逻辑的方法，以及Angular如何使用依赖注入（DI）模式来提供这些服务。</li>
-</ul>
-<h4 id="第二部分：进阶实战"><a href="#第二部分：进阶实战" class="headerlink" title="第二部分：进阶实战"></a>第二部分：进阶实战</h4><ul>
-<li><strong>路由和导航</strong>：深入探讨Angular路由器的工作原理，如何定义路由规则，以及如何进行导航。</li>
-<li><strong>表单处理</strong>：详细说明如何使用Angular表单模块来创建和验证用户输入表单。</li>
-<li><strong>RxJS和异步编程</strong>：介绍如何使用RxJS库在Angular中处理异步操作，包括Observable和操作符的概念。</li>
-<li><strong>状态管理</strong>：探讨在Angular应用中管理状态的策略，可能包括使用NgRx或其他状态管理库。</li>
-</ul>
-<h4 id="第三部分：项目实战"><a href="#第三部分：项目实战" class="headerlink" title="第三部分：项目实战"></a>第三部分：项目实战</h4><ul>
-<li><strong>构建实际项目</strong>：通过构建一个实际的Angular应用来综合运用前面学到的知识，可能是一个电商平台、博客系统或任务管理器。</li>
-<li><strong>性能优化</strong>：介绍如何分析和提升Angular应用的性能。</li>
-<li><strong>部署和维护</strong>：讨论将Angular应用部署到生产环境的最佳实践，以及如何维护和更新现有应用。</li>
-</ul>
-<h4 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h4><p>《Angular 开发入门与实战》是一本面向希望深入了解Angular框架的前端开发人员的实用指南。通过阅读这本书，开发者不仅能掌握Angular的基础知识，还能学会如何在实际项目中应用这些知识来构建复杂的应用程序。</p>
-<p>这份读书笔记旨在概述书中可能包含的主要内容和概念，真正的学习和理解还需深入阅读原书并实践其中的示例和技巧。</p>
-]]></content>
-      <categories>
-        <category>书籍</category>
-      </categories>
-      <tags>
-        <tag>读书笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>深入掌握 OSS：最完美的 OSS 上传方案！</title>
-    <url>/2024/03/22/%E6%B7%B1%E5%85%A5%E6%8E%8C%E6%8F%A1%20OSS%EF%BC%9A%E6%9C%80%E5%AE%8C%E7%BE%8E%E7%9A%84%20OSS%20%E4%B8%8A%E4%BC%A0%E6%96%B9%E6%A1%88%EF%BC%81/</url>
-    <content><![CDATA[<h2 id="原文链接"><a href="#原文链接" class="headerlink" title="原文链接"></a><a href="https://juejin.cn/post/7325495635455868938">原文链接</a></h2><p>上传文件一般不会直接存在服务器目录下，这样不好扩展，一般我们会用阿里云的 OSS（Object Storage Service）对象存储服务，它会自己做弹性扩展，所以存储空间是无限的。</p>
-<p>OSS 对象存储是在一个 bucket 桶下，存放多个文件。</p>
-<p>它是用 key-value 存储的，没有目录的概念，阿里云 OSS 的目录只是用元信息来模拟实现的。</p>
-<p>上传文件后，我们能拿到文件 URL，但生产环境下我们不会直接用 OSS 的 URL 访问，而是会开启 CDN，用网站域名访问，最终回源到 OSS 服务。因此还需要开通 CDN 服务</p>
-<p>不管在哪里上传，都需要 acessKeyId 和 acessKeySecret。</p>
-<p>这个是阿里云的安全策略，因为直接用用户名密码，一旦泄漏就很麻烦，而 acessKey 泄漏了也可以禁用。而且建议用 RAM 子用户的方式生成 accessKey，这样可以最小化权限，进一步减少泄漏的风险。</p>
-<p>客户端直传 OSS 的方式不需要消耗服务器的资源，但是会有泄漏 acessKey 的风险，所以一般都是用服务端生成临时的签名等信息，然后用这些信息来上传。</p>
-]]></content>
-      <categories>
-        <category>阅读</category>
-      </categories>
-      <tags>
-        <tag>每日阅读</tag>
-        <tag>OSS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【DevOps】笔记</title>
-    <url>/2022/05/28/%E3%80%90DevOps%E3%80%91%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>DevOps</category>
-      </categories>
-      <tags>
-        <tag>DevOps</tag>
-        <tag>CI/CD</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【English】记录帖</title>
-    <url>/2024/03/29/%E3%80%90English%E3%80%91%E8%AE%B0%E5%BD%95%E5%B8%96/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>学习</category>
-        <category>English</category>
-      </categories>
-      <tags>
-        <tag>English</tag>
       </tags>
   </entry>
 </search>
