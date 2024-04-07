@@ -364,8 +364,11 @@
 <p>在 JS 中编写 HTML 模板结构</p>
 <p>通过 Babel 编译 成 JS</p>
 <p>组件化开发模式</p>
-<p>函数式组件</p>
-<p>类式组件</p>
+<p>组件类型</p>
+<ul>
+<li>函数式组件</li>
+<li>类式组件</li>
+</ul>
 <p>state</p>
 <p>props</p>
 <p>refs</p>
