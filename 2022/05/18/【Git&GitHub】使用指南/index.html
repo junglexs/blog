@@ -87,7 +87,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">575</span>
+            <span class="post-count">576</span>
         </span>
     </span>
 
@@ -134,10 +134,9 @@
 <p>13.再拉取远端代码后，pop 代码，再次 push</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git stash pop</span><br><span class="line">git pull origin master</span><br><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
 
-<ol start="14">
-<li>生成 SSH Key，在图中路径找到并复制密钥<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;你的GitHub绑定的邮箱&quot;</span><br></pre></td></tr></table></figure>
-<img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7bc3ab392f0547f4bf5594d7ec660e72~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1212&h=854&s=336984&e=png&b=fdfdfd" alt="image.png"><br>或者以下代码查看密钥</li>
-</ol>
+<p>14.生成 SSH Key，在图中路径找到并复制密钥</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;你的GitHub绑定的邮箱&quot;</span><br></pre></td></tr></table></figure>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7bc3ab392f0547f4bf5594d7ec660e72~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1212&h=854&s=336984&e=png&b=fdfdfd" alt="image.png"><br>或者以下代码查看密钥</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat ~<span class="regexp">/.ssh/i</span>d_rsa.<span class="property">pub</span></span><br></pre></td></tr></table></figure>
 <p>复制密钥到GitHub上</p>
 <p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ef182221a1da48cb9224430990fe493d~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=3024&h=1508&s=436959&e=png&b=fefefe" alt="image.png"></p>

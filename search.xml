@@ -156,10 +156,9 @@
 <p>13.再拉取远端代码后，pop 代码，再次 push</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git stash pop</span><br><span class="line">git pull origin master</span><br><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
 
-<ol start="14">
-<li>生成 SSH Key，在图中路径找到并复制密钥<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;你的GitHub绑定的邮箱&quot;</span><br></pre></td></tr></table></figure>
-<img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7bc3ab392f0547f4bf5594d7ec660e72~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1212&h=854&s=336984&e=png&b=fdfdfd" alt="image.png"><br>或者以下代码查看密钥</li>
-</ol>
+<p>14.生成 SSH Key，在图中路径找到并复制密钥</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;你的GitHub绑定的邮箱&quot;</span><br></pre></td></tr></table></figure>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7bc3ab392f0547f4bf5594d7ec660e72~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1212&h=854&s=336984&e=png&b=fdfdfd" alt="image.png"><br>或者以下代码查看密钥</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line">cat ~<span class="regexp">/.ssh/i</span>d_rsa.<span class="property">pub</span></span><br></pre></td></tr></table></figure>
 <p>复制密钥到GitHub上</p>
 <p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ef182221a1da48cb9224430990fe493d~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=3024&h=1508&s=436959&e=png&b=fefefe" alt="image.png"></p>
@@ -426,108 +425,108 @@
     <title>【VSCode】使用笔记</title>
     <url>/2021/10/18/%E3%80%90VSCode%E3%80%91%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<h1 id="必装插件"><a href="#必装插件" class="headerlink" title="必装插件"></a>必装插件</h1><h2 id="1-基础插件"><a href="#1-基础插件" class="headerlink" title="1. 基础插件"></a>1. 基础插件</h2><ol>
-<li><p>GitLens</p>
+<li><p><strong>GitLens</strong></p>
 <blockquote>
 <p>Git 提交记录提示</p>
 </blockquote>
 </li>
-<li><p>Error Lens</p>
+<li><p><strong>Error Lens</strong></p>
 <blockquote>
 <p>代码错误提示</p>
 </blockquote>
 </li>
-<li><p>Auto Rename Tag</p>
+<li><p><strong>Auto Rename Tag</strong></p>
 <blockquote>
 <p>自动补充 HTML 标签</p>
 </blockquote>
 </li>
-<li><p>AZ AL Dev Tools&#x2F;AL Code Outline</p>
+<li><p><strong>AZ AL Dev Tools&#x2F;AL Code Outline</strong></p>
 <blockquote>
 <p>梳理代码结构的插件</p>
 </blockquote>
 </li>
-<li><p>Better Comments</p>
+<li><p><strong>Better Comments</strong></p>
 <blockquote>
 <p>颜色区分不同注释</p>
 </blockquote>
 </li>
-<li><p>Turbo Console Log</p>
+<li><p><strong>Turbo Console Log</strong></p>
 <blockquote>
 <p>自动写console</p>
 </blockquote>
 </li>
-<li><p>Bracket Pair Colorizer2</p>
+<li><p><strong>Bracket Pair Colorizer2</strong></p>
 <blockquote>
 <p>颜色区分括号</p>
 </blockquote>
 </li>
-<li><p>Chinese</p>
+<li><p><strong>Chinese</strong></p>
 <blockquote>
 <p>汉化 VSCode</p>
 </blockquote>
 </li>
-<li><p>Code Runner</p>
+<li><p><strong>Code Runner</strong></p>
 <blockquote>
 <p>允许简单代码</p>
 </blockquote>
 </li>
-<li><p>Code Spell Checker</p>
+<li><p><strong>Code Spell Checker</strong></p>
 <blockquote>
 <p>代码拼写错误提示</p>
 </blockquote>
 </li>
-<li><p>Color Highlight</p>
+<li><p><strong>Color Highlight</strong></p>
 <blockquote>
 <p>代码区域高亮</p>
 </blockquote>
 </li>
-<li><p>ESLint， 格式化代码</p>
+<li><p><strong>ESLint， 格式化代码</strong></p>
 </li>
-<li><p>翻译（英汉词典）</p>
+<li><p><strong>翻译（英汉词典）</strong></p>
 </li>
-<li><p>Image preview</p>
+<li><p><strong>Image preview</strong></p>
 <blockquote>
 <p>预览图片文件</p>
 </blockquote>
 </li>
-<li><p>indent-rainbow</p>
+<li><p><strong>indent-rainbow</strong></p>
 <blockquote>
 <p>缩进高亮</p>
 </blockquote>
 </li>
-<li><p>Regex Previewer</p>
+<li><p><strong>Regex Previewer</strong></p>
 <blockquote>
 <p>预览正则表达式</p>
 </blockquote>
 </li>
-<li><p>Material Icon Theme</p>
+<li><p><strong>Material Icon Theme</strong></p>
 <blockquote>
 <p>主题</p>
 </blockquote>
 </li>
-<li><p>open in browser</p>
+<li><p><strong>open in browser</strong></p>
 <blockquote>
 <p>浏览器运行</p>
 </blockquote>
 </li>
-<li><p>Partial Diff</p>
+<li><p><strong>Partial Diff</strong></p>
 <blockquote>
 <p>对比代码差异</p>
 </blockquote>
 </li>
-<li><p>Project Manager</p>
+<li><p><strong>Project Manager</strong></p>
 <blockquote>
 <p>管理不同项目&#x2F;代码库</p>
 </blockquote>
 </li>
-<li><p>Zhihu On VSCode</p>
+<li><p><strong>Zhihu On VSCode</strong></p>
 <blockquote>
 <p>字面意思，（摸鱼用）</p>
 </blockquote>
 </li>
 </ol>
 <h2 id="2-React-开发插件"><a href="#2-React-开发插件" class="headerlink" title="2. React 开发插件"></a>2. React 开发插件</h2><ol>
-<li><p>ES7+ React&#x2F;Redux&#x2F;React-Native snippets</p>
+<li><p><strong>ES7+ React&#x2F;Redux&#x2F;React-Native snippets</strong></p>
 <blockquote>
 <p>React 快捷代码生成</p>
 </blockquote>
