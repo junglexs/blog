@@ -98,16 +98,16 @@
     <content><![CDATA[<p>Google Chrome</p>
 <p>谷歌浏览器</p>
 <h1 id="拓展程序"><a href="#拓展程序" class="headerlink" title="拓展程序"></a>拓展程序</h1><ol>
-<li>【Google 翻译】选中翻译</li>
-<li>【沉浸式翻译】（巨好用）双语对照</li>
-<li>【Proxy SwitchOmega】 管理和切换代理</li>
-<li>【JSON Formatter】</li>
-<li>【CSS Peeper】</li>
-<li>【Lighthouse】分析、改善网页性能</li>
-<li>【React Developer Tools】React 开发</li>
-<li>【Redux DevTools】</li>
-<li>【Shazam】听歌识曲</li>
-<li></li>
+<li><strong>Google 翻译</strong> （选中翻译）</li>
+<li><strong>沉浸式翻译</strong>（巨好用，双语对照）</li>
+<li><strong>Proxy SwitchOmega</strong> （管理和切换代理）</li>
+<li><strong>JSON Formatter</strong></li>
+<li><strong>CSS Peeper</strong></li>
+<li><strong>Lighthouse</strong> （分析、改善网页性能）</li>
+<li><strong>React Developer Tools</strong> （React 开发）</li>
+<li><strong>Redux DevTools</strong></li>
+<li><strong>Shazam</strong> （听歌识曲）</li>
+<li><strong>Voice Control for ChatGPT</strong> （ChatGPT 语音对话，练习口语听力）</li>
 </ol>
 ]]></content>
       <categories>
@@ -300,6 +300,11 @@
     <url>/2023/07/29/%E3%80%90Hexo%E3%80%91%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<h2 id="一、初识Hexo"><a href="#一、初识Hexo" class="headerlink" title="一、初识Hexo"></a>一、初识Hexo</h2><h4 id="1-config-yml"><a href="#1-config-yml" class="headerlink" title="1._config.yml"></a>1._config.yml</h4><p>了解<code>_config.yml</code>配置文件的参数信息。网站的 <a href="https://hexo.io/zh-cn/docs/configuration">配置</a> 信息，可以在此配置大部分的参数。</p>
 <h4 id="2-生成文章"><a href="#2-生成文章" class="headerlink" title="2.生成文章"></a>2.生成文章</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hexo new &quot;post title with whitespace&quot;</span><br></pre></td></tr></table></figure>
+
+<p>生成草稿</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new draft <span class="string">&quot;draft test&quot;</span></span><br></pre></td></tr></table></figure>
+
+
 
 <h4 id="3-生成静态文件"><a href="#3-生成静态文件" class="headerlink" title="3.生成静态文件"></a>3.生成静态文件</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
 
