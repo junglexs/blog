@@ -87,7 +87,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">368</span>
+            <span class="post-count">459</span>
         </span>
     </span>
 
@@ -152,18 +152,24 @@
 </ol>
 <figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="title class_">Item</span> &#123;...todo&#125;&gt;&lt;/<span class="title class_">Item</span>&gt;</span><br><span class="line"><span class="comment">// 等价于</span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">Item</span> <span class="attr">id</span>=<span class="string">&#123;todo.id&#125;</span> <span class="attr">name</span>=<span class="string">&#123;todo.name&#125;</span> &gt;</span><span class="tag">&lt;/<span class="name">Item</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
 
-<p>组件通信</p>
-<p>父 -&gt; 子</p>
+
+
+<p>状态在哪里，操作状态的方法就在哪里</p>
+<h3 id="组件通信"><a href="#组件通信" class="headerlink" title="组件通信"></a>组件通信</h3><p>父 -&gt; 子</p>
 <p>通过 props</p>
 <p>子 -&gt; 父 </p>
 <p>通过 回调函数，父组件把函数传给子组件，子组件在合适的时候，调用该函数，将值传入该函数</p>
-<h1 id="React-路由"><a href="#React-路由" class="headerlink" title="React 路由"></a>React 路由</h1><h1 id="Redux"><a href="#Redux" class="headerlink" title="Redux"></a>Redux</h1><h4 id="创建-react-项目"><a href="#创建-react-项目" class="headerlink" title="创建 react 项目"></a>创建 react 项目</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npx create-react-app react-basic</span><br></pre></td></tr></table></figure>
+<h1 id="React-ajax"><a href="#React-ajax" class="headerlink" title="React ajax"></a>React ajax</h1><p>第三方 ajax 库 axios</p>
+<h2 id="脚手架配置代理"><a href="#脚手架配置代理" class="headerlink" title="脚手架配置代理"></a>脚手架配置代理</h2><p>实现跨域请求</p>
+<p>中间代理 没有 ajax 引擎，而是通过请求转发的形式，不存在跨域问题，能获取返回的数据</p>
+<p>多个不同代理，要编写 setupProxy.js 配置具体代理规则</p>
+<h1 id="React-路由"><a href="#React-路由" class="headerlink" title="React 路由"></a>React 路由</h1><h1 id="Redux"><a href="#Redux" class="headerlink" title="Redux"></a>Redux</h1><h2 id="创建-react-项目"><a href="#创建-react-项目" class="headerlink" title="创建 react 项目"></a>创建 react 项目</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npx create-react-app react-basic</span><br></pre></td></tr></table></figure>
 
 
 
 <p>index.js</p>
 <p>App.js</p>
-<h4 id="useState"><a href="#useState" class="headerlink" title="useState"></a>useState</h4><p>数据驱动视图</p>
+<h2 id="useState"><a href="#useState" class="headerlink" title="useState"></a>useState</h2><p>数据驱动视图</p>
 <p>直接修改原对象 是无法改变视图的</p>
 <p>需要替换整个对象</p>
 <p>组件样式</p>
