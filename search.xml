@@ -834,7 +834,7 @@
   </entry>
   <entry>
     <title>【npm】笔记</title>
-    <url>/2022/05/20/%E3%80%90NPM%E3%80%91%E7%AC%94%E8%AE%B0/</url>
+    <url>/2022/05/20/%E3%80%90npm%E3%80%91%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<h1 id="yarn"><a href="#yarn" class="headerlink" title="yarn"></a>yarn</h1><p>安装 yarn</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g yarn</span><br></pre></td></tr></table></figure>
 
