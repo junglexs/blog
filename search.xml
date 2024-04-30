@@ -93,6 +93,59 @@
       </tags>
   </entry>
   <entry>
+    <title>【Hexo】使用笔记</title>
+    <url>/2023/07/29/%E3%80%90Hexo%E3%80%91%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<h2 id="一、初识Hexo"><a href="#一、初识Hexo" class="headerlink" title="一、初识Hexo"></a>一、初识Hexo</h2><h4 id="1-config-yml"><a href="#1-config-yml" class="headerlink" title="1._config.yml"></a>1._config.yml</h4><p>了解<code>_config.yml</code>配置文件的参数信息。网站的 <a href="https://hexo.io/zh-cn/docs/configuration">配置</a> 信息，可以在此配置大部分的参数。</p>
+<h4 id="2-生成文章"><a href="#2-生成文章" class="headerlink" title="2.生成文章"></a>2.生成文章</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hexo new &quot;post title with whitespace&quot;</span><br></pre></td></tr></table></figure>
+
+<p>生成草稿</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new draft <span class="string">&quot;draft test&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>预览草稿（直接使用 hexo server 是无法看到草稿的）</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo server --draft</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="3-生成静态文件"><a href="#3-生成静态文件" class="headerlink" title="3.生成静态文件"></a>3.生成静态文件</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-部署"><a href="#4-部署" class="headerlink" title="4.部署"></a>4.部署</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h2 id="二、配置"><a href="#二、配置" class="headerlink" title="二、配置"></a>二、配置</h2><p>开启文章资源文件夹</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">post_asset_folder = <span class="literal"><span class="keyword">true</span></span></span><br></pre></td></tr></table></figure>
+
+<h2 id="三、分类"><a href="#三、分类" class="headerlink" title="三、分类"></a>三、分类</h2><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">hexo new page categories</span><br></pre></td></tr></table></figure>
+
+<h2 id="四、搜索"><a href="#四、搜索" class="headerlink" title="四、搜索"></a>四、搜索</h2><ul>
+<li><a href="https://github.com/theme-next/hexo-generator-searchdb">hexo-generator-searchdb</a> 用于搜索</li>
+</ul>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-searchdb --save</span><br></pre></td></tr></table></figure>
+
+<p>然后将以下配置复制到你博客根目录下的 <code>_config.yml</code> 里:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># hexo-generator-searchdb</span><br><span class="line">search:</span><br><span class="line">  path: search.xml</span><br><span class="line">  field: post</span><br><span class="line">  format: html</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><a href="https://github.com/hexojs/hexo-generator-feed">hexo-generator-feed</a> 用于生成 RSS 订阅</li>
+</ul>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-feed --save</span><br></pre></td></tr></table></figure>
+
+<p>然后将以下配置复制到你博客根目录下的 <code>_config.yml</code> 里:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">feed:</span><br><span class="line">  type: atom</span><br><span class="line">  path: atom.xml</span><br><span class="line">  limit: 20</span><br><span class="line">  hub:</span><br><span class="line">  content:</span><br><span class="line">  content_limit: 140</span><br><span class="line">  content_limit_delim: &quot; &quot;</span><br><span class="line">  order_by: -date</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>知识库</category>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>博客</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>【Chrome】使用指南</title>
     <url>/2022/04/19/%E3%80%90Chrome%E3%80%91%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</url>
     <content><![CDATA[<p>Google Chrome</p>
@@ -116,6 +169,18 @@
       </categories>
       <tags>
         <tag>Chrome</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【LeetCode】</title>
+    <url>/2023/07/27/%E3%80%90LeetCode%E3%80%91/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>学习</category>
+        <category>LeetCode</category>
+      </categories>
+      <tags>
+        <tag>LeetCode</tag>
       </tags>
   </entry>
   <entry>
@@ -174,18 +239,6 @@
       <tags>
         <tag>Git</tag>
         <tag>GitHub</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【LeetCode】</title>
-    <url>/2023/07/27/%E3%80%90LeetCode%E3%80%91/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>学习</category>
-        <category>LeetCode</category>
-      </categories>
-      <tags>
-        <tag>LeetCode</tag>
       </tags>
   </entry>
   <entry>
@@ -254,99 +307,6 @@
       </categories>
       <tags>
         <tag>MacOS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【Markdown】使用笔记（MacOS）</title>
-    <url>/2022/06/29/%E3%80%90Markdown%E3%80%91%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0%EF%BC%88MacOS%EF%BC%89/</url>
-    <content><![CDATA[<p><a href="https://zhuanlan.zhihu.com/p/632381789">Markdown教程</a></p>
-<h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><ul>
-<li>生成代码块 <code>option + command + C</code> </li>
-<li>源码模式 <code>command + /</code></li>
-<li>标题 <code>comand + 1</code> 或 2 、 3、 4</li>
-<li>查找 <code>comand + F</code></li>
-<li>超链接 <code>command + K</code></li>
-<li>查找并替换 <code>option + command + F</code></li>
-<li>无序列表 <code>option + command + U</code>  或 <code>- + tab</code></li>
-<li>有序列表 <code>option + command + L</code> 或 <code>1. + tab</code> </li>
-<li>代码  <code>control + ` </code></li>
-<li>代码块 <code>option + command + C</code></li>
-<li>引用 <code>option + command + Q</code></li>
-<li>放大&#x2F;缩小 <code>shift + command + =</code> &#x2F; <code>shift + command + -</code></li>
-</ul>
-<h2 id="语法与文本内容冲突"><a href="#语法与文本内容冲突" class="headerlink" title="语法与文本内容冲突"></a>语法与文本内容冲突</h2><h4 id="使用反斜杠-来将这些字符进行转义"><a href="#使用反斜杠-来将这些字符进行转义" class="headerlink" title="使用反斜杠\来将这些字符进行转义"></a>使用反斜杠<code>\</code>来将这些字符进行转义</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">*\*这样里面的文字就不会加粗了\*\*</span><br></pre></td></tr></table></figure>
-
-<h4 id="使用多个反引号来创建代码块"><a href="#使用多个反引号来创建代码块" class="headerlink" title="使用多个反引号来创建代码块"></a>使用多个反引号来创建代码块</h4><p>如果你发现转义字符不起作用（例如，在某些Markdown解析器中可能会有差异），另一个方法是使用更多的反引号来创建代码块，并在里面放置你的代码</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">`` control + ` ``</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
-
-
-
-]]></content>
-      <categories>
-        <category>知识库</category>
-        <category>Markdown</category>
-      </categories>
-      <tags>
-        <tag>Markdown</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【Hexo】使用笔记</title>
-    <url>/2023/07/29/%E3%80%90Hexo%E3%80%91%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<h2 id="一、初识Hexo"><a href="#一、初识Hexo" class="headerlink" title="一、初识Hexo"></a>一、初识Hexo</h2><h4 id="1-config-yml"><a href="#1-config-yml" class="headerlink" title="1._config.yml"></a>1._config.yml</h4><p>了解<code>_config.yml</code>配置文件的参数信息。网站的 <a href="https://hexo.io/zh-cn/docs/configuration">配置</a> 信息，可以在此配置大部分的参数。</p>
-<h4 id="2-生成文章"><a href="#2-生成文章" class="headerlink" title="2.生成文章"></a>2.生成文章</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hexo new &quot;post title with whitespace&quot;</span><br></pre></td></tr></table></figure>
-
-<p>生成草稿</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new draft <span class="string">&quot;draft test&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>预览草稿（直接使用 hexo server 是无法看到草稿的）</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo server --draft</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="3-生成静态文件"><a href="#3-生成静态文件" class="headerlink" title="3.生成静态文件"></a>3.生成静态文件</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
-
-<h4 id="4-部署"><a href="#4-部署" class="headerlink" title="4.部署"></a>4.部署</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h2 id="二、配置"><a href="#二、配置" class="headerlink" title="二、配置"></a>二、配置</h2><p>开启文章资源文件夹</p>
-<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">post_asset_folder = <span class="literal"><span class="keyword">true</span></span></span><br></pre></td></tr></table></figure>
-
-<h2 id="三、分类"><a href="#三、分类" class="headerlink" title="三、分类"></a>三、分类</h2><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">hexo new page categories</span><br></pre></td></tr></table></figure>
-
-<h2 id="四、搜索"><a href="#四、搜索" class="headerlink" title="四、搜索"></a>四、搜索</h2><ul>
-<li><a href="https://github.com/theme-next/hexo-generator-searchdb">hexo-generator-searchdb</a> 用于搜索</li>
-</ul>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-searchdb --save</span><br></pre></td></tr></table></figure>
-
-<p>然后将以下配置复制到你博客根目录下的 <code>_config.yml</code> 里:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># hexo-generator-searchdb</span><br><span class="line">search:</span><br><span class="line">  path: search.xml</span><br><span class="line">  field: post</span><br><span class="line">  format: html</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><a href="https://github.com/hexojs/hexo-generator-feed">hexo-generator-feed</a> 用于生成 RSS 订阅</li>
-</ul>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-feed --save</span><br></pre></td></tr></table></figure>
-
-<p>然后将以下配置复制到你博客根目录下的 <code>_config.yml</code> 里:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">feed:</span><br><span class="line">  type: atom</span><br><span class="line">  path: atom.xml</span><br><span class="line">  limit: 20</span><br><span class="line">  hub:</span><br><span class="line">  content:</span><br><span class="line">  content_limit: 140</span><br><span class="line">  content_limit_delim: &quot; &quot;</span><br><span class="line">  order_by: -date</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>知识库</category>
-        <category>Hexo</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>博客</tag>
       </tags>
   </entry>
   <entry>
@@ -456,6 +416,19 @@
       </tags>
   </entry>
   <entry>
+    <title>【TypeScript】笔记</title>
+    <url>/2021/09/20/%E3%80%90TypeScript%E3%80%91%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<p><a href="https://www.tslang.cn/">TypeScript 中文网</a></p>
+]]></content>
+      <categories>
+        <category>知识库</category>
+        <category>TypeScript</category>
+      </categories>
+      <tags>
+        <tag>TypeScript</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>【VSCode】使用笔记</title>
     <url>/2021/10/18/%E3%80%90VSCode%E3%80%91%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<h1 id="必装插件"><a href="#必装插件" class="headerlink" title="必装插件"></a>必装插件</h1><h2 id="1-基础插件"><a href="#1-基础插件" class="headerlink" title="1. 基础插件"></a>1. 基础插件</h2><ol>
@@ -523,16 +496,66 @@
       </tags>
   </entry>
   <entry>
-    <title>【TypeScript】笔记</title>
-    <url>/2021/09/20/%E3%80%90TypeScript%E3%80%91%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<p><a href="https://www.tslang.cn/">TypeScript 中文网</a></p>
+    <title>【Markdown】使用笔记（MacOS）</title>
+    <url>/2022/06/29/%E3%80%90Markdown%E3%80%91%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0%EF%BC%88MacOS%EF%BC%89/</url>
+    <content><![CDATA[<p><a href="https://zhuanlan.zhihu.com/p/632381789">Markdown教程</a></p>
+<h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><ul>
+<li>生成代码块 <code>option + command + C</code> </li>
+<li>源码模式 <code>command + /</code></li>
+<li>标题 <code>comand + 1</code> 或 2 、 3、 4</li>
+<li>查找 <code>comand + F</code></li>
+<li>超链接 <code>command + K</code></li>
+<li>查找并替换 <code>option + command + F</code></li>
+<li>无序列表 <code>option + command + U</code>  或 <code>- + tab</code></li>
+<li>有序列表 <code>option + command + L</code> 或 <code>1. + tab</code> </li>
+<li>代码  <code>control + ` </code></li>
+<li>代码块 <code>option + command + C</code></li>
+<li>引用 <code>option + command + Q</code></li>
+<li>放大&#x2F;缩小 <code>shift + command + =</code> &#x2F; <code>shift + command + -</code></li>
+</ul>
+<h2 id="语法与文本内容冲突"><a href="#语法与文本内容冲突" class="headerlink" title="语法与文本内容冲突"></a>语法与文本内容冲突</h2><h4 id="使用反斜杠-来将这些字符进行转义"><a href="#使用反斜杠-来将这些字符进行转义" class="headerlink" title="使用反斜杠\来将这些字符进行转义"></a>使用反斜杠<code>\</code>来将这些字符进行转义</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">*\*这样里面的文字就不会加粗了\*\*</span><br></pre></td></tr></table></figure>
+
+<h4 id="使用多个反引号来创建代码块"><a href="#使用多个反引号来创建代码块" class="headerlink" title="使用多个反引号来创建代码块"></a>使用多个反引号来创建代码块</h4><p>如果你发现转义字符不起作用（例如，在某些Markdown解析器中可能会有差异），另一个方法是使用更多的反引号来创建代码块，并在里面放置你的代码</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">`` control + ` ``</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
 ]]></content>
       <categories>
         <category>知识库</category>
-        <category>TypeScript</category>
+        <category>Markdown</category>
       </categories>
       <tags>
-        <tag>TypeScript</tag>
+        <tag>Markdown</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【npm】笔记</title>
+    <url>/2022/05/20/%E3%80%90npm%E3%80%91%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<h1 id="yarn"><a href="#yarn" class="headerlink" title="yarn"></a>yarn</h1><p>安装 yarn</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g yarn</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="F-A"><a href="#F-A" class="headerlink" title="F&amp;A"></a>F&amp;A</h1><p>1.执行 yarn intall 报错，Error,certificate has expired.</p>
+<p><img src="https://www.image.junglexs.com/blog/202404302102183.png" alt="image-20240430210213083"></p>
+<blockquote>
+<p>HTTPS 证书验证失败，导致这个问题。将 yarn 配置中的 strict-ssl 设置为 false , 在 info yarn config 信息中， ‘strict-ssl’ 为 true，表示需要验证 HTTPS 证书。我们可以将 ‘strict-ssl’ 设置为 false，跳过 HTTPS 证书验证。执行如下命令即可</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yarn config <span class="built_in">set</span> <span class="string">&quot;strict-ssl&quot;</span> <span class="literal">false</span> -g</span><br></pre></td></tr></table></figure>
+</blockquote>
+]]></content>
+      <categories>
+        <category>npm</category>
+      </categories>
+      <tags>
+        <tag>npm</tag>
+        <tag>yarn</tag>
       </tags>
   </entry>
   <entry>
@@ -687,6 +710,18 @@
       </tags>
   </entry>
   <entry>
+    <title>【计算机组成原理】</title>
+    <url>/2020/05/21/%E3%80%90%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E3%80%91/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>知识库</category>
+        <category>计算机组成原理</category>
+      </categories>
+      <tags>
+        <tag>计算机组成原理</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>【计算机网络】</title>
     <url>/2022/06/15/%E3%80%90%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E3%80%91/</url>
     <content><![CDATA[]]></content>
@@ -772,25 +807,6 @@
       </tags>
   </entry>
   <entry>
-    <title>深入掌握 OSS：最完美的 OSS 上传方案！</title>
-    <url>/2024/03/22/%E6%B7%B1%E5%85%A5%E6%8E%8C%E6%8F%A1%20OSS%EF%BC%9A%E6%9C%80%E5%AE%8C%E7%BE%8E%E7%9A%84%20OSS%20%E4%B8%8A%E4%BC%A0%E6%96%B9%E6%A1%88%EF%BC%81/</url>
-    <content><![CDATA[<h2 id="原文链接"><a href="#原文链接" class="headerlink" title="原文链接"></a><a href="https://juejin.cn/post/7325495635455868938">原文链接</a></h2><p>上传文件一般不会直接存在服务器目录下，这样不好扩展，一般我们会用阿里云的 OSS（Object Storage Service）对象存储服务，它会自己做弹性扩展，所以存储空间是无限的。</p>
-<p>OSS 对象存储是在一个 bucket 桶下，存放多个文件。</p>
-<p>它是用 key-value 存储的，没有目录的概念，阿里云 OSS 的目录只是用元信息来模拟实现的。</p>
-<p>上传文件后，我们能拿到文件 URL，但生产环境下我们不会直接用 OSS 的 URL 访问，而是会开启 CDN，用网站域名访问，最终回源到 OSS 服务。因此还需要开通 CDN 服务</p>
-<p>不管在哪里上传，都需要 acessKeyId 和 acessKeySecret。</p>
-<p>这个是阿里云的安全策略，因为直接用用户名密码，一旦泄漏就很麻烦，而 acessKey 泄漏了也可以禁用。而且建议用 RAM 子用户的方式生成 accessKey，这样可以最小化权限，进一步减少泄漏的风险。</p>
-<p>客户端直传 OSS 的方式不需要消耗服务器的资源，但是会有泄漏 acessKey 的风险，所以一般都是用服务端生成临时的签名等信息，然后用这些信息来上传。</p>
-]]></content>
-      <categories>
-        <category>阅读</category>
-      </categories>
-      <tags>
-        <tag>OSS</tag>
-        <tag>每日阅读</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>面试官问我按钮级别权限怎么控制，我说v-if，面试官说再见</title>
     <url>/2024/03/04/%E9%9D%A2%E8%AF%95%E5%AE%98%E9%97%AE%E6%88%91%E6%8C%89%E9%92%AE%E7%BA%A7%E5%88%AB%E6%9D%83%E9%99%90%E6%80%8E%E4%B9%88%E6%8E%A7%E5%88%B6%EF%BC%8C%E6%88%91%E8%AF%B4v-if%EF%BC%8C%E9%9D%A2%E8%AF%95%E5%AE%98%E8%AF%B4%E5%86%8D%E8%A7%81/</url>
     <content><![CDATA[<h2 id="原文链接"><a href="#原文链接" class="headerlink" title="原文链接"></a><a href="https://juejin.cn/post/7209648356530896953">原文链接</a></h2><p>按钮级别权限控制，怎么做？使用v-if ？可以，但不够通用。</p>
@@ -821,38 +837,22 @@
       </tags>
   </entry>
   <entry>
-    <title>【计算机组成原理】</title>
-    <url>/2020/05/21/%E3%80%90%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E3%80%91/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>知识库</category>
-        <category>计算机组成原理</category>
-      </categories>
-      <tags>
-        <tag>计算机组成原理</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【npm】笔记</title>
-    <url>/2022/05/20/%E3%80%90npm%E3%80%91%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<h1 id="yarn"><a href="#yarn" class="headerlink" title="yarn"></a>yarn</h1><p>安装 yarn</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g yarn</span><br></pre></td></tr></table></figure>
-
-
-
-<h1 id="F-A"><a href="#F-A" class="headerlink" title="F&amp;A"></a>F&amp;A</h1><p>1.执行 yarn intall 报错，Error,certificate has expired.</p>
-<p><img src="https://www.image.junglexs.com/blog/202404302102183.png" alt="image-20240430210213083"></p>
-<blockquote>
-<p>HTTPS 证书验证失败，导致这个问题。将 yarn 配置中的 strict-ssl 设置为 false , 在 info yarn config 信息中， ‘strict-ssl’ 为 true，表示需要验证 HTTPS 证书。我们可以将 ‘strict-ssl’ 设置为 false，跳过 HTTPS 证书验证。执行如下命令即可</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yarn config <span class="built_in">set</span> <span class="string">&quot;strict-ssl&quot;</span> <span class="literal">false</span> -g</span><br></pre></td></tr></table></figure>
-</blockquote>
+    <title>深入掌握 OSS：最完美的 OSS 上传方案！</title>
+    <url>/2024/03/22/%E6%B7%B1%E5%85%A5%E6%8E%8C%E6%8F%A1%20OSS%EF%BC%9A%E6%9C%80%E5%AE%8C%E7%BE%8E%E7%9A%84%20OSS%20%E4%B8%8A%E4%BC%A0%E6%96%B9%E6%A1%88%EF%BC%81/</url>
+    <content><![CDATA[<h2 id="原文链接"><a href="#原文链接" class="headerlink" title="原文链接"></a><a href="https://juejin.cn/post/7325495635455868938">原文链接</a></h2><p>上传文件一般不会直接存在服务器目录下，这样不好扩展，一般我们会用阿里云的 OSS（Object Storage Service）对象存储服务，它会自己做弹性扩展，所以存储空间是无限的。</p>
+<p>OSS 对象存储是在一个 bucket 桶下，存放多个文件。</p>
+<p>它是用 key-value 存储的，没有目录的概念，阿里云 OSS 的目录只是用元信息来模拟实现的。</p>
+<p>上传文件后，我们能拿到文件 URL，但生产环境下我们不会直接用 OSS 的 URL 访问，而是会开启 CDN，用网站域名访问，最终回源到 OSS 服务。因此还需要开通 CDN 服务</p>
+<p>不管在哪里上传，都需要 acessKeyId 和 acessKeySecret。</p>
+<p>这个是阿里云的安全策略，因为直接用用户名密码，一旦泄漏就很麻烦，而 acessKey 泄漏了也可以禁用。而且建议用 RAM 子用户的方式生成 accessKey，这样可以最小化权限，进一步减少泄漏的风险。</p>
+<p>客户端直传 OSS 的方式不需要消耗服务器的资源，但是会有泄漏 acessKey 的风险，所以一般都是用服务端生成临时的签名等信息，然后用这些信息来上传。</p>
 ]]></content>
       <categories>
-        <category>npm</category>
+        <category>阅读</category>
       </categories>
       <tags>
-        <tag>npm</tag>
-        <tag>yarn</tag>
+        <tag>OSS</tag>
+        <tag>每日阅读</tag>
       </tags>
   </entry>
 </search>
