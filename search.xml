@@ -364,7 +364,17 @@
 <li>类式组件</li>
 </ul>
 <h1 id="React-面向组件编程"><a href="#React-面向组件编程" class="headerlink" title="React 面向组件编程"></a>React 面向组件编程</h1><h2 id="组件三大核心属性"><a href="#组件三大核心属性" class="headerlink" title="组件三大核心属性"></a>组件三大核心属性</h2><h3 id="state"><a href="#state" class="headerlink" title="state"></a>state</h3><h3 id="props"><a href="#props" class="headerlink" title="props"></a>props</h3><p>propType 用于对 prop 的类型和必要性的限制</p>
-<h3 id="refs"><a href="#refs" class="headerlink" title="refs"></a>refs</h3><p>函数柯里化（高阶函数）</p>
+<h3 id="refs"><a href="#refs" class="headerlink" title="refs"></a>refs</h3><p>组件内的标签可以定义ref属性来标识自己，可以通过 ref 获取某个 dom 元素的值</p>
+<ul>
+<li><p>字符串形式的 ref （不推荐），从 this.refs 中取节点</p>
+</li>
+<li><p>回调函数形式的 ref</p>
+<figure class="highlight jsx"><table><tr><td class="code"><pre><span class="line">&lt;input ref=&#123;<span class="function"><span class="params">c</span> =&gt;</span> <span class="variable language_">this</span>.<span class="property">input1</span> = c &#125; type=<span class="string">&quot;text&quot;</span> placeholder=<span class="string">&quot;点击按钮提示数据&quot;</span>/&gt;</span><br></pre></td></tr></table></figure>
+
+<p>把 ref 所处的当前的节点放到组件实例的 input1 属性中</p>
+</li>
+</ul>
+<p>函数柯里化（高阶函数）</p>
 <h2 id="生命周期钩子"><a href="#生命周期钩子" class="headerlink" title="生命周期钩子"></a>生命周期钩子</h2><ul>
 <li>constructor 构造器</li>
 <li>componentWillMount 组件将要挂载</li>
@@ -401,6 +411,10 @@
 <p>子 -&gt; 父 </p>
 <p>通过 回调函数，父组件把函数传给子组件，子组件在合适的时候，调用该函数，将值传入该函数</p>
 <h1 id="React-ajax"><a href="#React-ajax" class="headerlink" title="React ajax"></a>React ajax</h1><p>第三方 ajax 库 axios</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> axios <span class="keyword">from</span> axios</span><br></pre></td></tr></table></figure>
+
+
+
 <h2 id="脚手架配置代理"><a href="#脚手架配置代理" class="headerlink" title="脚手架配置代理"></a>脚手架配置代理</h2><p>实现跨域请求</p>
 <p>中间代理 没有 ajax 引擎，而是通过请求转发的形式，不存在跨域问题，能获取返回的数据</p>
 <p>多个不同代理，要编写 setupProxy.js 配置具体代理规则</p>
@@ -419,6 +433,13 @@
 <p>利用 lodash 实现排序</p>
 <p>_.ordeBy</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">npm install classnames</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<p>连续结构赋值 + 重命名</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> obj = &#123;</span><br><span class="line"> <span class="attr">a</span>: &#123;</span><br><span class="line"> 	<span class="attr">b</span>: &#123;</span><br><span class="line"> 	 <span class="attr">c</span>: <span class="number">1</span></span><br><span class="line"> 	&#125;</span><br><span class="line"> &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> &#123;<span class="attr">a</span>:&#123;<span class="attr">b</span>:&#123;<span class="attr">c</span>:data&#125;&#125;&#125; = obj;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(data);</span><br></pre></td></tr></table></figure>
 
 ]]></content>
       <categories>
