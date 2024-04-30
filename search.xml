@@ -418,6 +418,7 @@
 <h2 id="脚手架配置代理"><a href="#脚手架配置代理" class="headerlink" title="脚手架配置代理"></a>脚手架配置代理</h2><p>实现跨域请求</p>
 <p>中间代理 没有 ajax 引擎，而是通过请求转发的形式，不存在跨域问题，能获取返回的数据</p>
 <p>多个不同代理，要编写 setupProxy.js 配置具体代理规则</p>
+<p>后端 跨域用 cors</p>
 <h1 id="React-路由"><a href="#React-路由" class="headerlink" title="React 路由"></a>React 路由</h1><h1 id="Redux"><a href="#Redux" class="headerlink" title="Redux"></a>Redux</h1><h2 id="创建-react-项目"><a href="#创建-react-项目" class="headerlink" title="创建 react 项目"></a>创建 react 项目</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npx create-react-app react-basic</span><br></pre></td></tr></table></figure>
 
 
@@ -441,6 +442,10 @@
 <p>连续结构赋值 + 重命名</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> obj = &#123;</span><br><span class="line"> <span class="attr">a</span>: &#123;</span><br><span class="line"> 	<span class="attr">b</span>: &#123;</span><br><span class="line"> 	 <span class="attr">c</span>: <span class="number">1</span></span><br><span class="line"> 	&#125;</span><br><span class="line"> &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> &#123;<span class="attr">a</span>:&#123;<span class="attr">b</span>:&#123;<span class="attr">c</span>:data&#125;&#125;&#125; = obj;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(data);</span><br></pre></td></tr></table></figure>
 
+
+
+<p>GitHub 搜索用户名</p>
+<p><a href="https://api.github.com/search/users?q=junglexs">https://api.github.com/search/users?q=junglexs</a></p>
 ]]></content>
       <categories>
         <category>知识库</category>
@@ -825,6 +830,29 @@
       </categories>
       <tags>
         <tag>计算机组成原理</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【npm】笔记</title>
+    <url>/2022/05/20/%E3%80%90NPM%E3%80%91%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<h1 id="yarn"><a href="#yarn" class="headerlink" title="yarn"></a>yarn</h1><p>安装 yarn</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g yarn</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="F-A"><a href="#F-A" class="headerlink" title="F&amp;A"></a>F&amp;A</h1><p>1.执行 yarn intall 报错，Error,certificate has expired.</p>
+<p><img src="https://www.image.junglexs.com/blog/202404302102183.png" alt="image-20240430210213083"></p>
+<blockquote>
+<p>HTTPS 证书验证失败，导致这个问题。将 yarn 配置中的 strict-ssl 设置为 false , 在 info yarn config 信息中， ‘strict-ssl’ 为 true，表示需要验证 HTTPS 证书。我们可以将 ‘strict-ssl’ 设置为 false，跳过 HTTPS 证书验证。执行如下命令即可</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yarn config <span class="built_in">set</span> <span class="string">&quot;strict-ssl&quot;</span> <span class="literal">false</span> -g</span><br></pre></td></tr></table></figure>
+</blockquote>
+]]></content>
+      <categories>
+        <category>npm</category>
+      </categories>
+      <tags>
+        <tag>npm</tag>
+        <tag>yarn</tag>
       </tags>
   </entry>
 </search>

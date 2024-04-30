@@ -185,6 +185,71 @@
 
     
     <article
+  id="post-【NPM】笔记"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2022/05/20/%E3%80%90NPM%E3%80%91%E7%AC%94%E8%AE%B0/"
+    >【npm】笔记</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2022/05/20/%E3%80%90NPM%E3%80%91%E7%AC%94%E8%AE%B0/" class="article-date">
+  <time datetime="2022-05-20T12:00:54.000Z" itemprop="datePublished">2022-05-20</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/npm/">npm</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="yarn"><a href="#yarn" class="headerlink" title="yarn"></a>yarn</h1><p>安装 yarn</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g yarn</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="F-A"><a href="#F-A" class="headerlink" title="F&amp;A"></a>F&amp;A</h1><p>1.执行 yarn intall 报错，Error,certificate has expired.</p>
+<p><img src="https://www.image.junglexs.com/blog/202404302102183.png" alt="image-20240430210213083"></p>
+<blockquote>
+<p>HTTPS 证书验证失败，导致这个问题。将 yarn 配置中的 strict-ssl 设置为 false , 在 info yarn config 信息中， ‘strict-ssl’ 为 true，表示需要验证 HTTPS 证书。我们可以将 ‘strict-ssl’ 设置为 false，跳过 HTTPS 证书验证。执行如下命令即可</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn config <span class="built_in">set</span> <span class="string">&quot;strict-ssl&quot;</span> <span class="literal">false</span> -g</span><br></pre></td></tr></table></figure>
+</blockquote>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/npm/" rel="tag">npm</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/yarn/" rel="tag">yarn</a></li></ul>
+
+    </footer>
+  </div>
+
+    
+ 
+   
+  
+</article>
+
+    
+    <article
   id="post-【Git&amp;GitHub】使用指南"
   class="article article-type-post"
   itemscope
@@ -845,67 +910,13 @@
 </article>
 
     
-    <article
-  id="post-【计算机组成原理】"
-  class="article article-type-post"
-  itemscope
-  itemprop="blogPost"
-  data-scroll-reveal
->
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2020/05/21/%E3%80%90%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E3%80%91/"
-    >【计算机组成原理】</a> 
-</h2>
- 
-
-      
-    </header>
-     
-    <div class="article-meta">
-      <a href="/2020/05/21/%E3%80%90%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E3%80%91/" class="article-date">
-  <time datetime="2020-05-21T13:13:35.000Z" itemprop="datePublished">2020-05-21</time>
-</a> 
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E7%9F%A5%E8%AF%86%E5%BA%93/">知识库</a> / <a class="article-category-link" href="/categories/%E7%9F%A5%E8%AF%86%E5%BA%93/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/">计算机组成原理</a>
-  </div>
-   
-    </div>
-      
-    <div class="article-entry" itemprop="articleBody">
-       
-   
-      <!-- reward -->
-      
-    </div>
-    
-
-    <!-- copyright -->
-    
-    <footer class="article-footer">
-       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/" rel="tag">计算机组成原理</a></li></ul>
-
-    </footer>
-  </div>
-
-    
- 
-   
-  
-</article>
-
-    
   </article>
   
 
   
   <nav class="page-nav">
     
-    <a class="extend prev" rel="prev" href="/">上一页</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+    <a class="extend prev" rel="prev" href="/">上一页</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/">下一页</a>
   </nav>
   
 </section>

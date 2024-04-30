@@ -216,7 +216,7 @@
     <link href="https://junglexs.github.io/2023/03/25/%E3%80%90React%E3%80%91%E7%AC%94%E8%AE%B0/"/>
     <id>https://junglexs.github.io/2023/03/25/%E3%80%90React%E3%80%91%E7%AC%94%E8%AE%B0/</id>
     <published>2023-03-25T13:36:20.000Z</published>
-    <updated>2024-04-30T09:36:33.261Z</updated>
+    <updated>2024-04-30T11:29:42.123Z</updated>
     
     
       
@@ -302,6 +302,34 @@
     <category term="DevOps" scheme="https://junglexs.github.io/tags/DevOps/"/>
     
     <category term="CI/CD" scheme="https://junglexs.github.io/tags/CI-CD/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【npm】笔记</title>
+    <link href="https://junglexs.github.io/2022/05/20/%E3%80%90NPM%E3%80%91%E7%AC%94%E8%AE%B0/"/>
+    <id>https://junglexs.github.io/2022/05/20/%E3%80%90NPM%E3%80%91%E7%AC%94%E8%AE%B0/</id>
+    <published>2022-05-20T12:00:54.000Z</published>
+    <updated>2024-04-30T13:06:19.440Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;yarn&quot;&gt;&lt;a href=&quot;#yarn&quot; class=&quot;headerlink&quot; title=&quot;yarn&quot;&gt;&lt;/a&gt;yarn&lt;/h1&gt;&lt;p&gt;安装 yarn&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td</summary>
+        
+      
+    
+    
+    
+    <category term="npm" scheme="https://junglexs.github.io/categories/npm/"/>
+    
+    
+    <category term="npm" scheme="https://junglexs.github.io/tags/npm/"/>
+    
+    <category term="yarn" scheme="https://junglexs.github.io/tags/yarn/"/>
     
   </entry>
   
@@ -515,25 +543,6 @@
     
     
     <category term="读书笔记" scheme="https://junglexs.github.io/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【计算机组成原理】</title>
-    <link href="https://junglexs.github.io/2020/05/21/%E3%80%90%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E3%80%91/"/>
-    <id>https://junglexs.github.io/2020/05/21/%E3%80%90%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E3%80%91/</id>
-    <published>2020-05-21T13:13:35.000Z</published>
-    <updated>2024-03-21T13:16:34.137Z</updated>
-    
-    
-    
-    
-    <category term="知识库" scheme="https://junglexs.github.io/categories/%E7%9F%A5%E8%AF%86%E5%BA%93/"/>
-    
-    <category term="计算机组成原理" scheme="https://junglexs.github.io/categories/%E7%9F%A5%E8%AF%86%E5%BA%93/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/"/>
-    
-    
-    <category term="计算机组成原理" scheme="https://junglexs.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/"/>
     
   </entry>
   
