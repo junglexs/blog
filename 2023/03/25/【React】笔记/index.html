@@ -87,7 +87,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">623</span>
+            <span class="post-count">672</span>
         </span>
     </span>
 
@@ -169,6 +169,14 @@
 <p>通过 props</p>
 <p>子 -&gt; 父 </p>
 <p>通过 回调函数，父组件把函数传给子组件，子组件在合适的时候，调用该函数，将值传入该函数</p>
+<p>兄弟组件之间通信</p>
+<p>消息订阅与发布</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>) <span class="keyword">import</span> <span class="title class_">PubSub</span> <span class="keyword">from</span> <span class="string">&#x27;pubsub-js&#x27;</span> <span class="comment">//引入</span></span><br><span class="line"><span class="number">2</span>) <span class="title class_">PubSub</span>.<span class="title function_">subscribe</span>(<span class="string">&#x27;delete&#x27;</span>, <span class="keyword">function</span>(<span class="params">msg,data</span>)&#123; &#125;); <span class="comment">//订阅</span></span><br><span class="line"><span class="number">3</span>) <span class="title class_">PubSub</span>.<span class="title function_">publish</span>(<span class="string">&#x27;delete&#x27;</span>, data) <span class="comment">//发布消息</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
 <h1 id="React-ajax"><a href="#React-ajax" class="headerlink" title="React ajax"></a>React ajax</h1><p>第三方 ajax 库 axios</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> axios <span class="keyword">from</span> axios</span><br></pre></td></tr></table></figure>
 

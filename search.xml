@@ -85,6 +85,7 @@
     <url>/2022/05/28/%E3%80%90DevOps%E3%80%91%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[]]></content>
       <categories>
+        <category>知识库</category>
         <category>DevOps</category>
       </categories>
       <tags>
@@ -370,6 +371,14 @@
 <p>通过 props</p>
 <p>子 -&gt; 父 </p>
 <p>通过 回调函数，父组件把函数传给子组件，子组件在合适的时候，调用该函数，将值传入该函数</p>
+<p>兄弟组件之间通信</p>
+<p>消息订阅与发布</p>
+<figure class="highlight jsx"><table><tr><td class="code"><pre><span class="line"><span class="number">1</span>) <span class="keyword">import</span> <span class="title class_">PubSub</span> <span class="keyword">from</span> <span class="string">&#x27;pubsub-js&#x27;</span> <span class="comment">//引入</span></span><br><span class="line"><span class="number">2</span>) <span class="title class_">PubSub</span>.<span class="title function_">subscribe</span>(<span class="string">&#x27;delete&#x27;</span>, <span class="keyword">function</span>(<span class="params">msg,data</span>)&#123; &#125;); <span class="comment">//订阅</span></span><br><span class="line"><span class="number">3</span>) <span class="title class_">PubSub</span>.<span class="title function_">publish</span>(<span class="string">&#x27;delete&#x27;</span>, data) <span class="comment">//发布消息</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
 <h1 id="React-ajax"><a href="#React-ajax" class="headerlink" title="React ajax"></a>React ajax</h1><p>第三方 ajax 库 axios</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> axios <span class="keyword">from</span> axios</span><br></pre></td></tr></table></figure>
 
@@ -551,6 +560,7 @@
 </blockquote>
 ]]></content>
       <categories>
+        <category>知识库</category>
         <category>npm</category>
       </categories>
       <tags>
@@ -1133,14 +1143,28 @@
 <li><u><strong>All you have to do</strong> is sit here and be quiet</u> 你要做的就是坐着并保持安静</li>
 <li>Scram 滚开 get it off me 从我身上走开</li>
 <li>Daddy is running too fast <u>for the wasp to catch him.</u> （以至于黄蜂抓不到他）</li>
+<li>I didn’t believe you would <strong>actually</strong> do it.</li>
+<li><u>You’re most welcome.</u> 不要那么客气 （You’re most welcome to come 非常欢迎你来）</li>
 </ul>
-<h2 id="Day46-End"><a href="#Day46-End" class="headerlink" title="Day46 End."></a>Day46 End.</h2>]]></content>
+<h2 id="Day16-Musical-Instruments"><a href="#Day16-Musical-Instruments" class="headerlink" title="Day16 Musical Instruments"></a>Day16 Musical Instruments</h2><h2 id="Day46-End"><a href="#Day46-End" class="headerlink" title="Day46 End."></a>Day46 End.</h2>]]></content>
       <categories>
         <category>学习</category>
         <category>English</category>
       </categories>
       <tags>
         <tag>English</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【Promise】笔记</title>
+    <url>/2020/11/28/%E3%80%90Promise%E3%80%91%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<h1 id="Promise"><a href="#Promise" class="headerlink" title="Promise"></a>Promise</h1>]]></content>
+      <categories>
+        <category>知识库</category>
+        <category>Promise</category>
+      </categories>
+      <tags>
+        <tag>Promise</tag>
       </tags>
   </entry>
 </search>
