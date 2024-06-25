@@ -120,6 +120,197 @@
       </tags>
   </entry>
   <entry>
+    <title>【Git&amp;GitHub】使用指南</title>
+    <url>/2022/05/18/%E3%80%90Git&amp;GitHub%E3%80%91%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</url>
+    <content><![CDATA[<h1 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h1><h2 id="本地代码上传"><a href="#本地代码上传" class="headerlink" title="本地代码上传"></a>本地代码上传</h2><p>1.建立远程仓库<br>2.切换到项目路径，打开终端<br>3.设置用户名、邮箱 </p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git config --global user.name &quot;[你的GitHub的用户名]&quot;</span><br><span class="line">git config --global user.email &quot;[你的GitHub绑定的邮箱]&quot;</span><br></pre></td></tr></table></figure>
+<p>4.查看是否创建成功</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git config --list</span><br></pre></td></tr></table></figure>
+<p>5.初始化一个空的 git 本地仓库</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure>
+<p>6.绑定本地仓库与远程仓库</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git remote add origin [远程仓库的具体地址]</span><br></pre></td></tr></table></figure>
+<p>7.查看本地分支情况</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git branch</span><br></pre></td></tr></table></figure>
+<p>8.创建并切换到 <code>master</code> 分支</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">git checkout -b master</span><br></pre></td></tr></table></figure>
+<p>9.添加文件到暂存区</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">git add .</span><br></pre></td></tr></table></figure>
+<p>10.将更改提交到本地仓库</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git commit -m &quot;[自定义的提交信息]&quot;</span><br></pre></td></tr></table></figure>
+<p>11.将本地仓库 push 到远程仓库</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
+<p>12.若发生冲突，则可以先暂存本地代码</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git stash -m &quot;[自定义的暂存信息]&quot;</span><br></pre></td></tr></table></figure>
+<p>13.再拉取远端代码后，pop 代码，再次 push</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git stash pop</span><br><span class="line">git pull origin master</span><br><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
+
+<p>14.生成 SSH Key，在图中路径找到并复制密钥</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;你的GitHub绑定的邮箱&quot;</span><br></pre></td></tr></table></figure>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7bc3ab392f0547f4bf5594d7ec660e72~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1212&h=854&s=336984&e=png&b=fdfdfd" alt="image.png"><br>或者以下代码查看密钥</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">cat ~<span class="regexp">/.ssh/i</span>d_rsa.<span class="property">pub</span></span><br></pre></td></tr></table></figure>
+<p>复制密钥到GitHub上</p>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ef182221a1da48cb9224430990fe493d~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=3024&h=1508&s=436959&e=png&b=fefefe" alt="image.png"></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/90ebd1dfa5fc44b587a1cc2f1b90a8d8~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1212&h=350&s=196085&e=png&b=fdfdfd" alt="image.png"></p>
+<h2 id="stash-pop-和-stash-apply-的区别"><a href="#stash-pop-和-stash-apply-的区别" class="headerlink" title="stash pop 和 stash apply 的区别"></a>stash pop 和 stash apply 的区别</h2><ul>
+<li><strong>相同处</strong>：<code>git stash apply</code> 和 <code>git stash pop</code> 都是用来从存储区（stash）恢复工作目录的命令。它们的主要区别在于处理完恢复操作后对 stash 的影响。</li>
+<li><strong>不同处</strong>：<code>pop</code> 会从 stash 中恢复保存的工作目录和索引，并将这些更改应用到当前分支上，但它与 <code>apply</code> 不同的是，<code>pop</code> 操作会从 stash 中删除恢复的 stash。</li>
+<li><strong>总结</strong>：如果你打算在多个分支之间多次应用相同的 stash，可以使用 <code>apply</code>，这样 stash 不会被删除，你可以在需要的时候再次应用。如果你只需要一次性地应用 stash 并将其删除，可以使用 <code>pop</code>。</li>
+</ul>
+<h2 id="git-commit-规范"><a href="#git-commit-规范" class="headerlink" title="git commit 规范"></a>git commit 规范</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">feat(user-auth): add user authentication // 新功能（feat）</span><br><span class="line">fix(database): resolve issue with data inconsistency // Bug修复（fix）</span><br><span class="line">docs(readme): update project documentation // 文档变更（docs）</span><br><span class="line">perf(api): improve response time <span class="keyword">for</span> data retrieval // 性能优化（perf）</span><br><span class="line">style(css): adjust layout <span class="keyword">for</span> better readability // 样式修改（style）</span><br><span class="line"><span class="built_in">test</span>(api): add unit tests <span class="keyword">for</span> user service // 测试相关（<span class="built_in">test</span>）</span><br><span class="line">refactor(database): restructure database schema // 重构（refactor）</span><br><span class="line">revert: undo previous commit // 回滚变更（revert）</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+<h1 id="GitHub"><a href="#GitHub" class="headerlink" title="GitHub"></a>GitHub</h1><h2 id="SSH"><a href="#SSH" class="headerlink" title="SSH"></a>SSH</h2>]]></content>
+      <categories>
+        <category>知识库</category>
+        <category>Git</category>
+      </categories>
+      <tags>
+        <tag>Git</tag>
+        <tag>GitHub</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【Hexo】使用笔记</title>
+    <url>/2023/07/29/%E3%80%90Hexo%E3%80%91%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<h2 id="一、初识Hexo"><a href="#一、初识Hexo" class="headerlink" title="一、初识Hexo"></a>一、初识Hexo</h2><h4 id="1-config-yml"><a href="#1-config-yml" class="headerlink" title="1._config.yml"></a>1._config.yml</h4><p>了解<code>_config.yml</code>配置文件的参数信息。网站的 <a href="https://hexo.io/zh-cn/docs/configuration">配置</a> 信息，可以在此配置大部分的参数。</p>
+<h4 id="2-生成文章"><a href="#2-生成文章" class="headerlink" title="2.生成文章"></a>2.生成文章</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hexo new &quot;post title with whitespace&quot;</span><br></pre></td></tr></table></figure>
+
+<p>生成草稿</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new draft <span class="string">&quot;draft test&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>预览草稿（直接使用 hexo server 是无法看到草稿的）</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo server --draft</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="3-生成静态文件"><a href="#3-生成静态文件" class="headerlink" title="3.生成静态文件"></a>3.生成静态文件</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-部署"><a href="#4-部署" class="headerlink" title="4.部署"></a>4.部署</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h2 id="二、配置"><a href="#二、配置" class="headerlink" title="二、配置"></a>二、配置</h2><p>开启文章资源文件夹</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">post_asset_folder = <span class="literal"><span class="keyword">true</span></span></span><br></pre></td></tr></table></figure>
+
+<h2 id="三、分类"><a href="#三、分类" class="headerlink" title="三、分类"></a>三、分类</h2><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">hexo new page categories</span><br></pre></td></tr></table></figure>
+
+<h2 id="四、搜索"><a href="#四、搜索" class="headerlink" title="四、搜索"></a>四、搜索</h2><ul>
+<li><a href="https://github.com/theme-next/hexo-generator-searchdb">hexo-generator-searchdb</a> 用于搜索</li>
+</ul>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-searchdb --save</span><br></pre></td></tr></table></figure>
+
+<p>然后将以下配置复制到你博客根目录下的 <code>_config.yml</code> 里:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># hexo-generator-searchdb</span><br><span class="line">search:</span><br><span class="line">  path: search.xml</span><br><span class="line">  field: post</span><br><span class="line">  format: html</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><a href="https://github.com/hexojs/hexo-generator-feed">hexo-generator-feed</a> 用于生成 RSS 订阅</li>
+</ul>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-feed --save</span><br></pre></td></tr></table></figure>
+
+<p>然后将以下配置复制到你博客根目录下的 <code>_config.yml</code> 里:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">feed:</span><br><span class="line">  type: atom</span><br><span class="line">  path: atom.xml</span><br><span class="line">  limit: 20</span><br><span class="line">  hub:</span><br><span class="line">  content:</span><br><span class="line">  content_limit: 140</span><br><span class="line">  content_limit_delim: &quot; &quot;</span><br><span class="line">  order_by: -date</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>知识库</category>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>博客</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【LeetCode】</title>
+    <url>/2023/07/27/%E3%80%90LeetCode%E3%80%91/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>学习</category>
+        <category>LeetCode</category>
+      </categories>
+      <tags>
+        <tag>LeetCode</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【MacOS】使用笔记</title>
+    <url>/2021/11/25/%E3%80%90MacOS%E3%80%91%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<h1 id="日常"><a href="#日常" class="headerlink" title="日常"></a>日常</h1><ul>
+<li><code>command + C</code> 复制</li>
+<li><code>command + V</code> 粘贴</li>
+<li><code>option + command + V</code>  （正常复制后）剪贴</li>
+<li><code>command + Z</code> 撤销</li>
+<li><code>shift + command + Z</code> 重做（相当于撤销上一步的撤销）</li>
+<li><code>command + D</code> 快速选中某词</li>
+<li><code>command + tab</code> 向后切换应用</li>
+<li><code>command + ～</code> 向前切换应用 &#x2F; 切换同一个应用的不同窗口</li>
+<li><code>command + M</code> 最小化窗口</li>
+<li><code>command + W</code>  关闭窗口</li>
+<li><code>command + Q</code> 退出程序</li>
+<li><code>command + shift + 4</code> 截屏</li>
+<li><code>command + shift + 5</code> 录屏</li>
+<li><code>control + A</code> 定位当前行首，现替换成 <code>command + 左方向键</code>更简单，配合 <code>shift</code>选中更丝滑</li>
+<li><code>control + E</code> 定位当前行尾，现替换成 <code>command + 右方向键</code> 更简单</li>
+</ul>
+<h1 id="访达"><a href="#访达" class="headerlink" title="访达"></a>访达</h1><ul>
+<li><code>enter</code> 重命名某文件</li>
+<li><code>command + O</code> 打开某文件</li>
+<li><code>command + delete</code> 删除某文件到废纸篓</li>
+<li><code>command + [</code> 前往上一个文件夹</li>
+<li><code>command + ]</code> 前往下一个文件夹</li>
+<li><code>command + 上方向键</code> 前往上层文件夹</li>
+<li><code>command + E</code> 推出磁盘映像</li>
+</ul>
+<h1 id="VSCode"><a href="#VSCode" class="headerlink" title="VSCode"></a>VSCode</h1><ul>
+<li><code>control + G</code> 定位某行 </li>
+<li><code>control + C </code>结束终端当前进程</li>
+<li><code>command + shift + K</code> 删除整行代码 </li>
+<li><code>option + command + F </code> 当前文件替换 </li>
+<li><code>option + shift + 向上/向下箭头</code> 复制一行 </li>
+<li><code>option + shift + F</code> 格式化代码</li>
+</ul>
+<h1 id="终端"><a href="#终端" class="headerlink" title="终端"></a>终端</h1><p>当遇到提示：“你不能使用以点“.”开头的名称,因为这些名称已被系统预留。请选取其他名称。”可以使用以下命令</p>
+<ul>
+<li>显示隐藏文件</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">defaults write com.apple.finder AppleShowAllFiles -boolean <span class="literal">true</span> ; killall Finder</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>隐藏隐藏文件</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">defaults write com.apple.finder AppleShowAllFiles FALSE ; killall Finder</span><br></pre></td></tr></table></figure>
+
+
+
+<p>Mac终端</p>
+<ul>
+<li>Terminal 系统自带终端</li>
+<li>iTerm2</li>
+<li>Warp</li>
+</ul>
+<h1 id="FAQ"><a href="#FAQ" class="headerlink" title="FAQ"></a>FAQ</h1><h5 id="无法打开“xxx-app”，因为无法验证开发者。"><a href="#无法打开“xxx-app”，因为无法验证开发者。" class="headerlink" title="无法打开“xxx.app”，因为无法验证开发者。"></a><strong>无法打开“xxx.app”，因为无法验证开发者。</strong></h5><blockquote>
+<p>打开【设置】，找到【隐私与安全性】，选择信任该 app即可。</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>知识库</category>
+        <category>MacOS</category>
+      </categories>
+      <tags>
+        <tag>MacOS</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>【English】挑战52天背完小猪佩奇</title>
     <url>/2023/10/17/%E3%80%90English%E3%80%91%E6%8C%91%E6%88%9852%E5%A4%A9%E8%83%8C%E5%AE%8C%E5%B0%8F%E7%8C%AA%E4%BD%A9%E5%A5%87/</url>
     <content><![CDATA[<h1 id="挑战52天背完小猪佩奇"><a href="#挑战52天背完小猪佩奇" class="headerlink" title="挑战52天背完小猪佩奇"></a>挑战52天背完小猪佩奇</h1><p><a href="https://www.bilibili.com/bangumi/play/ep375425?from_spmid=666.19.0.0">小猪佩奇 第一季 英文版 Peppa Pig</a></p>
@@ -585,209 +776,6 @@
       </tags>
   </entry>
   <entry>
-    <title>【Git&amp;GitHub】使用指南</title>
-    <url>/2022/05/18/%E3%80%90Git&amp;GitHub%E3%80%91%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</url>
-    <content><![CDATA[<h1 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h1><h2 id="本地代码上传"><a href="#本地代码上传" class="headerlink" title="本地代码上传"></a>本地代码上传</h2><p>1.建立远程仓库<br>2.切换到项目路径，打开终端<br>3.设置用户名、邮箱 </p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git config --global user.name &quot;[你的GitHub的用户名]&quot;</span><br><span class="line">git config --global user.email &quot;[你的GitHub绑定的邮箱]&quot;</span><br></pre></td></tr></table></figure>
-<p>4.查看是否创建成功</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git config --list</span><br></pre></td></tr></table></figure>
-<p>5.初始化一个空的 git 本地仓库</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure>
-<p>6.绑定本地仓库与远程仓库</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git remote add origin [远程仓库的具体地址]</span><br></pre></td></tr></table></figure>
-<p>7.查看本地分支情况</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git branch</span><br></pre></td></tr></table></figure>
-<p>8.创建并切换到 <code>master</code> 分支</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">git checkout -b master</span><br></pre></td></tr></table></figure>
-<p>9.添加文件到暂存区</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">git add .</span><br></pre></td></tr></table></figure>
-<p>10.将更改提交到本地仓库</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git commit -m &quot;[自定义的提交信息]&quot;</span><br></pre></td></tr></table></figure>
-<p>11.将本地仓库 push 到远程仓库</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
-<p>12.若发生冲突，则可以先暂存本地代码</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git stash -m &quot;[自定义的暂存信息]&quot;</span><br></pre></td></tr></table></figure>
-<p>13.再拉取远端代码后，pop 代码，再次 push</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git stash pop</span><br><span class="line">git pull origin master</span><br><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
-
-<p>14.生成 SSH Key，在图中路径找到并复制密钥</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;你的GitHub绑定的邮箱&quot;</span><br></pre></td></tr></table></figure>
-<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7bc3ab392f0547f4bf5594d7ec660e72~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1212&h=854&s=336984&e=png&b=fdfdfd" alt="image.png"><br>或者以下代码查看密钥</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">cat ~<span class="regexp">/.ssh/i</span>d_rsa.<span class="property">pub</span></span><br></pre></td></tr></table></figure>
-<p>复制密钥到GitHub上</p>
-<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ef182221a1da48cb9224430990fe493d~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=3024&h=1508&s=436959&e=png&b=fefefe" alt="image.png"></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/90ebd1dfa5fc44b587a1cc2f1b90a8d8~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1212&h=350&s=196085&e=png&b=fdfdfd" alt="image.png"></p>
-<h2 id="stash-pop-和-stash-apply-的区别"><a href="#stash-pop-和-stash-apply-的区别" class="headerlink" title="stash pop 和 stash apply 的区别"></a>stash pop 和 stash apply 的区别</h2><ul>
-<li><strong>相同处</strong>：<code>git stash apply</code> 和 <code>git stash pop</code> 都是用来从存储区（stash）恢复工作目录的命令。它们的主要区别在于处理完恢复操作后对 stash 的影响。</li>
-<li><strong>不同处</strong>：<code>pop</code> 会从 stash 中恢复保存的工作目录和索引，并将这些更改应用到当前分支上，但它与 <code>apply</code> 不同的是，<code>pop</code> 操作会从 stash 中删除恢复的 stash。</li>
-<li><strong>总结</strong>：如果你打算在多个分支之间多次应用相同的 stash，可以使用 <code>apply</code>，这样 stash 不会被删除，你可以在需要的时候再次应用。如果你只需要一次性地应用 stash 并将其删除，可以使用 <code>pop</code>。</li>
-</ul>
-<h2 id="git-commit-规范"><a href="#git-commit-规范" class="headerlink" title="git commit 规范"></a>git commit 规范</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">feat(user-auth): add user authentication // 新功能（feat）</span><br><span class="line">fix(database): resolve issue with data inconsistency // Bug修复（fix）</span><br><span class="line">docs(readme): update project documentation // 文档变更（docs）</span><br><span class="line">perf(api): improve response time <span class="keyword">for</span> data retrieval // 性能优化（perf）</span><br><span class="line">style(css): adjust layout <span class="keyword">for</span> better readability // 样式修改（style）</span><br><span class="line"><span class="built_in">test</span>(api): add unit tests <span class="keyword">for</span> user service // 测试相关（<span class="built_in">test</span>）</span><br><span class="line">refactor(database): restructure database schema // 重构（refactor）</span><br><span class="line">revert: undo previous commit // 回滚变更（revert）</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
-
-<h1 id="GitHub"><a href="#GitHub" class="headerlink" title="GitHub"></a>GitHub</h1><h2 id="SSH"><a href="#SSH" class="headerlink" title="SSH"></a>SSH</h2>]]></content>
-      <categories>
-        <category>知识库</category>
-        <category>Git</category>
-      </categories>
-      <tags>
-        <tag>Git</tag>
-        <tag>GitHub</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【Hexo】使用笔记</title>
-    <url>/2023/07/29/%E3%80%90Hexo%E3%80%91%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<h2 id="一、初识Hexo"><a href="#一、初识Hexo" class="headerlink" title="一、初识Hexo"></a>一、初识Hexo</h2><h4 id="1-config-yml"><a href="#1-config-yml" class="headerlink" title="1._config.yml"></a>1._config.yml</h4><p>了解<code>_config.yml</code>配置文件的参数信息。网站的 <a href="https://hexo.io/zh-cn/docs/configuration">配置</a> 信息，可以在此配置大部分的参数。</p>
-<h4 id="2-生成文章"><a href="#2-生成文章" class="headerlink" title="2.生成文章"></a>2.生成文章</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hexo new &quot;post title with whitespace&quot;</span><br></pre></td></tr></table></figure>
-
-<p>生成草稿</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new draft <span class="string">&quot;draft test&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>预览草稿（直接使用 hexo server 是无法看到草稿的）</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo server --draft</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="3-生成静态文件"><a href="#3-生成静态文件" class="headerlink" title="3.生成静态文件"></a>3.生成静态文件</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
-
-<h4 id="4-部署"><a href="#4-部署" class="headerlink" title="4.部署"></a>4.部署</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h2 id="二、配置"><a href="#二、配置" class="headerlink" title="二、配置"></a>二、配置</h2><p>开启文章资源文件夹</p>
-<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">post_asset_folder = <span class="literal"><span class="keyword">true</span></span></span><br></pre></td></tr></table></figure>
-
-<h2 id="三、分类"><a href="#三、分类" class="headerlink" title="三、分类"></a>三、分类</h2><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">hexo new page categories</span><br></pre></td></tr></table></figure>
-
-<h2 id="四、搜索"><a href="#四、搜索" class="headerlink" title="四、搜索"></a>四、搜索</h2><ul>
-<li><a href="https://github.com/theme-next/hexo-generator-searchdb">hexo-generator-searchdb</a> 用于搜索</li>
-</ul>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-searchdb --save</span><br></pre></td></tr></table></figure>
-
-<p>然后将以下配置复制到你博客根目录下的 <code>_config.yml</code> 里:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># hexo-generator-searchdb</span><br><span class="line">search:</span><br><span class="line">  path: search.xml</span><br><span class="line">  field: post</span><br><span class="line">  format: html</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><a href="https://github.com/hexojs/hexo-generator-feed">hexo-generator-feed</a> 用于生成 RSS 订阅</li>
-</ul>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-feed --save</span><br></pre></td></tr></table></figure>
-
-<p>然后将以下配置复制到你博客根目录下的 <code>_config.yml</code> 里:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">feed:</span><br><span class="line">  type: atom</span><br><span class="line">  path: atom.xml</span><br><span class="line">  limit: 20</span><br><span class="line">  hub:</span><br><span class="line">  content:</span><br><span class="line">  content_limit: 140</span><br><span class="line">  content_limit_delim: &quot; &quot;</span><br><span class="line">  order_by: -date</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>知识库</category>
-        <category>Hexo</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>博客</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【LeetCode】</title>
-    <url>/2023/07/27/%E3%80%90LeetCode%E3%80%91/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>学习</category>
-        <category>LeetCode</category>
-      </categories>
-      <tags>
-        <tag>LeetCode</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【MacOS】使用笔记</title>
-    <url>/2021/11/25/%E3%80%90MacOS%E3%80%91%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<h1 id="日常"><a href="#日常" class="headerlink" title="日常"></a>日常</h1><ul>
-<li><code>command + C</code> 复制</li>
-<li><code>command + V</code> 粘贴</li>
-<li><code>option + command + V</code>  （正常复制后）剪贴</li>
-<li><code>command + Z</code> 撤销</li>
-<li><code>shift + command + Z</code> 重做（相当于撤销上一步的撤销）</li>
-<li><code>command + D</code> 快速选中某词</li>
-<li><code>command + tab</code> 向后切换应用</li>
-<li><code>command + ～</code> 向前切换应用 &#x2F; 切换同一个应用的不同窗口</li>
-<li><code>command + M</code> 最小化窗口</li>
-<li><code>command + W</code>  关闭窗口</li>
-<li><code>command + Q</code> 退出程序</li>
-<li><code>command + shift + 4</code> 截屏</li>
-<li><code>command + shift + 5</code> 录屏</li>
-<li><code>control + A</code> 定位当前行首，现替换成 <code>command + 左方向键</code>更简单，配合 <code>shift</code>选中更丝滑</li>
-<li><code>control + E</code> 定位当前行尾，现替换成 <code>command + 右方向键</code> 更简单</li>
-</ul>
-<h1 id="访达"><a href="#访达" class="headerlink" title="访达"></a>访达</h1><ul>
-<li><code>enter</code> 重命名某文件</li>
-<li><code>command + O</code> 打开某文件</li>
-<li><code>command + delete</code> 删除某文件到废纸篓</li>
-<li><code>command + [</code> 前往上一个文件夹</li>
-<li><code>command + ]</code> 前往下一个文件夹</li>
-<li><code>command + 上方向键</code> 前往上层文件夹</li>
-<li><code>command + E</code> 推出磁盘映像</li>
-</ul>
-<h1 id="VSCode"><a href="#VSCode" class="headerlink" title="VSCode"></a>VSCode</h1><ul>
-<li><code>control + G</code> 定位某行 </li>
-<li><code>control + C </code>结束终端当前进程</li>
-<li><code>command + shift + K</code> 删除整行代码 </li>
-<li><code>option + command + F </code> 当前文件替换 </li>
-<li><code>option + shift + 向上/向下箭头</code> 复制一行 </li>
-<li><code>option + shift + F</code> 格式化代码</li>
-</ul>
-<h1 id="终端"><a href="#终端" class="headerlink" title="终端"></a>终端</h1><p>当遇到提示：“你不能使用以点“.”开头的名称,因为这些名称已被系统预留。请选取其他名称。”可以使用以下命令</p>
-<ul>
-<li>显示隐藏文件</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">defaults write com.apple.finder AppleShowAllFiles -boolean <span class="literal">true</span> ; killall Finder</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>隐藏隐藏文件</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">defaults write com.apple.finder AppleShowAllFiles FALSE ; killall Finder</span><br></pre></td></tr></table></figure>
-
-
-
-<p>Mac终端</p>
-<ul>
-<li>Terminal 系统自带终端</li>
-<li>iTerm2</li>
-<li>Warp</li>
-</ul>
-<h1 id="FAQ"><a href="#FAQ" class="headerlink" title="FAQ"></a>FAQ</h1><h5 id="无法打开“xxx-app”，因为无法验证开发者。"><a href="#无法打开“xxx-app”，因为无法验证开发者。" class="headerlink" title="无法打开“xxx.app”，因为无法验证开发者。"></a><strong>无法打开“xxx.app”，因为无法验证开发者。</strong></h5><blockquote>
-<p>打开【设置】，找到【隐私与安全性】，选择信任该 app即可。</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>知识库</category>
-        <category>MacOS</category>
-      </categories>
-      <tags>
-        <tag>MacOS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【Promise】笔记</title>
-    <url>/2020/11/28/%E3%80%90Promise%E3%80%91%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<h1 id="Promise"><a href="#Promise" class="headerlink" title="Promise"></a>Promise</h1>]]></content>
-      <categories>
-        <category>知识库</category>
-        <category>Promise</category>
-      </categories>
-      <tags>
-        <tag>Promise</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>【Markdown】使用笔记（MacOS）</title>
     <url>/2022/06/29/%E3%80%90Markdown%E3%80%91%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0%EF%BC%88MacOS%EF%BC%89/</url>
     <content><![CDATA[<p><a href="https://zhuanlan.zhihu.com/p/632381789">Markdown教程</a></p>
@@ -942,16 +930,15 @@
       </tags>
   </entry>
   <entry>
-    <title>【TypeScript】笔记</title>
-    <url>/2021/09/20/%E3%80%90TypeScript%E3%80%91%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<p><a href="https://www.tslang.cn/">TypeScript 中文网</a></p>
-]]></content>
+    <title>【Promise】笔记</title>
+    <url>/2020/11/28/%E3%80%90Promise%E3%80%91%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<h1 id="Promise"><a href="#Promise" class="headerlink" title="Promise"></a>Promise</h1>]]></content>
       <categories>
         <category>知识库</category>
-        <category>TypeScript</category>
+        <category>Promise</category>
       </categories>
       <tags>
-        <tag>TypeScript</tag>
+        <tag>Promise</tag>
       </tags>
   </entry>
   <entry>
@@ -1019,6 +1006,19 @@
       </categories>
       <tags>
         <tag>VSCode</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【TypeScript】笔记</title>
+    <url>/2021/09/20/%E3%80%90TypeScript%E3%80%91%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<p><a href="https://www.tslang.cn/">TypeScript 中文网</a></p>
+]]></content>
+      <categories>
+        <category>知识库</category>
+        <category>TypeScript</category>
+      </categories>
+      <tags>
+        <tag>TypeScript</tag>
       </tags>
   </entry>
   <entry>
@@ -1185,18 +1185,6 @@
       </tags>
   </entry>
   <entry>
-    <title>【计算机组成原理】</title>
-    <url>/2020/05/21/%E3%80%90%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E3%80%91/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>知识库</category>
-        <category>计算机组成原理</category>
-      </categories>
-      <tags>
-        <tag>计算机组成原理</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>【计算机网络】</title>
     <url>/2022/06/15/%E3%80%90%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E3%80%91/</url>
     <content><![CDATA[]]></content>
@@ -1206,6 +1194,18 @@
       </categories>
       <tags>
         <tag>计算机网络</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【计算机组成原理】</title>
+    <url>/2020/05/21/%E3%80%90%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86%E3%80%91/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>知识库</category>
+        <category>计算机组成原理</category>
+      </categories>
+      <tags>
+        <tag>计算机组成原理</tag>
       </tags>
   </entry>
   <entry>
@@ -1294,6 +1294,25 @@
       </tags>
   </entry>
   <entry>
+    <title>深入掌握 OSS：最完美的 OSS 上传方案！</title>
+    <url>/2024/03/22/%E6%B7%B1%E5%85%A5%E6%8E%8C%E6%8F%A1%20OSS%EF%BC%9A%E6%9C%80%E5%AE%8C%E7%BE%8E%E7%9A%84%20OSS%20%E4%B8%8A%E4%BC%A0%E6%96%B9%E6%A1%88%EF%BC%81/</url>
+    <content><![CDATA[<h2 id="原文链接"><a href="#原文链接" class="headerlink" title="原文链接"></a><a href="https://juejin.cn/post/7325495635455868938">原文链接</a></h2><p>上传文件一般不会直接存在服务器目录下，这样不好扩展，一般我们会用阿里云的 OSS（Object Storage Service）对象存储服务，它会自己做弹性扩展，所以存储空间是无限的。</p>
+<p>OSS 对象存储是在一个 bucket 桶下，存放多个文件。</p>
+<p>它是用 key-value 存储的，没有目录的概念，阿里云 OSS 的目录只是用元信息来模拟实现的。</p>
+<p>上传文件后，我们能拿到文件 URL，但生产环境下我们不会直接用 OSS 的 URL 访问，而是会开启 CDN，用网站域名访问，最终回源到 OSS 服务。因此还需要开通 CDN 服务</p>
+<p>不管在哪里上传，都需要 acessKeyId 和 acessKeySecret。</p>
+<p>这个是阿里云的安全策略，因为直接用用户名密码，一旦泄漏就很麻烦，而 acessKey 泄漏了也可以禁用。而且建议用 RAM 子用户的方式生成 accessKey，这样可以最小化权限，进一步减少泄漏的风险。</p>
+<p>客户端直传 OSS 的方式不需要消耗服务器的资源，但是会有泄漏 acessKey 的风险，所以一般都是用服务端生成临时的签名等信息，然后用这些信息来上传。</p>
+]]></content>
+      <categories>
+        <category>阅读</category>
+      </categories>
+      <tags>
+        <tag>OSS</tag>
+        <tag>每日阅读</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>面试官问我按钮级别权限怎么控制，我说v-if，面试官说再见</title>
     <url>/2024/03/04/%E9%9D%A2%E8%AF%95%E5%AE%98%E9%97%AE%E6%88%91%E6%8C%89%E9%92%AE%E7%BA%A7%E5%88%AB%E6%9D%83%E9%99%90%E6%80%8E%E4%B9%88%E6%8E%A7%E5%88%B6%EF%BC%8C%E6%88%91%E8%AF%B4v-if%EF%BC%8C%E9%9D%A2%E8%AF%95%E5%AE%98%E8%AF%B4%E5%86%8D%E8%A7%81/</url>
     <content><![CDATA[<h2 id="原文链接"><a href="#原文链接" class="headerlink" title="原文链接"></a><a href="https://juejin.cn/post/7209648356530896953">原文链接</a></h2><p>按钮级别权限控制，怎么做？使用v-if ？可以，但不够通用。</p>
@@ -1321,25 +1340,6 @@
         <tag>每日阅读</tag>
         <tag>Vue</tag>
         <tag>权限</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>深入掌握 OSS：最完美的 OSS 上传方案！</title>
-    <url>/2024/03/22/%E6%B7%B1%E5%85%A5%E6%8E%8C%E6%8F%A1%20OSS%EF%BC%9A%E6%9C%80%E5%AE%8C%E7%BE%8E%E7%9A%84%20OSS%20%E4%B8%8A%E4%BC%A0%E6%96%B9%E6%A1%88%EF%BC%81/</url>
-    <content><![CDATA[<h2 id="原文链接"><a href="#原文链接" class="headerlink" title="原文链接"></a><a href="https://juejin.cn/post/7325495635455868938">原文链接</a></h2><p>上传文件一般不会直接存在服务器目录下，这样不好扩展，一般我们会用阿里云的 OSS（Object Storage Service）对象存储服务，它会自己做弹性扩展，所以存储空间是无限的。</p>
-<p>OSS 对象存储是在一个 bucket 桶下，存放多个文件。</p>
-<p>它是用 key-value 存储的，没有目录的概念，阿里云 OSS 的目录只是用元信息来模拟实现的。</p>
-<p>上传文件后，我们能拿到文件 URL，但生产环境下我们不会直接用 OSS 的 URL 访问，而是会开启 CDN，用网站域名访问，最终回源到 OSS 服务。因此还需要开通 CDN 服务</p>
-<p>不管在哪里上传，都需要 acessKeyId 和 acessKeySecret。</p>
-<p>这个是阿里云的安全策略，因为直接用用户名密码，一旦泄漏就很麻烦，而 acessKey 泄漏了也可以禁用。而且建议用 RAM 子用户的方式生成 accessKey，这样可以最小化权限，进一步减少泄漏的风险。</p>
-<p>客户端直传 OSS 的方式不需要消耗服务器的资源，但是会有泄漏 acessKey 的风险，所以一般都是用服务端生成临时的签名等信息，然后用这些信息来上传。</p>
-]]></content>
-      <categories>
-        <category>阅读</category>
-      </categories>
-      <tags>
-        <tag>OSS</tag>
-        <tag>每日阅读</tag>
       </tags>
   </entry>
 </search>
