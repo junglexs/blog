@@ -1,38 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>《Angular 开发入门与实战》</title>
-    <url>/2021/09/15/%E3%80%8AAngular%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8%E4%B8%8E%E5%AE%9E%E6%88%98%E3%80%8B/</url>
-    <content><![CDATA[<p>兰泽君 著作</p>
-<h2 id="读书笔记"><a href="#读书笔记" class="headerlink" title="读书笔记"></a>读书笔记</h2><h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>Angular是一种流行的前端框架，由Google维护，专为开发动态单页应用（SPA）而设计。它鼓励使用TypeScript进行开发，这是JavaScript的一个超集，添加了静态类型等特性。</p>
-<h4 id="第一部分：Angular基础"><a href="#第一部分：Angular基础" class="headerlink" title="第一部分：Angular基础"></a>第一部分：Angular基础</h4><ul>
-<li><strong>TypeScript基础</strong>：介绍TypeScript的基本语法，以及如何在Angular项目中使用它。</li>
-<li><strong>组件和模块</strong>：解释Angular应用是如何通过组件来构建用户界面的，每个组件都有自己的逻辑和模板。模块则用来组织这些组件，以及提供服务。</li>
-<li><strong>模板和数据绑定</strong>：介绍如何使用Angular模板语法来显示数据和响应用户事件，以及单向和双向数据绑定的概念。</li>
-<li><strong>服务和依赖注入</strong>：讨论服务的概念，这是一种用于封装业务逻辑的方法，以及Angular如何使用依赖注入（DI）模式来提供这些服务。</li>
-</ul>
-<h4 id="第二部分：进阶实战"><a href="#第二部分：进阶实战" class="headerlink" title="第二部分：进阶实战"></a>第二部分：进阶实战</h4><ul>
-<li><strong>路由和导航</strong>：深入探讨Angular路由器的工作原理，如何定义路由规则，以及如何进行导航。</li>
-<li><strong>表单处理</strong>：详细说明如何使用Angular表单模块来创建和验证用户输入表单。</li>
-<li><strong>RxJS和异步编程</strong>：介绍如何使用RxJS库在Angular中处理异步操作，包括Observable和操作符的概念。</li>
-<li><strong>状态管理</strong>：探讨在Angular应用中管理状态的策略，可能包括使用NgRx或其他状态管理库。</li>
-</ul>
-<h4 id="第三部分：项目实战"><a href="#第三部分：项目实战" class="headerlink" title="第三部分：项目实战"></a>第三部分：项目实战</h4><ul>
-<li><strong>构建实际项目</strong>：通过构建一个实际的Angular应用来综合运用前面学到的知识，可能是一个电商平台、博客系统或任务管理器。</li>
-<li><strong>性能优化</strong>：介绍如何分析和提升Angular应用的性能。</li>
-<li><strong>部署和维护</strong>：讨论将Angular应用部署到生产环境的最佳实践，以及如何维护和更新现有应用。</li>
-</ul>
-<h4 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h4><p>《Angular 开发入门与实战》是一本面向希望深入了解Angular框架的前端开发人员的实用指南。通过阅读这本书，开发者不仅能掌握Angular的基础知识，还能学会如何在实际项目中应用这些知识来构建复杂的应用程序。</p>
-<p>这份读书笔记旨在概述书中可能包含的主要内容和概念，真正的学习和理解还需深入阅读原书并实践其中的示例和技巧。</p>
-]]></content>
-      <categories>
-        <category>书籍</category>
-      </categories>
-      <tags>
-        <tag>读书笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>《JavsScript百炼成仙》</title>
     <url>/2021/02/12/%E3%80%8AJavsScript%E7%99%BE%E7%82%BC%E6%88%90%E4%BB%99%E3%80%8B/</url>
     <content><![CDATA[<p>杨逸飞 编著</p>
@@ -107,6 +75,38 @@
       </tags>
   </entry>
   <entry>
+    <title>《Angular 开发入门与实战》</title>
+    <url>/2021/09/15/%E3%80%8AAngular%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8%E4%B8%8E%E5%AE%9E%E6%88%98%E3%80%8B/</url>
+    <content><![CDATA[<p>兰泽君 著作</p>
+<h2 id="读书笔记"><a href="#读书笔记" class="headerlink" title="读书笔记"></a>读书笔记</h2><h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>Angular是一种流行的前端框架，由Google维护，专为开发动态单页应用（SPA）而设计。它鼓励使用TypeScript进行开发，这是JavaScript的一个超集，添加了静态类型等特性。</p>
+<h4 id="第一部分：Angular基础"><a href="#第一部分：Angular基础" class="headerlink" title="第一部分：Angular基础"></a>第一部分：Angular基础</h4><ul>
+<li><strong>TypeScript基础</strong>：介绍TypeScript的基本语法，以及如何在Angular项目中使用它。</li>
+<li><strong>组件和模块</strong>：解释Angular应用是如何通过组件来构建用户界面的，每个组件都有自己的逻辑和模板。模块则用来组织这些组件，以及提供服务。</li>
+<li><strong>模板和数据绑定</strong>：介绍如何使用Angular模板语法来显示数据和响应用户事件，以及单向和双向数据绑定的概念。</li>
+<li><strong>服务和依赖注入</strong>：讨论服务的概念，这是一种用于封装业务逻辑的方法，以及Angular如何使用依赖注入（DI）模式来提供这些服务。</li>
+</ul>
+<h4 id="第二部分：进阶实战"><a href="#第二部分：进阶实战" class="headerlink" title="第二部分：进阶实战"></a>第二部分：进阶实战</h4><ul>
+<li><strong>路由和导航</strong>：深入探讨Angular路由器的工作原理，如何定义路由规则，以及如何进行导航。</li>
+<li><strong>表单处理</strong>：详细说明如何使用Angular表单模块来创建和验证用户输入表单。</li>
+<li><strong>RxJS和异步编程</strong>：介绍如何使用RxJS库在Angular中处理异步操作，包括Observable和操作符的概念。</li>
+<li><strong>状态管理</strong>：探讨在Angular应用中管理状态的策略，可能包括使用NgRx或其他状态管理库。</li>
+</ul>
+<h4 id="第三部分：项目实战"><a href="#第三部分：项目实战" class="headerlink" title="第三部分：项目实战"></a>第三部分：项目实战</h4><ul>
+<li><strong>构建实际项目</strong>：通过构建一个实际的Angular应用来综合运用前面学到的知识，可能是一个电商平台、博客系统或任务管理器。</li>
+<li><strong>性能优化</strong>：介绍如何分析和提升Angular应用的性能。</li>
+<li><strong>部署和维护</strong>：讨论将Angular应用部署到生产环境的最佳实践，以及如何维护和更新现有应用。</li>
+</ul>
+<h4 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h4><p>《Angular 开发入门与实战》是一本面向希望深入了解Angular框架的前端开发人员的实用指南。通过阅读这本书，开发者不仅能掌握Angular的基础知识，还能学会如何在实际项目中应用这些知识来构建复杂的应用程序。</p>
+<p>这份读书笔记旨在概述书中可能包含的主要内容和概念，真正的学习和理解还需深入阅读原书并实践其中的示例和技巧。</p>
+]]></content>
+      <categories>
+        <category>书籍</category>
+      </categories>
+      <tags>
+        <tag>读书笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>【DevOps】笔记</title>
     <url>/2022/05/28/%E3%80%90DevOps%E3%80%91%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[]]></content>
@@ -117,129 +117,6 @@
       <tags>
         <tag>DevOps</tag>
         <tag>CI/CD</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【Git&amp;GitHub】使用指南</title>
-    <url>/2022/05/18/%E3%80%90Git&amp;GitHub%E3%80%91%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</url>
-    <content><![CDATA[<h1 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h1><h2 id="本地代码上传"><a href="#本地代码上传" class="headerlink" title="本地代码上传"></a>本地代码上传</h2><p>1.建立远程仓库<br>2.切换到项目路径，打开终端<br>3.设置用户名、邮箱 </p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git config --global user.name &quot;[你的GitHub的用户名]&quot;</span><br><span class="line">git config --global user.email &quot;[你的GitHub绑定的邮箱]&quot;</span><br></pre></td></tr></table></figure>
-<p>4.查看是否创建成功</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git config --list</span><br></pre></td></tr></table></figure>
-<p>5.初始化一个空的 git 本地仓库</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure>
-<p>6.绑定本地仓库与远程仓库</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git remote add origin [远程仓库的具体地址]</span><br></pre></td></tr></table></figure>
-<p>7.查看本地分支情况</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git branch</span><br></pre></td></tr></table></figure>
-<p>8.创建并切换到 <code>master</code> 分支</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">git checkout -b master</span><br></pre></td></tr></table></figure>
-<p>9.添加文件到暂存区</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">git add .</span><br></pre></td></tr></table></figure>
-<p>10.将更改提交到本地仓库</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git commit -m &quot;[自定义的提交信息]&quot;</span><br></pre></td></tr></table></figure>
-<p>11.将本地仓库 push 到远程仓库</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
-<p>12.若发生冲突，则可以先暂存本地代码</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git stash -m &quot;[自定义的暂存信息]&quot;</span><br></pre></td></tr></table></figure>
-<p>13.再拉取远端代码后，pop 代码，再次 push</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git stash pop</span><br><span class="line">git pull origin master</span><br><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
-
-<p>14.生成 SSH Key，在图中路径找到并复制密钥</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;你的GitHub绑定的邮箱&quot;</span><br></pre></td></tr></table></figure>
-<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7bc3ab392f0547f4bf5594d7ec660e72~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1212&h=854&s=336984&e=png&b=fdfdfd" alt="image.png"><br>或者以下代码查看密钥</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">cat ~<span class="regexp">/.ssh/i</span>d_rsa.<span class="property">pub</span></span><br></pre></td></tr></table></figure>
-<p>复制密钥到GitHub上</p>
-<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ef182221a1da48cb9224430990fe493d~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=3024&h=1508&s=436959&e=png&b=fefefe" alt="image.png"></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/90ebd1dfa5fc44b587a1cc2f1b90a8d8~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1212&h=350&s=196085&e=png&b=fdfdfd" alt="image.png"></p>
-<h2 id="stash-pop-和-stash-apply-的区别"><a href="#stash-pop-和-stash-apply-的区别" class="headerlink" title="stash pop 和 stash apply 的区别"></a>stash pop 和 stash apply 的区别</h2><ul>
-<li><strong>相同处</strong>：<code>git stash apply</code> 和 <code>git stash pop</code> 都是用来从存储区（stash）恢复工作目录的命令。它们的主要区别在于处理完恢复操作后对 stash 的影响。</li>
-<li><strong>不同处</strong>：<code>pop</code> 会从 stash 中恢复保存的工作目录和索引，并将这些更改应用到当前分支上，但它与 <code>apply</code> 不同的是，<code>pop</code> 操作会从 stash 中删除恢复的 stash。</li>
-<li><strong>总结</strong>：如果你打算在多个分支之间多次应用相同的 stash，可以使用 <code>apply</code>，这样 stash 不会被删除，你可以在需要的时候再次应用。如果你只需要一次性地应用 stash 并将其删除，可以使用 <code>pop</code>。</li>
-</ul>
-<h2 id="git-commit-规范"><a href="#git-commit-规范" class="headerlink" title="git commit 规范"></a>git commit 规范</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">feat(user-auth): add user authentication // 新功能（feat）</span><br><span class="line">fix(database): resolve issue with data inconsistency // Bug修复（fix）</span><br><span class="line">docs(readme): update project documentation // 文档变更（docs）</span><br><span class="line">perf(api): improve response time <span class="keyword">for</span> data retrieval // 性能优化（perf）</span><br><span class="line">style(css): adjust layout <span class="keyword">for</span> better readability // 样式修改（style）</span><br><span class="line"><span class="built_in">test</span>(api): add unit tests <span class="keyword">for</span> user service // 测试相关（<span class="built_in">test</span>）</span><br><span class="line">refactor(database): restructure database schema // 重构（refactor）</span><br><span class="line">revert: undo previous commit // 回滚变更（revert）</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
-
-<h1 id="GitHub"><a href="#GitHub" class="headerlink" title="GitHub"></a>GitHub</h1><h2 id="SSH"><a href="#SSH" class="headerlink" title="SSH"></a>SSH</h2>]]></content>
-      <categories>
-        <category>知识库</category>
-        <category>Git</category>
-      </categories>
-      <tags>
-        <tag>Git</tag>
-        <tag>GitHub</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【LeetCode】</title>
-    <url>/2023/07/27/%E3%80%90LeetCode%E3%80%91/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>学习</category>
-        <category>LeetCode</category>
-      </categories>
-      <tags>
-        <tag>LeetCode</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【Hexo】使用笔记</title>
-    <url>/2023/07/29/%E3%80%90Hexo%E3%80%91%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<h2 id="一、初识Hexo"><a href="#一、初识Hexo" class="headerlink" title="一、初识Hexo"></a>一、初识Hexo</h2><h4 id="1-config-yml"><a href="#1-config-yml" class="headerlink" title="1._config.yml"></a>1._config.yml</h4><p>了解<code>_config.yml</code>配置文件的参数信息。网站的 <a href="https://hexo.io/zh-cn/docs/configuration">配置</a> 信息，可以在此配置大部分的参数。</p>
-<h4 id="2-生成文章"><a href="#2-生成文章" class="headerlink" title="2.生成文章"></a>2.生成文章</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hexo new &quot;post title with whitespace&quot;</span><br></pre></td></tr></table></figure>
-
-<p>生成草稿</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new draft <span class="string">&quot;draft test&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>预览草稿（直接使用 hexo server 是无法看到草稿的）</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo server --draft</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="3-生成静态文件"><a href="#3-生成静态文件" class="headerlink" title="3.生成静态文件"></a>3.生成静态文件</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
-
-<h4 id="4-部署"><a href="#4-部署" class="headerlink" title="4.部署"></a>4.部署</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h2 id="二、配置"><a href="#二、配置" class="headerlink" title="二、配置"></a>二、配置</h2><p>开启文章资源文件夹</p>
-<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">post_asset_folder = <span class="literal"><span class="keyword">true</span></span></span><br></pre></td></tr></table></figure>
-
-<h2 id="三、分类"><a href="#三、分类" class="headerlink" title="三、分类"></a>三、分类</h2><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">hexo new page categories</span><br></pre></td></tr></table></figure>
-
-<h2 id="四、搜索"><a href="#四、搜索" class="headerlink" title="四、搜索"></a>四、搜索</h2><ul>
-<li><a href="https://github.com/theme-next/hexo-generator-searchdb">hexo-generator-searchdb</a> 用于搜索</li>
-</ul>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-searchdb --save</span><br></pre></td></tr></table></figure>
-
-<p>然后将以下配置复制到你博客根目录下的 <code>_config.yml</code> 里:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># hexo-generator-searchdb</span><br><span class="line">search:</span><br><span class="line">  path: search.xml</span><br><span class="line">  field: post</span><br><span class="line">  format: html</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><a href="https://github.com/hexojs/hexo-generator-feed">hexo-generator-feed</a> 用于生成 RSS 订阅</li>
-</ul>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-feed --save</span><br></pre></td></tr></table></figure>
-
-<p>然后将以下配置复制到你博客根目录下的 <code>_config.yml</code> 里:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">feed:</span><br><span class="line">  type: atom</span><br><span class="line">  path: atom.xml</span><br><span class="line">  limit: 20</span><br><span class="line">  hub:</span><br><span class="line">  content:</span><br><span class="line">  content_limit: 140</span><br><span class="line">  content_limit_delim: &quot; &quot;</span><br><span class="line">  order_by: -date</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>知识库</category>
-        <category>Hexo</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>博客</tag>
       </tags>
   </entry>
   <entry>
@@ -708,27 +585,46 @@
       </tags>
   </entry>
   <entry>
-    <title>【Markdown】使用笔记（MacOS）</title>
-    <url>/2022/06/29/%E3%80%90Markdown%E3%80%91%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0%EF%BC%88MacOS%EF%BC%89/</url>
-    <content><![CDATA[<p><a href="https://zhuanlan.zhihu.com/p/632381789">Markdown教程</a></p>
-<h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><ul>
-<li>生成代码块 <code>option + command + C</code> </li>
-<li>源码模式 <code>command + /</code></li>
-<li>标题 <code>comand + 1</code> 或 2 、 3、 4</li>
-<li>查找 <code>comand + F</code></li>
-<li>超链接 <code>command + K</code></li>
-<li>查找并替换 <code>option + command + F</code></li>
-<li>无序列表 <code>option + command + U</code>  或 <code>- + tab</code></li>
-<li>有序列表 <code>option + command + L</code> 或 <code>1. + tab</code> </li>
-<li>代码  <code>control + ` </code></li>
-<li>代码块 <code>option + command + C</code></li>
-<li>引用 <code>option + command + Q</code></li>
-<li>放大&#x2F;缩小 <code>shift + command + =</code> &#x2F; <code>shift + command + -</code></li>
+    <title>【Git&amp;GitHub】使用指南</title>
+    <url>/2022/05/18/%E3%80%90Git&amp;GitHub%E3%80%91%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</url>
+    <content><![CDATA[<h1 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h1><h2 id="本地代码上传"><a href="#本地代码上传" class="headerlink" title="本地代码上传"></a>本地代码上传</h2><p>1.建立远程仓库<br>2.切换到项目路径，打开终端<br>3.设置用户名、邮箱 </p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git config --global user.name &quot;[你的GitHub的用户名]&quot;</span><br><span class="line">git config --global user.email &quot;[你的GitHub绑定的邮箱]&quot;</span><br></pre></td></tr></table></figure>
+<p>4.查看是否创建成功</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git config --list</span><br></pre></td></tr></table></figure>
+<p>5.初始化一个空的 git 本地仓库</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure>
+<p>6.绑定本地仓库与远程仓库</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git remote add origin [远程仓库的具体地址]</span><br></pre></td></tr></table></figure>
+<p>7.查看本地分支情况</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git branch</span><br></pre></td></tr></table></figure>
+<p>8.创建并切换到 <code>master</code> 分支</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">git checkout -b master</span><br></pre></td></tr></table></figure>
+<p>9.添加文件到暂存区</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">git add .</span><br></pre></td></tr></table></figure>
+<p>10.将更改提交到本地仓库</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git commit -m &quot;[自定义的提交信息]&quot;</span><br></pre></td></tr></table></figure>
+<p>11.将本地仓库 push 到远程仓库</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
+<p>12.若发生冲突，则可以先暂存本地代码</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git stash -m &quot;[自定义的暂存信息]&quot;</span><br></pre></td></tr></table></figure>
+<p>13.再拉取远端代码后，pop 代码，再次 push</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git stash pop</span><br><span class="line">git pull origin master</span><br><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
+
+<p>14.生成 SSH Key，在图中路径找到并复制密钥</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;你的GitHub绑定的邮箱&quot;</span><br></pre></td></tr></table></figure>
+<p><img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7bc3ab392f0547f4bf5594d7ec660e72~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1212&h=854&s=336984&e=png&b=fdfdfd" alt="image.png"><br>或者以下代码查看密钥</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">cat ~<span class="regexp">/.ssh/i</span>d_rsa.<span class="property">pub</span></span><br></pre></td></tr></table></figure>
+<p>复制密钥到GitHub上</p>
+<p><img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ef182221a1da48cb9224430990fe493d~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=3024&h=1508&s=436959&e=png&b=fefefe" alt="image.png"></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/90ebd1dfa5fc44b587a1cc2f1b90a8d8~tplv-k3u1fbpfcp-jj-mark:0:0:0:0:q75.image#?w=1212&h=350&s=196085&e=png&b=fdfdfd" alt="image.png"></p>
+<h2 id="stash-pop-和-stash-apply-的区别"><a href="#stash-pop-和-stash-apply-的区别" class="headerlink" title="stash pop 和 stash apply 的区别"></a>stash pop 和 stash apply 的区别</h2><ul>
+<li><strong>相同处</strong>：<code>git stash apply</code> 和 <code>git stash pop</code> 都是用来从存储区（stash）恢复工作目录的命令。它们的主要区别在于处理完恢复操作后对 stash 的影响。</li>
+<li><strong>不同处</strong>：<code>pop</code> 会从 stash 中恢复保存的工作目录和索引，并将这些更改应用到当前分支上，但它与 <code>apply</code> 不同的是，<code>pop</code> 操作会从 stash 中删除恢复的 stash。</li>
+<li><strong>总结</strong>：如果你打算在多个分支之间多次应用相同的 stash，可以使用 <code>apply</code>，这样 stash 不会被删除，你可以在需要的时候再次应用。如果你只需要一次性地应用 stash 并将其删除，可以使用 <code>pop</code>。</li>
 </ul>
-<h2 id="语法与文本内容冲突"><a href="#语法与文本内容冲突" class="headerlink" title="语法与文本内容冲突"></a>语法与文本内容冲突</h2><h4 id="使用反斜杠-来将这些字符进行转义"><a href="#使用反斜杠-来将这些字符进行转义" class="headerlink" title="使用反斜杠\来将这些字符进行转义"></a>使用反斜杠<code>\</code>来将这些字符进行转义</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">*\*这样里面的文字就不会加粗了\*\*</span><br></pre></td></tr></table></figure>
-
-<h4 id="使用多个反引号来创建代码块"><a href="#使用多个反引号来创建代码块" class="headerlink" title="使用多个反引号来创建代码块"></a>使用多个反引号来创建代码块</h4><p>如果你发现转义字符不起作用（例如，在某些Markdown解析器中可能会有差异），另一个方法是使用更多的反引号来创建代码块，并在里面放置你的代码</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">`` control + ` ``</span><br></pre></td></tr></table></figure>
+<h2 id="git-commit-规范"><a href="#git-commit-规范" class="headerlink" title="git commit 规范"></a>git commit 规范</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">feat(user-auth): add user authentication // 新功能（feat）</span><br><span class="line">fix(database): resolve issue with data inconsistency // Bug修复（fix）</span><br><span class="line">docs(readme): update project documentation // 文档变更（docs）</span><br><span class="line">perf(api): improve response time <span class="keyword">for</span> data retrieval // 性能优化（perf）</span><br><span class="line">style(css): adjust layout <span class="keyword">for</span> better readability // 样式修改（style）</span><br><span class="line"><span class="built_in">test</span>(api): add unit tests <span class="keyword">for</span> user service // 测试相关（<span class="built_in">test</span>）</span><br><span class="line">refactor(database): restructure database schema // 重构（refactor）</span><br><span class="line">revert: undo previous commit // 回滚变更（revert）</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 
 
@@ -736,27 +632,79 @@
 
 
 
+<h1 id="GitHub"><a href="#GitHub" class="headerlink" title="GitHub"></a>GitHub</h1><h2 id="SSH"><a href="#SSH" class="headerlink" title="SSH"></a>SSH</h2>]]></content>
+      <categories>
+        <category>知识库</category>
+        <category>Git</category>
+      </categories>
+      <tags>
+        <tag>Git</tag>
+        <tag>GitHub</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【Hexo】使用笔记</title>
+    <url>/2023/07/29/%E3%80%90Hexo%E3%80%91%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<h2 id="一、初识Hexo"><a href="#一、初识Hexo" class="headerlink" title="一、初识Hexo"></a>一、初识Hexo</h2><h4 id="1-config-yml"><a href="#1-config-yml" class="headerlink" title="1._config.yml"></a>1._config.yml</h4><p>了解<code>_config.yml</code>配置文件的参数信息。网站的 <a href="https://hexo.io/zh-cn/docs/configuration">配置</a> 信息，可以在此配置大部分的参数。</p>
+<h4 id="2-生成文章"><a href="#2-生成文章" class="headerlink" title="2.生成文章"></a>2.生成文章</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hexo new &quot;post title with whitespace&quot;</span><br></pre></td></tr></table></figure>
 
+<p>生成草稿</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new draft <span class="string">&quot;draft test&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>预览草稿（直接使用 hexo server 是无法看到草稿的）</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo server --draft</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="3-生成静态文件"><a href="#3-生成静态文件" class="headerlink" title="3.生成静态文件"></a>3.生成静态文件</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-部署"><a href="#4-部署" class="headerlink" title="4.部署"></a>4.部署</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h2 id="二、配置"><a href="#二、配置" class="headerlink" title="二、配置"></a>二、配置</h2><p>开启文章资源文件夹</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">post_asset_folder = <span class="literal"><span class="keyword">true</span></span></span><br></pre></td></tr></table></figure>
+
+<h2 id="三、分类"><a href="#三、分类" class="headerlink" title="三、分类"></a>三、分类</h2><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">hexo new page categories</span><br></pre></td></tr></table></figure>
+
+<h2 id="四、搜索"><a href="#四、搜索" class="headerlink" title="四、搜索"></a>四、搜索</h2><ul>
+<li><a href="https://github.com/theme-next/hexo-generator-searchdb">hexo-generator-searchdb</a> 用于搜索</li>
+</ul>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-searchdb --save</span><br></pre></td></tr></table></figure>
+
+<p>然后将以下配置复制到你博客根目录下的 <code>_config.yml</code> 里:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># hexo-generator-searchdb</span><br><span class="line">search:</span><br><span class="line">  path: search.xml</span><br><span class="line">  field: post</span><br><span class="line">  format: html</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><a href="https://github.com/hexojs/hexo-generator-feed">hexo-generator-feed</a> 用于生成 RSS 订阅</li>
+</ul>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-feed --save</span><br></pre></td></tr></table></figure>
+
+<p>然后将以下配置复制到你博客根目录下的 <code>_config.yml</code> 里:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">feed:</span><br><span class="line">  type: atom</span><br><span class="line">  path: atom.xml</span><br><span class="line">  limit: 20</span><br><span class="line">  hub:</span><br><span class="line">  content:</span><br><span class="line">  content_limit: 140</span><br><span class="line">  content_limit_delim: &quot; &quot;</span><br><span class="line">  order_by: -date</span><br></pre></td></tr></table></figure>
 
 ]]></content>
       <categories>
         <category>知识库</category>
-        <category>Markdown</category>
+        <category>Hexo</category>
       </categories>
       <tags>
-        <tag>Markdown</tag>
+        <tag>Hexo</tag>
+        <tag>博客</tag>
       </tags>
   </entry>
   <entry>
-    <title>【Promise】笔记</title>
-    <url>/2020/11/28/%E3%80%90Promise%E3%80%91%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<h1 id="Promise"><a href="#Promise" class="headerlink" title="Promise"></a>Promise</h1>]]></content>
+    <title>【LeetCode】</title>
+    <url>/2023/07/27/%E3%80%90LeetCode%E3%80%91/</url>
+    <content><![CDATA[]]></content>
       <categories>
-        <category>知识库</category>
-        <category>Promise</category>
+        <category>学习</category>
+        <category>LeetCode</category>
       </categories>
       <tags>
-        <tag>Promise</tag>
+        <tag>LeetCode</tag>
       </tags>
   </entry>
   <entry>
@@ -825,6 +773,58 @@
       </categories>
       <tags>
         <tag>MacOS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【Promise】笔记</title>
+    <url>/2020/11/28/%E3%80%90Promise%E3%80%91%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<h1 id="Promise"><a href="#Promise" class="headerlink" title="Promise"></a>Promise</h1>]]></content>
+      <categories>
+        <category>知识库</category>
+        <category>Promise</category>
+      </categories>
+      <tags>
+        <tag>Promise</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【Markdown】使用笔记（MacOS）</title>
+    <url>/2022/06/29/%E3%80%90Markdown%E3%80%91%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0%EF%BC%88MacOS%EF%BC%89/</url>
+    <content><![CDATA[<p><a href="https://zhuanlan.zhihu.com/p/632381789">Markdown教程</a></p>
+<h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><ul>
+<li>生成代码块 <code>option + command + C</code> </li>
+<li>源码模式 <code>command + /</code></li>
+<li>标题 <code>comand + 1</code> 或 2 、 3、 4</li>
+<li>查找 <code>comand + F</code></li>
+<li>超链接 <code>command + K</code></li>
+<li>查找并替换 <code>option + command + F</code></li>
+<li>无序列表 <code>option + command + U</code>  或 <code>- + tab</code></li>
+<li>有序列表 <code>option + command + L</code> 或 <code>1. + tab</code> </li>
+<li>代码  <code>control + ` </code></li>
+<li>代码块 <code>option + command + C</code></li>
+<li>引用 <code>option + command + Q</code></li>
+<li>放大&#x2F;缩小 <code>shift + command + =</code> &#x2F; <code>shift + command + -</code></li>
+</ul>
+<h2 id="语法与文本内容冲突"><a href="#语法与文本内容冲突" class="headerlink" title="语法与文本内容冲突"></a>语法与文本内容冲突</h2><h4 id="使用反斜杠-来将这些字符进行转义"><a href="#使用反斜杠-来将这些字符进行转义" class="headerlink" title="使用反斜杠\来将这些字符进行转义"></a>使用反斜杠<code>\</code>来将这些字符进行转义</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">*\*这样里面的文字就不会加粗了\*\*</span><br></pre></td></tr></table></figure>
+
+<h4 id="使用多个反引号来创建代码块"><a href="#使用多个反引号来创建代码块" class="headerlink" title="使用多个反引号来创建代码块"></a>使用多个反引号来创建代码块</h4><p>如果你发现转义字符不起作用（例如，在某些Markdown解析器中可能会有差异），另一个方法是使用更多的反引号来创建代码块，并在里面放置你的代码</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">`` control + ` ``</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+]]></content>
+      <categories>
+        <category>知识库</category>
+        <category>Markdown</category>
+      </categories>
+      <tags>
+        <tag>Markdown</tag>
       </tags>
   </entry>
   <entry>
@@ -1043,18 +1043,6 @@
       <tags>
         <tag>npm</tag>
         <tag>yarn</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【微信小程序】</title>
-    <url>/2021/02/21/%E3%80%90%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E3%80%91/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>知识库</category>
-        <category>微信小程序</category>
-      </categories>
-      <tags>
-        <tag>微信小程序</tag>
       </tags>
   </entry>
   <entry>
@@ -1294,22 +1282,15 @@
       </tags>
   </entry>
   <entry>
-    <title>深入掌握 OSS：最完美的 OSS 上传方案！</title>
-    <url>/2024/03/22/%E6%B7%B1%E5%85%A5%E6%8E%8C%E6%8F%A1%20OSS%EF%BC%9A%E6%9C%80%E5%AE%8C%E7%BE%8E%E7%9A%84%20OSS%20%E4%B8%8A%E4%BC%A0%E6%96%B9%E6%A1%88%EF%BC%81/</url>
-    <content><![CDATA[<h2 id="原文链接"><a href="#原文链接" class="headerlink" title="原文链接"></a><a href="https://juejin.cn/post/7325495635455868938">原文链接</a></h2><p>上传文件一般不会直接存在服务器目录下，这样不好扩展，一般我们会用阿里云的 OSS（Object Storage Service）对象存储服务，它会自己做弹性扩展，所以存储空间是无限的。</p>
-<p>OSS 对象存储是在一个 bucket 桶下，存放多个文件。</p>
-<p>它是用 key-value 存储的，没有目录的概念，阿里云 OSS 的目录只是用元信息来模拟实现的。</p>
-<p>上传文件后，我们能拿到文件 URL，但生产环境下我们不会直接用 OSS 的 URL 访问，而是会开启 CDN，用网站域名访问，最终回源到 OSS 服务。因此还需要开通 CDN 服务</p>
-<p>不管在哪里上传，都需要 acessKeyId 和 acessKeySecret。</p>
-<p>这个是阿里云的安全策略，因为直接用用户名密码，一旦泄漏就很麻烦，而 acessKey 泄漏了也可以禁用。而且建议用 RAM 子用户的方式生成 accessKey，这样可以最小化权限，进一步减少泄漏的风险。</p>
-<p>客户端直传 OSS 的方式不需要消耗服务器的资源，但是会有泄漏 acessKey 的风险，所以一般都是用服务端生成临时的签名等信息，然后用这些信息来上传。</p>
-]]></content>
+    <title>【微信小程序】</title>
+    <url>/2021/02/21/%E3%80%90%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E3%80%91/</url>
+    <content><![CDATA[]]></content>
       <categories>
-        <category>阅读</category>
+        <category>知识库</category>
+        <category>微信小程序</category>
       </categories>
       <tags>
-        <tag>OSS</tag>
-        <tag>每日阅读</tag>
+        <tag>微信小程序</tag>
       </tags>
   </entry>
   <entry>
@@ -1340,6 +1321,25 @@
         <tag>每日阅读</tag>
         <tag>Vue</tag>
         <tag>权限</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>深入掌握 OSS：最完美的 OSS 上传方案！</title>
+    <url>/2024/03/22/%E6%B7%B1%E5%85%A5%E6%8E%8C%E6%8F%A1%20OSS%EF%BC%9A%E6%9C%80%E5%AE%8C%E7%BE%8E%E7%9A%84%20OSS%20%E4%B8%8A%E4%BC%A0%E6%96%B9%E6%A1%88%EF%BC%81/</url>
+    <content><![CDATA[<h2 id="原文链接"><a href="#原文链接" class="headerlink" title="原文链接"></a><a href="https://juejin.cn/post/7325495635455868938">原文链接</a></h2><p>上传文件一般不会直接存在服务器目录下，这样不好扩展，一般我们会用阿里云的 OSS（Object Storage Service）对象存储服务，它会自己做弹性扩展，所以存储空间是无限的。</p>
+<p>OSS 对象存储是在一个 bucket 桶下，存放多个文件。</p>
+<p>它是用 key-value 存储的，没有目录的概念，阿里云 OSS 的目录只是用元信息来模拟实现的。</p>
+<p>上传文件后，我们能拿到文件 URL，但生产环境下我们不会直接用 OSS 的 URL 访问，而是会开启 CDN，用网站域名访问，最终回源到 OSS 服务。因此还需要开通 CDN 服务</p>
+<p>不管在哪里上传，都需要 acessKeyId 和 acessKeySecret。</p>
+<p>这个是阿里云的安全策略，因为直接用用户名密码，一旦泄漏就很麻烦，而 acessKey 泄漏了也可以禁用。而且建议用 RAM 子用户的方式生成 accessKey，这样可以最小化权限，进一步减少泄漏的风险。</p>
+<p>客户端直传 OSS 的方式不需要消耗服务器的资源，但是会有泄漏 acessKey 的风险，所以一般都是用服务端生成临时的签名等信息，然后用这些信息来上传。</p>
+]]></content>
+      <categories>
+        <category>阅读</category>
+      </categories>
+      <tags>
+        <tag>OSS</tag>
+        <tag>每日阅读</tag>
       </tags>
   </entry>
 </search>
